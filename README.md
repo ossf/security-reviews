@@ -64,7 +64,8 @@ purpose of this project.
 
 - [ ] Review the [review template](template.md) file for information on
       which sections to include and the type of information required for
-      a review to be accepted.
+      a review to be accepted. Or use the [QuickStart](quickstart.html)
+      page to generate the markdown file using an HTML form.
 - [ ] Conduct the security review.    
 - [ ] Clone this repository and add your security review in the relevant
       path.

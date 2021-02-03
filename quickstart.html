@@ -1,0 +1,295 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css" integrity="sha512-P5MgMn1jBN01asBgU0z60Qk4QxiXo86+wlFahKrsQf37c9cro517WzVSPPV1tDKzhku2iJ2FVgL67wG03SGnNA==" crossorigin="anonymous" />
+
+    <title>OSS Security Reviews: QuickStart Template!</title>
+    <style>
+        body { font-family: 'Segoe UI', 'Helvetica Neue', sans-serif}
+        textarea { font-family: 'Source Code Pro', Inconsolata, 'Consolas', monospace}
+        h6 { margin-top: 15px; font-weight: bold }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar navbar-dark bg-dark">
+        <a class="navbar-brand" href="/">
+            OpenSSF: Security Reviews: QuickStart
+        </a>
+    </nav>
+    <div class="container-fluid" style="margin-top: 50px">
+        <main>
+            <form style="width: 1800px;margin:auto">
+                <div class="row">
+                    <div class="col-5">
+                        <div class="row">
+                            <h2>Metadata</h2>
+                        </div>
+                        <div class="row">
+                            <h6>Publication State</h6>
+                            <label for="publicationState" class="form-label sr-only">Publication State</label>
+                            <select class="form-control" id="publicationState" required>
+                                <option value="">--Choose--</option>
+                                <option value="draft">Draft</option>
+                                <option value="published" selected>Published</option>
+                            </select>
+                        </div>
+                        <div class="row">
+                            <h6>Access</h6>
+                            <label for="access" class="form-label sr-only">Access</label>
+                            <select class="form-control" id="access" required>
+                                <option value="">--Choose--</option>
+                                <option value="private/$ORG">private/$ORG</option>
+                                <option value="public" selected>public</option>
+                            </select>
+                        </div>
+                        <div class="row">
+                            <h6>Author</h6>
+                            <label for="author" class="form-label sr-only">Author / e-mail</label>
+                            <input type="text" class="form-control" id="author" required value=""/>
+                        </div>
+                        <div class="row">
+                            <h6>Domain</h6>
+                            <label for="domain" class="form-label sr-only">Domain</label>
+                            <select class="form-control" id="domain" required>
+                                <option value="">--Choose--</option>
+                                <option value="security" selected>security</option>
+                            </select>
+                        </div>                        
+                        <div class="row">
+                            <h6>Methodology</h6>
+                            <div class="form-group w-100">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="static-analysis" id="staticAnalysis" checked>
+                                    <label class="form-check-label" for="staticAnalysis">Static Analysis</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="dynamic-analysis" id="dynamicAnalysis" checked>
+                                    <label class="form-check-label" for="dynamicAnalysis">Dynamic Analysis</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="web-search" id="webSearch" checked>
+                                    <label class="form-check-label" for="webSearch">Web Search</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <h6>Opinion</h6>
+                            <label for="opinion" class="form-label sr-only">Opinion</label>
+                            <select class="form-control" id="opinion" required>
+                                <option value="">--Choose--</option>
+                                <option value="secure" selected>Secure</option>
+                                <option value="insecure">Insecure</option>
+                                <option value="partially-secure">Partially Secure</option>
+                            </select>
+                        </div>                        
+                        <div class="row">
+                            <h6>Package URLs</h6>
+                            <label for="packageURLs" class="sr-only">Package URLs</label>
+                            <textarea class="form-control" id="packageURLs" rows="5" placeholder="pkg:npm/left-pad@1.3.0 (one per line)" required></textarea>
+                        </div>                                                
+                        <div class="row">
+                            <h6>Review Date</h6>
+                            <label for="reviewDate" class="form-label sr-only">Review Date</label>
+                            <input type="date" class="form-control" id="reviewDate" required/>
+                        </div>
+                        <div class="row">
+                            <h6>Scope</h6>
+                            <label for="scope" class="form-label sr-only">Scope</label>
+                            <select class="form-control" id="scope" required>
+                                <option value="">--Choose--</option>
+                                <option value="implementation/full" selected>Implementation (Full)</option>
+                                <option value="implementation/partial">Implementation (Partial)</option>
+                                <option value="non-implementation">Non-Implementation</option>
+                            </select>
+                        </div>                        
+                        <div class="row">
+                            <h6>Schema Version</h6>
+                            <label for="schemaVersion" class="form-label sr-only">Schema Version</label>
+                            <select class="form-control" id="schemaVersion" required>
+                                <option value="">--Choose--</option>
+                                <option value="1.0" selected>1.0</option>
+                            </select>
+                        </div>                        
+                        <div class="row">
+                            <h6>Severity</h6>
+                            <label for="severity" class="form-label sr-only">Severity</label>
+                            <select class="form-control" id="severity" required>
+                                <option value="">--Choose--</option>
+                                <option value="critical">Critical</option>
+                                <option value="important">Important</option>
+                                <option value="moderate">Moderate</option>
+                                <option value="low">Low</option>
+                                <option value="defense-in-depth">Defense in Depth</option>
+                                <option value="informational">Informational</option>
+                                <option value="not-applicable">Not Applicable</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-7 pl-4">
+                        <div class="row">
+                            <h2>Content</h2>
+                        </div>           
+                        <div class="row">
+                            <div class="col-12">
+                                <h6>Summary</h6>
+                                <div class="form-group">
+                                    <label for="summary" class="sr-only">Summary</label>
+                                    <textarea class="form-control" id="summary" rows="3" placeholder="One-line summary of the review" required></textarea>
+                                </div>
+                            </div>                                                
+                        </div>                             
+                        <div class="row">
+                            <div class="col-12">
+                                <h6>Details</h6>
+                                <div class="form-group">
+                                    <label for="details" class="sr-only">Details</label>
+                                    <textarea class="form-control" id="details" rows="10" placeholder="Details of the review" required></textarea>
+                                </div>
+                            </div>                                                
+                        </div>                    
+                        <div class="row">
+                            <div class="col-12">
+                                <h6>Methodology</h6>
+                                <div class="form-group">
+                                    <label for="details" class="sr-only">Methodology</label>
+                                    <textarea class="form-control" id="methodology" rows="4" placeholder="Methodology of the review (Optional)"></textarea>
+                                </div>
+                            </div>                                                
+                        </div>     
+                        <div class="row">
+                            <div class="col-12">
+                                <h6>External References</h6>
+                                <div class="form-group">
+                                    <label for="externalReferences" class="sr-only">External References</label>
+                                    <textarea class="form-control" id="externalReferences" rows="5" placeholder="External References (Optional)"></textarea>
+                                </div>
+                            </div>                                                
+                        </div>       
+                        <div class="row">
+                            <div class="col-12">
+                                <button type="submit" class="btn btn-primary float-right">Create Markdown</button>
+                            </div>                                                
+                        </div>           
+                        <div class="row">
+                            <div class="col-12">
+                                <h6>Instructions</h6>
+                                <p>
+                                    Once you have the markdown completed, add it to the
+                                    <a href="https://github.com/ossf/Project-Security-Reviews">Project-Security-Reviews</a>
+                                    GitHub repository in the "reviews" folder.
+                                </p>
+                                <p>Submit a pull request with your change.</p>
+                            </div>                                                
+                        </div>                                                          
+                    </div>
+                </div>
+            </form>
+        </main>
+    </div>
+
+    
+    <div class="modal" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document" style="width:1200px;max-width:1200px">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Markdown Text</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <textarea id="markdown" class="form-control" style="width: 100%;" rows="35"></textarea>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary copyClipboard">Copy to Clipboard</button>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.bundle.min.js" integrity="sha512-wV7Yj1alIZDqZFCUQJy85VN+qvEIly93fIQAN7iqDFCPEucLCeNFz4r35FCo9s6WrpdDQPi80xbljXB8Bjtvcg==" crossorigin="anonymous"></script>
+    
+    <script type="text/javascript">
+    Date.prototype.toDateInputValue = (function() {
+        var local = new Date(this);
+        local.setMinutes(this.getMinutes() - this.getTimezoneOffset());
+        return local.toJSON().slice(0,10);
+    });
+
+    $(window).on('load', function() {
+        $('#reviewDate').val(new Date().toDateInputValue());
+
+        $('.copyClipboard').on('click', function(e) {
+            $('#markdown').select();
+            const result = document.execCommand('copy');
+            if (!result) {
+                alert('Unable to copy to clipboard. Press Ctrl-C instead.');
+            } else {
+                $("#markdown").blur();
+            }
+        });
+
+        $('form').on('submit', function(e) {
+            e.preventDefault();
+
+            var t = '';
+            t += '<!--\n'
+            t += 'publication-state: ' + $('#publicationState').val() + '\n';
+            t += 'access: ' + $('#access').val() + '\n';
+            t += 'author: ' + $('#author').val() + '\n';
+            t += 'domain: ' + $('#domain').val() + '\n';
+            
+            var m = [];
+            if ($('#staticAnalysis').is(':checked')) m.push('static-analysis');
+            if ($('#dynamicAnalysis').is(':checked')) m.push('dynamic-analysis');
+            if ($('#webSearch').is(':checked')) m.push('web-search');
+            t += 'methodology-summary: ' + m.join(';') + '\n';
+            
+            t += 'package-urls:\n';
+            $.each($('#packageURLs').val().split("\n"), (idx, url) => {
+                if (url !== '') {
+                    t += '- "' + url + '"\n';
+                }
+            });
+
+            t += 'review-date: ' + $('#reviewDate').val() + '\n';
+            t += 'scope: ' + $('#scope').val() + '\n';
+            t += 'schema-version: ' + $('#schemaVersion').val() + '\n';
+            t += 'severity: ' + $('#severity').val() + '\n';
+            t += '-->\n\n';
+
+            t += '### Summary\n\n';
+            t += $('#summary').val().trim() + '\n\n';
+
+            t += '### Details\n\n';
+            t += $('#details').val().trim() + '\n\n';
+
+            t += '### Methodology\n\n';
+            t += $('#methodology').val().trim() + '\n\n';
+
+            t += '### External References\n\n';
+            const refs = $('#externalReferences').val().trim();
+            if (refs !== '') {
+                t += $('#externalReferences').val().trim() + '\n\n';
+            } else {
+                t += 'No external references were provided.\n\n';
+            }
+
+            t += '### Disclaimer\n\n';
+            t += 'All security reviews are conducted on a "best-effort" basis against a software\n';
+            t += 'component at a point in time. We make no guarantees that any review will be accurate\n';
+            t += 'or complete. If you dispute any content within a review, feel free to open an issue\n';
+            t += 'or submit a pull request with a correction or improvement.\n';
+
+            $('#markdown').val(t);
+            $('.modal').modal();
+        });
+    });
+    </script>
+  </body>
+</html>
