@@ -1,64 +1,85 @@
-# **OSSF Project/WG Name**
+# Security Reviews
 
-[Brief description of the initiative]
+This repository contains a collection of security reviews performed
+against open source components. It is intended to be a public resource,
+consumable by anyone under a permissive license, and one that anyone
+can contribute to.
 
+It is **not** intended to be a vulnerability reporting process; if you
+discover a vulnerability in an open source software component, we
+strongly encourage you to disclose it privately to the author.
 
-## 
-**Motivation**
+It is also **not** intended to be a vulnerability disclosure mechanism
+(i.e. it isn't an alternative to a CVE). If you are the author of a
+component, we encourage you to publicly dislcosure, either through the
+[GitHub Security Advisory](https://docs.github.com/en/free-pro-team@latest/github/managing-security-vulnerabilities/about-github-security-advisories)
+process or something similar.
 
-[Background / use cases of the problem to be solved]
+To be clear:
 
+**Please do not disclose "new" vulnerabilities on this repository.**
 
-## 
-**Objective**
+## Motivation
 
-[What is to be achieved with this initiative]
+There are two main motivations that led to this project.
 
-[OKRs - OPTIONAL]
+First, we weren't aware of any public resources that gave positive
+indicators about the security of open source components. If three
+organizations were all using the same component, they would each be
+led to review the component in some way, wasting effort that could
+be better directed at other components.
 
+Second, the safefty of a component is more than just "lack of
+vulnerability". Consider the case of a UUID generator that uses a
+strong cryptographic function and the current time as part of its
+algorithm. It's debatable whether this type of design should
+be considered a vulnerability (as randomness isn't essential when
+generating UUIDs), but in many cases, developers implicitly
+assume that an attacker cannot guess what UUID was or will be
+generated. In this regard, a security review could state that the 
+UUID generator is specifically not resistent to prediction, and
+would be of help to a developer trying to identify the best tool
+for the job.
 
-## 
-**Scope**
+## Objective
 
-[What is in and out of scope]
+The primary objective of this project is to collect and curate
+security reviews performed against open source software components,
+and to make these freely available to stakeholders.
 
+## Scope
 
-## 
-**Prior Work**
+Any sofware component distributed under and open source license.
 
+## Prior Work
 
+There are many tangentially-related projects (the NIST CVE database,
+GitHub Security Advisories, commercial vulnerability databases), but
+to the best of our knowledge, nothing that quite overlaps with the
+purpose of this project.
 
-*   List of prior and/or related projects
+## Get Involved
 
-# 
-**Get Involved**
+### Adding/Updating a Security Review
 
-*   Official communications occur on the [ADD LINK TO YOUR WG MAILING LIST] (ex: https://lists.openssf.org/g/openssf-tac/topics).  \
-[Manage your subscriptions to Open SSF mailing lists](https://lists.openssf.org/g/main/subgroups).
-*   [Add Slack information if availabable]
+- [ ] Review the [review template](template.md) file for information on
+      which sections to include and the type of information required for
+      a review to be accepted.
+- [ ] Conduct the security review.    
+- [ ] Clone this repository and add your security review in the relevant
+      path.
+- [ ] Submit a pull request.
 
-### 
-Quick Start
+### Removing a Security Review
 
-*   Areas that need contributions
-*   Build information if applicable
-*   Where to file issues
-*   Etc.
+If you believe that a security review is inappropriate, either because
+it is giving objectively poor advice, contains an undisclosed security
+vulnerability, or similar, please open an issue.
 
-## 
-**Meeting times**
+We reserve the right to remove (or not remove) any content submitted
+to this repository.
 
-[TODO: Update with your WG meeting details]
-*   Every other Tuesday @ 10:00am PST (Link to calendar invite)
-*   [Meeting Minutes](https://docs.google.com/document/d/1uXQI1vI5_HyOvxHMexrnTY_ruBrynbPl5yOd1UM4g3A/edit#heading=h.yworp6sxzb6g)
+## More Information
 
-# 
-**Governance**
-
-[TODO: Update this link to your specific CHARTER.md file]
-The [CHARTER.md](https://github.com/ossf/project-template/blob/main/CHARTER.md) outlines the scope and governance of our group activities.
-
-
-[OPTIONAL]
-*   Lead name 
-*   Co-Lead name
+For more information on this project and the Open Source Security
+Foundation, please visit https://openssf.org.
