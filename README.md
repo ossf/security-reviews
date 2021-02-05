@@ -80,6 +80,15 @@ vulnerability, or similar, please open an issue.
 We reserve the right to remove (or not remove) any content submitted
 to this repository.
 
+## Licenses
+
+All reviews here are under a permissive license.
+Unless stated otherwise, documentation is released under the
+[Creative Commons Attribution 4.0 (CC-BY-4.0) license](https://creativecommons.org/licenses/by/4.0/legalcode.txt), while code is released under the
+Apache license 2.0 (Apache-2.0).
+The documentation may link to other materials; those other materials retain
+their licenses.
+
 ## More Information
 
 For more information on this project and the Open Source Security
