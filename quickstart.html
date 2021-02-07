@@ -250,6 +250,8 @@
             if ($('#webSearch').is(':checked')) m.push('web-search');
             t += 'methodology-summary: ' + m.join(';') + '\n';
             
+            t += 'opinion: ' + $('#opinion').val() + '\n';
+          
             t += 'package-urls:\n';
             $.each($('#packageURLs').val().split("\n"), (idx, url) => {
                 if (url !== '') {
