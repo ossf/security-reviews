@@ -11,6 +11,7 @@ review-date: 2019-04-08
 scope: implementation/full
 schema-version: 1.0
 severity: not-applicable
+SPDX-License-Identifier: CC-BY-4.0
 -->
 
 ### Summary
@@ -30,6 +31,12 @@ effort to identify already-known security defects.
 ### External References
 
 No external references exist for this review.
+
+### License
+
+This text is released under at least the
+[Creative Commons Attribution 4.0 (CC-BY-4.0) license](https://creativecommons.org/licenses/by/4.0/legalcode.txt).
+External references are under their own licenses, which may be different.
 
 ### Disclaimer
 

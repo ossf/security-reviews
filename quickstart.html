@@ -126,6 +126,14 @@
                                 <option value="not-applicable">Not Applicable</option>
                             </select>
                         </div>
+                        <div class="row">
+                            <h6>SPDX License</h6>
+                            <label for="spdxLicense" class="form-label sr-only">SPDX License</label>
+                            <select class="form-control" id="spdxLicense" required>
+                                <option value="">--Choose--</option>
+                                <option value="CC-BY-4.0" selected>CC-BY-4.0</option>
+                            </select>
+                        </div>                                     
                     </div>
                     <div class="col-7 pl-4">
                         <div class="row">
@@ -263,6 +271,7 @@
             t += 'scope: ' + $('#scope').val() + '\n';
             t += 'schema-version: ' + $('#schemaVersion').val() + '\n';
             t += 'severity: ' + $('#severity').val() + '\n';
+            t += 'SPDX-License-Identifier: ' + $('#spdxLicense').val() + '\n';            
             t += '-->\n\n';
 
             t += '### Summary\n\n';
@@ -281,6 +290,11 @@
             } else {
                 t += 'No external references were provided.\n\n';
             }
+            
+            t += '### License\n\n';
+            t += 'This text is released under at least the\n';
+            t += '[Creative Commons Attribution 4.0 (CC-BY-4.0) license](https://creativecommons.org/licenses/by/4.0/legalcode.txt).\n';
+            t += 'External references are under their own licenses, which may be different.\n\n';
 
             t += '### Disclaimer\n\n';
             t += 'All security reviews are conducted on a "best-effort" basis against a software\n';

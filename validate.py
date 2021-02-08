@@ -72,7 +72,7 @@ class SecurityReviewValidator:
         sections = list(map(str.strip, filter(lambda s: s.startswith('### '), lines)))
 
         for header in ['Summary', 'Details',
-                       'External References', 'Methodology', 'Disclaimer']:
+                       'External References', 'Methodology', 'License', 'Disclaimer']:
             if f'### {header}' not in sections:
                 self.results.append(f'Missing header: {header}')
 
@@ -157,6 +157,10 @@ class SecurityReviewValidator:
             self.results.append(f"Opinion is {opinion} but severity is {severity}.")
         if opinion == 'insecure' and severity in ['informational']:
             self.results.append(f"Opinion is {opinion} but severity is {severity}.")
+        
+        spdx = metadata.get("SPDX-License-Identifier")
+        if not spdx or spdx not in ["CC-BY-4.0"]:
+            self.results.append(f"SPDX-License-Identifier is not CC-BY-4.0")
 
 if __name__ == '__main__':
     validator = SecurityReviewValidator()
