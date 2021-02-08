@@ -50,7 +50,7 @@ and to make these freely available to stakeholders.
 ## Scope
 
 The scope of this project includes any software that is distributed
-under and [open source](https://opensource.org/licenses) license.
+under an [open source](https://opensource.org/licenses) license.
 
 ## Prior Work
 
