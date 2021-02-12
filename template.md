@@ -1,19 +1,41 @@
-<!--
-publication-state: [draft | published]
-access: [public | private/<ORG>]
-author: [name <email>]
-domain: [security]
-methodology-summary: [any of static-analysis;code-review;web-search]
-opinion: [secure | insecure | partially-secure]
-package-urls:
-- "<PACKAGE URL>"
-- "<PACKAGE URL>"
-review-date: <YYYY-MM-DD>
-scope: [implementation/full | implementation/partial | non-implementation]
-schema-version: 1.0
-severity: [critical | important | moderate | low | defense-in-depth | informational | not-applicable]
-SPDX-License-Identifier: CC-BY-4.0
--->
+## Front Metadata
+
+```
+{
+	"Publication-State": "active",
+	"Reviewers": [
+		{
+			"Name": "Michael Scovetta" (Optional, Pseudonym/Handle OK)
+			"Email": "michael.scovetta@microsoft.com", (Optional)
+			"Organization": "Microsoft", (Optional)
+			"Associated-With-Project": [true | false],
+			"Compensation-Source": ["project" | "non-project" | "external" | "undisclosed" | "none"]
+		}
+	],
+	"Domain": "Security",
+	"Methodology": [  (Choose all that apply))
+		"Static-Analysis",
+		"Code-Review",
+		"Threat-Model",
+		"Web-Search",
+		"Fuzzing"
+		"External-Review"
+	],
+	"Issues-Identified": [ (Choose one)
+		"Severe",
+		"Non-Severe",
+		"None",
+		"Not-Examined"
+	]
+	"Package-URLs": [ (Multiple OK, but no wildcards)
+		"<PACKAGE URL>"
+	],
+	"Date-Reviewed": "<YYYY-MM-DD>",
+	"Scope": "[Implementation/Full | Implementation/Partial | Non-Implementation]" (Choose one)
+	"Schema-Version": "1.0",
+	"SPDX-License-Identifier": "CC-BY-4.0"
+}
+```
 
 ### Summary
 
@@ -28,13 +50,15 @@ SPDX-License-Identifier: CC-BY-4.0
 <!-- [Optional]
 	Use this section to describe any findings and to provide
 	additional information. It can be as long as you'd like.
+	If a threat model or assumed context is relevant, feel free
+	to include it here.
 -->
 
 ### Methodology
 
 <!-- [Required]
 	This section describes what was actually done when performing
-	the methodology.
+	the review.
 -->
 
 ### External References
@@ -45,18 +69,15 @@ SPDX-License-Identifier: CC-BY-4.0
 	can also reference external URLs for any other purpose.
 -->
 
+### Disclaimer
+
+All security reviews are conducted on a "best-effort" basis against a software
+component at a point in time. We make no guarantee as to the quality or completeness
+of any review. If you believe any content is inaccurate, we encourage you to open
+an issue or submit a pull request with a correction or improvement.
+
 ### License
 
 This text is released under at least the
 [Creative Commons Attribution 4.0 (CC-BY-4.0) license](https://creativecommons.org/licenses/by/4.0/legalcode.txt).
-External references are under their own licenses, which may be different.
-
-### Disclaimer
-
-<!-- [Required]
-	The default text is:
-All security reviews are conducted on a "best-effort" basis against a software
-component at a point in time. We make no guarantees that any review will be accurate
-or complete. If you dispute any content within a review, feel free to open an issue
-or submit a pull request with a correction or improvement.
--->
+Externally-referenced content may be licensed differently.

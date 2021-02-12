@@ -7,37 +7,40 @@ can contribute to.
 
 It is **not** intended to be a vulnerability reporting process; if you
 discover a vulnerability in an open source software component, we
-strongly encourage you to disclose it privately to the author.
+strongly encourage you to disclose it privately to the author so as
+to protect the community.
 
-It is also **not** intended to be a vulnerability disclosure mechanism
+It is **not** intended to be a vulnerability disclosure mechanism
 (i.e. it isn't an alternative to a CVE). If you are the author of a
-component, we encourage you to publicly dislcosure, either through the
+component, we encourage you to publicly disclose the vulnerability,
+either through the
 [GitHub Security Advisory](https://docs.github.com/en/free-pro-team@latest/github/managing-security-vulnerabilities/about-github-security-advisories)
-process or something similar.
+process, requesting a formal CVE yourself, or another appropriate
+mechanism.
 
 To be clear:
 
-**Please do not disclose "new" vulnerabilities on this repository.**
+**Do not disclose "new" or "unknown" vulnerabilities to this project or to this repository.**
 
 ## Motivation
 
 There are two main motivations that led to this project.
 
-First, we weren't aware of any public resources that gave positive
-indicators about the security of open source components. If three
-organizations were all using the same component, they would each be
-led to review the component in some way, wasting effort that could
+First, we weren't aware of any public resources that gave **positive indicators**
+about the security quality of open source components. If three
+organizations were all using the same component, they would consider
+reviewing the component in some way, wasting effort that could
 be better directed at other components.
 
-Second, the safefty of a component is more than just "lack of
-vulnerability". Consider the case of a UUID generator that uses a
+Second, the safety of a component is more than a simple "lack of
+vulnerabilities". Consider the case of a GUID generator that uses a
 strong cryptographic function and the current time as part of its
 algorithm. It's debatable whether this type of design should
 be considered a vulnerability (as randomness isn't essential when
-generating UUIDs), but in many cases, developers implicitly
-assume that an attacker cannot guess what UUID was or will be
-generated. In this regard, a security review could state that the 
-UUID generator is specifically not resistent to prediction, and
+generating GUIDs), but in many cases, developers implicitly
+assume that an attacker cannot guess what GUID will be generated.
+In this regard, a security review could state that the 
+GUID generator is specifically not resistent to prediction, and
 would be of help to a developer trying to identify the best tool
 for the job.
 
@@ -55,28 +58,42 @@ under an [open source](https://opensource.org/licenses) license.
 ## Prior Work
 
 There are many tangentially-related projects (the NIST CVE database,
-GitHub Security Advisories, commercial vulnerability databases), but
-to the best of our knowledge, nothing that quite overlaps with the
-purpose of this project.
+GitHub Security Advisories, commercial vulnerability databases), and
+many security researchers make available their own security assessments,
+but to the best of our knowledge, this project is somewhat unique
+in its purpose and approach.
 
 ## Get Involved
 
 ### Adding/Updating a Security Review
 
+- [ ] Watch the [video introduction](#) to the project for more information
+      and to learn more about what is expected in a security review.
 - [ ] Review the [review template](template.md) file for information on
-      which sections to include and the type of information required for
-      a review to be accepted. Or use the [QuickStart](quickstart.html)
-      page to generate the markdown file using an HTML form.
-- [ ] Conduct the security review.    
-- [ ] Clone this repository and add your security review in the relevant
-      path.
+      which sections can (and must) be included and suggestions for the
+      level of detail expected. You can also use the [QuickStart](quickstart.html)
+      page to generate a markdown file using a simple HTML form.
+- [ ] Choose an open source component and conduct the security review.
+- [ ] Clone this repository and add your security review to the relevant path.
 - [ ] Submit a pull request.
+
+### Naming a Security Review
+
+The name of a security review should be readable, using hyphen-separated lowercase
+letters, and should be placed in the most relevant path. For example, a security
+review of Zlib could be placed in the `github/madler/zlib` path, and a review of
+Django could be placed in the `pypi/django` path.
+
+If a review reflects multiple projects across different package managers (e.g.
+Django exists on both GitHub and PyPI), please file the project in location
+users are most likely to look for it (in this case, PyPI). If you get stuck,
+feel free to ask in an Issue or Pull Request.
 
 ### Removing a Security Review
 
 If you believe that a security review is inappropriate, either because
 it is giving objectively poor advice, contains an undisclosed security
-vulnerability, or similar, please open an issue.
+vulnerability, or similar, please open an Issue or contact [TBD](#).
 
 We reserve the right to remove (or not remove) any content submitted
 to this repository.
