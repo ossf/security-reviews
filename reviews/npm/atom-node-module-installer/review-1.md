@@ -24,9 +24,9 @@ This package installs node modules over an insecure protocol (HTTP) and is thus 
 
 ### Methodology
 
-• Static Analysis - CodeQL
-    • Converted CoffeScript to JavaScript using decaffeinate, an npm package
-    • Ran all security queries on package
+• Static Analysis - CodeQL  
+> • Converted CoffeScript to JavaScript using decaffeinate, an npm package  
+> • Ran all security queries on package  
 • Additional Research
 
 ### External References
