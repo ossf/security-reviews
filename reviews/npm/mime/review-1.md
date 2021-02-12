@@ -20,7 +20,7 @@ Older versions of this package are susceptible to a low severity vulnerability.
 
 ### Details
 
-Versions before 1.4.1, as well as versions 2.0.1 and 2.0.2 of this package are susceptible to a Regular Expression Denial of Service attack, that can allow an attacker to slow down the user's system. It is recommended to upgrade to a more recent version of this package where the vulnerability is patched.
+Versions before 1.4.1, as well as versions 2.0.1 and 2.0.2 of this package are susceptible to a Regular Expression Denial of Service attack that can allow an attacker to slow down the user's system. It is recommended to upgrade to a more recent version of this package where the vulnerability is patched.
 
 ### Methodology
 
@@ -30,7 +30,7 @@ Versions before 1.4.1, as well as versions 2.0.1 and 2.0.2 of this package are s
 ### External References
 
 1. https://snyk.io/test/npm/mime/1.3.6
-2. https://www.cvedetails.com/vulnerability-list/vendor_id-20879/Mime-Project.html
+2. https://www.cvedetails.com/vulnerability-list/vendor\_id-20879/Mime-Project.html
 3. https://cve.mitre.org/cgi-bin/cvekey.cgi?keyword=mime
 
 ### License
