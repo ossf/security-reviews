@@ -1,40 +1,28 @@
 ## Front Metadata
 
+This content must appear at the top of the review file. This is YAML.
 ```
-{
-	"Publication-State": "active",
-	"Reviewers": [
-		{
-			"Name": "Michael Scovetta" (Optional, Pseudonym/Handle OK)
-			"Email": "michael.scovetta@microsoft.com", (Optional)
-			"Organization": "Microsoft", (Optional)
-			"Associated-With-Project": [true | false],
-			"Compensation-Source": ["project" | "non-project" | "external" | "undisclosed" | "none"]
-		}
-	],
-	"Domain": "Security",
-	"Methodology": [  (Choose all that apply))
-		"Static-Analysis",
-		"Code-Review",
-		"Threat-Model",
-		"Web-Search",
-		"Fuzzing"
-		"External-Review"
-	],
-	"Issues-Identified": [ (Choose one)
-		"Severe",
-		"Non-Severe",
-		"None",
-		"Not-Examined"
-	]
-	"Package-URLs": [ (Multiple OK, but no wildcards)
-		"<PACKAGE URL>"
-	],
-	"Date-Reviewed": "<YYYY-MM-DD>",
-	"Scope": "[Implementation/Full | Implementation/Partial | Non-Implementation]" (Choose one)
-	"Schema-Version": "1.0",
-	"SPDX-License-Identifier": "CC-BY-4.0"
-}
+---
+Publication-State: ["Ative"]
+Reviewers:
+- Name: <Name>
+  Email: <E-Mail>
+  Organization: <Organization>
+  Associated-With-Project: true
+  Compensation-Source: [ "Project" | "Non-Project" | "External" | "Undisclosed" | "None" ]
+Domain: Security
+Methodology:
+- Static-Analysis
+- Code-Review
+- Web-Search
+Issues-Identified: [ "Severe" | "Non-Severe" | "Not Examined" | "None" ]
+Package-URLs:
+- <Package URL>
+Date-Reviewed: 'YYYY-MM-DD'
+Scope: [ "Implementation/Full" | "Implementation/Partial" | "Non-Implementation" ]
+Schema-Version: '1.0'
+SPDX-License-Identifier: CC-BY-4.0
+---
 ```
 
 ### Summary
