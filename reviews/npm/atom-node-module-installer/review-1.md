@@ -16,9 +16,7 @@ SPDX-License-Identifier: CC-BY-4.0
 
 ### Summary
 
-Known critical vulnerability, no tests exist in project, package has not been updated since 2014.  
-  
-Do not use this package if possible, as there is no existing patch. If necessary, ensure you are on a private, trusted network during installation.
+Known critical vulnerability. Do not use this package if possible, as there is no existing patch. If necessary, ensure you are on a private, trusted network during installation.
 
 ### Details
 
