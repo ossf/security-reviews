@@ -1,18 +1,22 @@
-<!--
-publication-state: published
-access: public
-author: Dilan Bhalla
-domain: security
-methodology-summary: static-analysis;web-search
-opinion: secure
-package-urls:
-- "pkg:npm/mime@1.3.6"
-review-date: 2021-02-12
-scope: implementation/full
-schema-version: 1.0
-severity: low
+---
+Publication-State: Draft
+Access: Public
+Reviewers:
+- Name: Dilan Bhalla
+  Associated-With-Project: false
+  Compensation-Source: none
+Domain: Security
+Methodology:
+- Static-Analysis
+- Web-Search
+Issues-Identified: Non-Severe
+Package-URLs:
+- pkg:npm/mime@1.3.6
+Review-Date: 2021-02-12
+Scope: Implementation/Full
+Schema-Version: 1.0
 SPDX-License-Identifier: CC-BY-4.0
--->
+---
 
 ### Summary
 
