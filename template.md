@@ -15,7 +15,7 @@ Methodology:
 - Static-Analysis
 - Code-Review
 - Web-Search
-Issues-Identified: [ "Severe" | "Non-Severe" | "Not Examined" | "None" ]
+Issues-Identified: [ "Severe" | "Non-Severe" | "Not-Examined" | "None" ]
 Package-URLs:
 - <Package URL>
 Date-Reviewed: 'YYYY-MM-DD'

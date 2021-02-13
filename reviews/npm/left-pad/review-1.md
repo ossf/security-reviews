@@ -7,7 +7,7 @@ Reviewers:
   Organization: Microsoft
   Associated-With-Project: false
   Compensation-Source: none
-Domain: security
+Domain: Security
 Methodology:
 - Static-Analysis
 - Web-Search
