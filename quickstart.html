@@ -31,8 +31,9 @@
                             <label for="publicationState" class="form-label sr-only">Publication State</label>
                             <select class="form-control" id="publicationState" required>
                                 <option value="">--Choose--</option>
-                                <option value="draft">Draft</option>
-                                <option value="published" selected>Published</option>
+                                <option value="Draft">Draft</option>
+                                <option value="Active" selected>Active</option>
+                                <option value="Removed">Removed</option>
                             </select>
                         </div>
                         <div class="row">
@@ -40,48 +41,101 @@
                             <label for="access" class="form-label sr-only">Access</label>
                             <select class="form-control" id="access" required>
                                 <option value="">--Choose--</option>
-                                <option value="private/$ORG">private/$ORG</option>
-                                <option value="public" selected>public</option>
+                                <option value="Private/$ORG">private/$ORG</option>
+                                <option value="Public" selected>public</option>
                             </select>
                         </div>
                         <div class="row">
-                            <h6>Author</h6>
-                            <label for="author" class="form-label sr-only">Author / e-mail</label>
-                            <input type="text" class="form-control" id="author" required value=""/>
+                            <h6>Reviewer (Optional)</h6>
+                        </div>
+                        <div class="row">
+                            <div class="col-4">
+                                <input type="text" class="form-control" placeholder="Name (optional)" id="reviewer0Name" />
+                            </div>
+                            <div class="col-4">
+                                <input type="text" class="form-control" placeholder="E-Mail (optional)" id="reviewer0Email" />
+                            </div>
+                            <div class="col-4">
+                                <input type="text" class="form-control" placeholder="Organization (optional)" id="reviewer0Organization" />
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-6">
+                                <h6>Reviewer Association</h6>
+                                <label for="domain" class="form-label sr-only">Associated with Project?</label>
+                                <select class="form-control" id="reviewer0AssociatedWithProject">
+                                    <option value="">--Choose--</option>
+                                    <option value="true">true</option>
+                                    <option value="false">false</option>
+                                </select>
+                            </div>
+                            <div class="col-6">
+                                <h6>Compensation Source</h6>
+                                <label for="domain" class="form-label sr-only">Compensation Source</label>
+                                <select class="form-control" id="reviewer0CompensationSource">
+                                    <option value="">--Choose--</option>
+                                    <option value="project">Project</option>
+                                    <option value="non-project">Non-Project</option>
+                                    <option value="external">External</option>
+                                    <option value="undisclosed">Undisclosed</option>
+                                    <option value="none">None</option>
+                                </select>
+                            </div>
                         </div>
                         <div class="row">
                             <h6>Domain</h6>
                             <label for="domain" class="form-label sr-only">Domain</label>
                             <select class="form-control" id="domain" required>
                                 <option value="">--Choose--</option>
-                                <option value="security" selected>security</option>
+                                <option value="Security" selected>Security</option>
                             </select>
                         </div>                        
                         <div class="row">
                             <h6>Methodology</h6>
-                            <div class="form-group w-100">
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="static-analysis" id="staticAnalysis" checked>
-                                    <label class="form-check-label" for="staticAnalysis">Static Analysis</label>
-                                </div>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="dynamic-analysis" id="dynamicAnalysis" checked>
-                                    <label class="form-check-label" for="dynamicAnalysis">Dynamic Analysis</label>
-                                </div>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="web-search" id="webSearch" checked>
-                                    <label class="form-check-label" for="webSearch">Web Search</label>
-                                </div>
-                            </div>
                         </div>
                         <div class="row">
-                            <h6>Opinion</h6>
-                            <label for="opinion" class="form-label sr-only">Opinion</label>
-                            <select class="form-control" id="opinion" required>
+                            <div class="col-6">
+                                <div class="form-group w-100">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="static-analysis" id="staticAnalysis">
+                                        <label class="form-check-label" for="staticAnalysis">Static Analysis</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="dynamic-analysis" id="dynamicAnalysis">
+                                        <label class="form-check-label" for="dynamicAnalysis">Dynamic Analysis</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="code-review" id="codeReview">
+                                        <label class="form-check-label" for="codeReview">Code Review</label>
+                                    </div>                                
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="form-group w-100">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="web-search" id="webSearch">
+                                        <label class="form-check-label" for="webSearch">Web Search</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="fuzzing" id="fuzzing">
+                                        <label class="form-check-label" for="fuzzing">Fuzzing</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="external-review" id="externalReview">
+                                        <label class="form-check-label" for="externalReview">External Review</label>
+                                    </div>
+                                </div>
+                            </div>                            
+                        </div>
+                        <div class="row">
+                            <h6>Issues Identified</h6>
+                            <label for="issuesIdentified" class="form-label sr-only">Issues Identified</label>
+                            <select class="form-control" id="issuesIdentified" required>
                                 <option value="">--Choose--</option>
-                                <option value="secure" selected>Secure</option>
-                                <option value="insecure">Insecure</option>
-                                <option value="partially-secure">Partially Secure</option>
+                                <option value="Severe">Severe</option>
+                                <option value="Non-Severe">Non-Severe</option>
+                                <option value="None">None</option>
+                                <option value="Not-Examined">Not Examined</option>
                             </select>
                         </div>                        
                         <div class="row">
@@ -99,9 +153,9 @@
                             <label for="scope" class="form-label sr-only">Scope</label>
                             <select class="form-control" id="scope" required>
                                 <option value="">--Choose--</option>
-                                <option value="implementation/full" selected>Implementation (Full)</option>
-                                <option value="implementation/partial">Implementation (Partial)</option>
-                                <option value="non-implementation">Non-Implementation</option>
+                                <option value="Implementation/Full" selected>Implementation (Full)</option>
+                                <option value="Implementation/Partial">Implementation (Partial)</option>
+                                <option value="Non-Implementation">Non-Implementation</option>
                             </select>
                         </div>                        
                         <div class="row">
@@ -113,27 +167,24 @@
                             </select>
                         </div>                        
                         <div class="row">
-                            <h6>Severity</h6>
-                            <label for="severity" class="form-label sr-only">Severity</label>
-                            <select class="form-control" id="severity" required>
-                                <option value="">--Choose--</option>
-                                <option value="critical">Critical</option>
-                                <option value="important">Important</option>
-                                <option value="moderate">Moderate</option>
-                                <option value="low">Low</option>
-                                <option value="defense-in-depth">Defense in Depth</option>
-                                <option value="informational">Informational</option>
-                                <option value="not-applicable">Not Applicable</option>
-                            </select>
-                        </div>
-                        <div class="row">
                             <h6>SPDX License</h6>
                             <label for="spdxLicense" class="form-label sr-only">SPDX License</label>
                             <select class="form-control" id="spdxLicense" required>
                                 <option value="">--Choose--</option>
                                 <option value="CC-BY-4.0" selected>CC-BY-4.0</option>
                             </select>
-                        </div>                                     
+                        </div>              
+                        <div class="row">
+                            <h6>Disclosure</h6>
+                            <div class="form-group w-100">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="agreeDisclosure" id="disclosure" required>
+                                    <label class="form-check-label" for="disclosure">
+                                        I agree that this review does not contain any significant, undisclosed, or
+                                        unpatched security vulnerabilities.</label>
+                                </div>
+                            </div>
+                        </div>                                                      
                     </div>
                     <div class="col-7 pl-4">
                         <div class="row">
@@ -159,19 +210,19 @@
                         </div>                    
                         <div class="row">
                             <div class="col-12">
-                                <h6>Methodology</h6>
+                                <h6>Methodology (Optional)</h6>
                                 <div class="form-group">
                                     <label for="details" class="sr-only">Methodology</label>
-                                    <textarea class="form-control" id="methodology" rows="4" placeholder="Methodology of the review (Optional)"></textarea>
+                                    <textarea class="form-control" id="methodology" rows="4" placeholder="Methodology of the review"></textarea>
                                 </div>
                             </div>                                                
                         </div>     
                         <div class="row">
                             <div class="col-12">
-                                <h6>External References</h6>
+                                <h6>External References (Optional)</h6>
                                 <div class="form-group">
                                     <label for="externalReferences" class="sr-only">External References</label>
-                                    <textarea class="form-control" id="externalReferences" rows="5" placeholder="External References (Optional)"></textarea>
+                                    <textarea class="form-control" id="externalReferences" rows="5" placeholder="External References"></textarea>
                                 </div>
                             </div>                                                
                         </div>       
@@ -184,11 +235,14 @@
                             <div class="col-12">
                                 <h6>Instructions</h6>
                                 <p>
-                                    Once you have the markdown completed, add it to the
-                                    <a href="https://github.com/ossf/Project-Security-Reviews">Project-Security-Reviews</a>
-                                    GitHub repository in the "reviews" folder.
+                                    Once you have the markdown completed, create a Pull Request to add your content to 
+                                    <a href="https://github.com/ossf/security-reviews">github.com/ossf/security-reviews</a>
+                                    in the "reviews" folder.
                                 </p>
-                                <p>Submit a pull request with your change.</p>
+                                <p>
+                                    If you have feedback on this form or project, please open an
+                                    <a href="https://github.com/ossf/security-reviews/issues">Issue</a>.
+                                </p>
                             </div>                                                
                         </div>                                                          
                     </div>
@@ -246,33 +300,40 @@
             e.preventDefault();
 
             var t = '';
-            t += '<!--\n'
-            t += 'publication-state: ' + $('#publicationState').val() + '\n';
-            t += 'access: ' + $('#access').val() + '\n';
-            t += 'author: ' + $('#author').val() + '\n';
-            t += 'domain: ' + $('#domain').val() + '\n';
+            t += '---\n'
+            t += 'Publication-State: ' + $('#publicationState').val() + '\n';
+            t += 'Access: ' + $('#access').val() + '\n';
+            t += 'Reviewers:\n';
+            if ($('#reviewer0Name').val()) t += '- Name: ' + $('#reviewer0Name').val() + '\n';
+            if ($('#reviewer0Email').val()) t += '  Email: ' + $('#reviewer0Email').val() + '\n';
+            if ($('#reviewer0Organization').val()) t += '  Organization: ' + $('#reviewer0Organization').val() + '\n';
+            if ($('#reviewer0AssociatedWithProject').val()) t += '  Associated-With-Project: ' + $('#reviewer0AssociatedWithProject').val() + '\n';
+            if ($('#reviewer0CompensationSource').val()) t += '  Compensation-Source: ' + $('#reviewer0CompensationSource').val() + '\n';
             
-            var m = [];
-            if ($('#staticAnalysis').is(':checked')) m.push('static-analysis');
-            if ($('#dynamicAnalysis').is(':checked')) m.push('dynamic-analysis');
-            if ($('#webSearch').is(':checked')) m.push('web-search');
-            t += 'methodology-summary: ' + m.join(';') + '\n';
+            t += 'Domain: ' + $('#domain').val() + '\n';
             
-            t += 'opinion: ' + $('#opinion').val() + '\n';
-          
-            t += 'package-urls:\n';
+            t += 'Methodology:\n';
+            if ($('#staticAnalysis').is(':checked')) t += '- Static-Analysis\n';
+            if ($('#dynamicAnalysis').is(':checked')) t += '- Dynamic-Analysis\n';
+            if ($('#webSearch').is(':checked')) t += '- Web-Search\n';
+            if ($('#codeReview').is(':checked')) t += '- Code-Review\n';
+            if ($('#externalReview').is(':checked')) t += '- External\n';
+            if ($('#fuzzing').is(':checked')) t += '- Fuzzing\n';
+
+            t += 'Issues-Identified: ' + $('#issuesIdentified').val() + '\n';
+
+            t += 'Package-URLs:\n';
             $.each($('#packageURLs').val().split("\n"), (idx, url) => {
                 if (url !== '') {
-                    t += '- "' + url + '"\n';
+                    t += '- ' + url.trim() + '\n';
                 }
             });
 
-            t += 'review-date: ' + $('#reviewDate').val() + '\n';
-            t += 'scope: ' + $('#scope').val() + '\n';
-            t += 'schema-version: ' + $('#schemaVersion').val() + '\n';
-            t += 'severity: ' + $('#severity').val() + '\n';
+            t += 'Review-Date: ' + $('#reviewDate').val() + '\n';
+            t += 'Scope: ' + $('#scope').val() + '\n';
+            t += 'Schema-Version: ' + $('#schemaVersion').val() + '\n';
             t += 'SPDX-License-Identifier: ' + $('#spdxLicense').val() + '\n';            
-            t += '-->\n\n';
+            t += '---\n\n';
 
             t += '### Summary\n\n';
             t += $('#summary').val().trim() + '\n\n';
@@ -291,16 +352,16 @@
                 t += 'No external references were provided.\n\n';
             }
             
+            t += '### Disclaimer\n\n';
+            t += 'All security reviews are conducted on a "best-effort" basis against a software\n';
+            t += 'component at a point in time. We make no guarantee as to the quality or completeness\n';
+            t += 'of any review. If you believe any content is inaccurate, we encourage you to open\n';
+            t += 'an issue or submit a pull request with a correction or improvement.\n\n';
+
             t += '### License\n\n';
             t += 'This text is released under at least the\n';
             t += '[Creative Commons Attribution 4.0 (CC-BY-4.0) license](https://creativecommons.org/licenses/by/4.0/legalcode.txt).\n';
-            t += 'External references are under their own licenses, which may be different.\n\n';
-
-            t += '### Disclaimer\n\n';
-            t += 'All security reviews are conducted on a "best-effort" basis against a software\n';
-            t += 'component at a point in time. We make no guarantees that any review will be accurate\n';
-            t += 'or complete. If you dispute any content within a review, feel free to open an issue\n';
-            t += 'or submit a pull request with a correction or improvement.\n';
+            t += 'Externally-referenced content may be licensed differently.\n';
 
             $('#markdown').val(t);
             $('.modal').modal();

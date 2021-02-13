@@ -23,7 +23,7 @@ class SecurityReviewValidator:
         for root, _, files in os.walk(path, topdown=False):
             for name in files:
                 filename  = os.path.join(root, name)
-                if'reviews/README.md' in filename:
+                if 'reviews/README.md' in filename:
                     continue   # Ignore this one
                 (_results, _warn_results) = self.validate_file(filename)
                 for result in _results:
@@ -78,85 +78,82 @@ class SecurityReviewValidator:
 
     def __check_metadata(self, lines):
         metadata_content = []
-        in_metadata = False
-
+        section = 0
         for line in lines:
             lstrip = line.strip()
-            if lstrip == '<!--':
-                in_metadata = True
-            elif lstrip == '-->':
-                in_metadata = False
+            if section == 0 and lstrip == '---':
+                section = 1
+            elif section == 1 and lstrip == '---':
                 break
-            elif in_metadata:
+            elif section == 1:
                 metadata_content.append(line)
+        
         metadata = yaml.safe_load('\n'.join(metadata_content))
 
-        if 'package-urls' not in metadata or not len(metadata['package-urls']):
+        if 'Package-URLs' not in metadata or not len(metadata['Package-URLs']):
             self.results.append("Missing Package URL.")
 
-        access = metadata.get('access')
+        access = metadata.get('Access')
         if not access:
             self.results.append("Missing access.")
-        if access != 'public' and not access.startswith("private/"):
-            self.results.append("Invalid access, must be either 'public' or 'private/<name>'")
+        if access != 'Public' and not access.startswith("Private/"):
+            self.results.append("Invalid access, must be either 'Public' or 'Private/<name>'")
 
-        if 'author' not in metadata:
-            self.results.append("Missing author.")
+        # For GitHub
+        if access.startswith("Private/"):
+            self.results.append("Invalid access, all reviews must be Public.")
+
+        for reviewer in metadata.get('Reviewers'):
+            for key, value in reviewer.items():
+                if key not in ['Name', 'Email', 'Organization', 'Associated-With-Project', 'Compensation-Source']:
+                    self.results.append(f"Unexpected reviewer property ({key}).")
+                #if not isinstance(value, str):
+                #    self.results.append(f"Unexpected reviewer value ({value}), string expected.")
         
-        if 'domain' not in metadata:
+        if 'Domain' not in metadata:
             self.results.append("Missing domain.")
+        if metadata['Domain'] != 'Security':
+            self.results.append("Invalid domain.")
         
-        methodology_summary = metadata.get('methodology-summary')
-        if not methodology_summary:
-            self.results.append("Missing methodology-summary.")
-        methodology_parts = methodology_summary.split(';')
-        for part in methodology_parts:
-            if part not in ['static-analysis', 'dynamic-analysis', 'fuzzing', 'code-review', 'web-search', 'project-health']:
-                self.result.append("Invalid methodology summary, must be one or more (semicolon-separated) of 'static-analysis', 'dynamic-analysis', 'fuzzing', 'code-review', 'web-search', or 'project-health'.")
+        methodology_parts = metadata.get('Methodology')
+        if not methodology_parts or not isinstance(methodology_parts, list):
+            self.results.append("Missing Methodology.")
+        else:
+            for methodology_part in methodology_parts:
+                if methodology_part not in ['Static-Analysis', 'Dynamic-Analysis', 'Fuzzing', 'Code-Review', 'Web-Search', 'External-Review']:
+                    self.results.append("Invalid methodology element.")
 
-        review_date = metadata.get('review-date')
+        review_date = metadata.get('Review-Date')
         if not review_date:
             self.results.append("Missing review date.")
         if not isinstance(review_date, datetime.date):
             self.results.append("Invalid review date.")
+        if isinstance(review_date, datetime.date) and review_date > datetime.date.today():
+            self.results.append("Invalid review date (in the future).")
 
-        if 'opinion' not in metadata:
-            self.results.append("Missing opinion.")
-        
-        publication_state = metadata.get('publication-state')
+        publication_state = metadata.get('Publication-State')
         if not publication_state:
-            self.results.append("Missing publication-state.")
-        if publication_state not in ['draft', 'published', 'revoked']:
-            self.results.append("Invalid publication-state, must be either 'draft', 'published', or 'revoked'.")
+            self.results.append("Missing Publication-State.")
+        if publication_state not in ['Draft', 'Active', 'Removed']:
+            self.results.append("Invalid Publication-State.")
 
-        opinion = metadata.get('opinion')
-        if not opinion:
-            self.results.append("Missing opinion.")
-        if opinion not in ['secure', 'insecure', 'partially-secure', 'no-opinion']:
-            self.results.append("Invalid opinion, must be either 'secure', 'insecure', 'partially-secure', or 'no-opinion'.")
+        issues = metadata.get('Issues-Identified')
+        if not issues:
+            self.results.append("Missing Issues-Identified.")
+        if issues not in ['Severe', 'Non-Severe', 'None', 'Not-Examined']:
+            self.results.append("Invalid Issues-Identified value.")
 
-        scope = metadata.get('scope')
+        scope = metadata.get('Scope')
         if not scope:
-            self.results.append("Missing scope.")
-        if scope not in ['implementation/full', 'implementation/partial', 'non-implementation']:
-            self.results.append("Invalid scope, must be either 'implementation/full', 'implementation/partial', or 'non-implementation'.")
+            self.results.append("Missing Scope.")
+        if scope not in ['Implementation/Full', 'Implementation/Partial', 'Non-Implementation']:
+            self.results.append("Invalid scope.")
 
-        schema_version = metadata.get('schema-version')
+        schema_version = metadata.get('Schema-Version')
         if not schema_version:
-            self.results.append("Missing schema-version.")
+            self.results.append("Missing Schema-Version.")
         if str(schema_version) != "1.0":
-            self.results.append("Invalid schema version.")
-        
-        severity = metadata.get('severity')
-        if not severity:
-            self.results.append("Missing severity.")
-        if severity not in ['critical', 'important', 'moderate', 'low', 'defense-in-depth', 'not-applicable', 'informational']:
-            self.results.append("Invalid severity, must be either 'critical', 'important', 'moderate', 'low', 'defense-in-depth', 'not-applicable', or 'informational'.")
-        
-        if opinion == 'secure' and severity in ['critical', 'important', 'moderate']:
-            self.results.append(f"Opinion is {opinion} but severity is {severity}.")
-        if opinion == 'insecure' and severity in ['informational']:
-            self.results.append(f"Opinion is {opinion} but severity is {severity}.")
+            self.results.append("Invalid Schema-Version.")
         
         spdx = metadata.get("SPDX-License-Identifier")
         if not spdx or spdx not in ["CC-BY-4.0"]:
