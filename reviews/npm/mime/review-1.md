@@ -11,7 +11,29 @@ Methodology:
 - Web-Search
 Issues-Identified: Non-Severe
 Package-URLs:
+- pkg:npm/mime@1.0.0
+- pkg:npm/mime@1.1.0
+- pkg:npm/mime@1.2.1
+- pkg:npm/mime@1.2.10
+- pkg:npm/mime@1.2.11
+- pkg:npm/mime@1.2.2
+- pkg:npm/mime@1.2.3
+- pkg:npm/mime@1.2.4
+- pkg:npm/mime@1.2.5
+- pkg:npm/mime@1.2.6
+- pkg:npm/mime@1.2.7
+- pkg:npm/mime@1.2.8
+- pkg:npm/mime@1.2.9
+- pkg:npm/mime@1.3.0
+- pkg:npm/mime@1.3.1
+- pkg:npm/mime@1.3.2
+- pkg:npm/mime@1.3.3
+- pkg:npm/mime@1.3.4
+- pkg:npm/mime@1.3.5
 - pkg:npm/mime@1.3.6
+- pkg:npm/mime@1.4.0
+- pkg:npm/mime@2.0.1
+- pkg:npm/mime@2.0.2
 Review-Date: 2021-02-12
 Scope: Implementation/Full
 Schema-Version: 1.0
@@ -36,6 +58,8 @@ Versions before 1.4.1, as well as versions 2.0.1 and 2.0.2 of this package are s
 1. https://snyk.io/test/npm/mime/1.3.6
 2. https://www.cvedetails.com/vulnerability-list/vendor\_id-20879/Mime-Project.html
 3. https://cve.mitre.org/cgi-bin/cvekey.cgi?keyword=mime
+4. https://www.npmjs.com/advisories/535
+5. https://www.npmjs.com/advisories/535/versions
 
 ### License
 
