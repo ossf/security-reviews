@@ -22,7 +22,7 @@ SPDX-License-Identifier: CC-BY-4.0
 
 ### Summary
 
-Five security issues were identified (one medium-risk, four low-risk), all related to undefined behavior. All but one (low risk) issue was fixed before the report was published in September 2016.
+Five security issues were identified (one medium-risk, four low-risk), all related to undefined behavior. All but one (low risk) issue was fixed before the report was published in September 2016. Users are encouraged to update to the latest stable version (1.2.11 at the time of this writing).
 
 ### Details
 
