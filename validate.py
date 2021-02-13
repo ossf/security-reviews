@@ -121,7 +121,7 @@ class SecurityReviewValidator:
         else:
             for methodology_part in methodology_parts:
                 if methodology_part not in ['Static-Analysis', 'Dynamic-Analysis', 'Fuzzing', 'Code-Review', 'Web-Search', 'External-Review']:
-                    self.result.append("Invalid methodology element.")
+                    self.results.append("Invalid methodology element.")
 
         review_date = metadata.get('Review-Date')
         if not review_date:

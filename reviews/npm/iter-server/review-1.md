@@ -1,18 +1,22 @@
-<!--
-publication-state: draft
-access: public
-author: Dilan Bhalla
-domain: security
-methodology-summary: web-search
-opinion: insecure
-package-urls:
-- "pkg:npm/iter-server@1.0.0"
-review-date: 2021-02-12
-scope: implementation/full
-schema-version: 1.0
-severity: critical
+---
+Publication-State: Draft
+Access: Public
+Reviewers:
+- Name: Dilan Bhalla
+  Associated-With-Project: false
+  Compensation-Source: none
+Domain: Security
+Methodology:
+- Web-Search
+- Code-Review
+Issues-Identified: Severe
+Package-URLs:
+- pkg:npm/iter-server@1.0.0
+Review-Date: 2021-02-12
+Scope: Implementation/Full
+Schema-Version: 1.0
 SPDX-License-Identifier: CC-BY-4.0
--->
+---
 
 ### Summary
 
