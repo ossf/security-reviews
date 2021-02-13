@@ -304,6 +304,7 @@
             t += 'Publication-State: ' + $('#publicationState').val() + '\n';
             t += 'Access: ' + $('#access').val() + '\n';
             t += 'Reviewers:\n';
+
             if ($('#reviewer0Name').val()) t += '- Name: ' + $('#reviewer0Name').val() + '\n';
             if ($('#reviewer0Email').val()) t += '  Email: ' + $('#reviewer0Email').val() + '\n';
             if ($('#reviewer0Organization').val()) t += '  Organization: ' + $('#reviewer0Organization').val() + '\n';
@@ -317,7 +318,7 @@
             if ($('#dynamicAnalysis').is(':checked')) t += '- Dynamic-Analysis\n';
             if ($('#webSearch').is(':checked')) t += '- Web-Search\n';
             if ($('#codeReview').is(':checked')) t += '- Code-Review\n';
-            if ($('#externalReview').is(':checked')) t += '- External\n';
+            if ($('#externalReview').is(':checked')) t += '- External-Review\n';
             if ($('#fuzzing').is(':checked')) t += '- Fuzzing\n';
 
             t += 'Issues-Identified: ' + $('#issuesIdentified').val() + '\n';
