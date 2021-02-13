@@ -28,7 +28,7 @@ Five security issues were identified (one medium-risk, four low-risk), all relat
 
 This assessment resulted in five findings, four of which have been fixed and are described in detail within the [report](https://github.com/trailofbits/publications/blob/master/reviews/zlib.pdf).
 
-The remaining issue, which was not identified as fixed in the report, has to do with accessing a character buffer using a pointer to an unsigned int. This violated strict aliasing rules and could cause undefined behavior; however, when tested in 2016, compilers produced correct code for the construction. There are further recommendations on potential fixes in the report.
+The remaining issue, which was not identified as fixed in the report, has to do with accessing a character buffer using a pointer to an unsigned int. This violated strict aliasing rules and could cause undefined behavior; however, when tested in 2016, compilers produced correct code for the construction. There are further recommendations on potential fixes for this remaining issue in the report.
 
 ### Methodology
 
