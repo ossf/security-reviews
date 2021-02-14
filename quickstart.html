@@ -74,11 +74,11 @@
                                 <label for="domain" class="form-label sr-only">Compensation Source</label>
                                 <select class="form-control" id="reviewer0CompensationSource">
                                     <option value="">--Choose--</option>
-                                    <option value="project">Project</option>
-                                    <option value="non-project">Non-Project</option>
-                                    <option value="external">External</option>
-                                    <option value="undisclosed">Undisclosed</option>
-                                    <option value="none">None</option>
+                                    <option value="Project">Project</option>
+                                    <option value="Non-Project">Non-Project</option>
+                                    <option value="External">External</option>
+                                    <option value="Undisclosed">Undisclosed</option>
+                                    <option value="None">None</option>
                                 </select>
                             </div>
                         </div>
@@ -304,6 +304,7 @@
             t += 'Publication-State: ' + $('#publicationState').val() + '\n';
             t += 'Access: ' + $('#access').val() + '\n';
             t += 'Reviewers:\n';
+
             if ($('#reviewer0Name').val()) t += '- Name: ' + $('#reviewer0Name').val() + '\n';
             if ($('#reviewer0Email').val()) t += '  Email: ' + $('#reviewer0Email').val() + '\n';
             if ($('#reviewer0Organization').val()) t += '  Organization: ' + $('#reviewer0Organization').val() + '\n';
@@ -317,7 +318,7 @@
             if ($('#dynamicAnalysis').is(':checked')) t += '- Dynamic-Analysis\n';
             if ($('#webSearch').is(':checked')) t += '- Web-Search\n';
             if ($('#codeReview').is(':checked')) t += '- Code-Review\n';
-            if ($('#externalReview').is(':checked')) t += '- External\n';
+            if ($('#externalReview').is(':checked')) t += '- External-Review\n';
             if ($('#fuzzing').is(':checked')) t += '- Fuzzing\n';
 
             t += 'Issues-Identified: ' + $('#issuesIdentified').val() + '\n';
