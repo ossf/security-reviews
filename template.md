@@ -17,7 +17,9 @@ Methodology:
 - Web-Search
 Issues-Identified: [ "Severe" | "Non-Severe" | "Not-Examined" | "None" ]
 Package-URLs:
-- <Package URL>
+- <Package URL or Source Repository URL>
+Package-Version:
+- <version or release-tag or commit-id>
 Date-Reviewed: 'YYYY-MM-DD'
 Scope: [ "Implementation/Full" | "Implementation/Partial" | "Non-Implementation" ]
 Schema-Version: '1.0'
