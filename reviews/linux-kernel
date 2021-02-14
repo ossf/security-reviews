@@ -33,9 +33,9 @@ The Linux Foundation sponsored a review in of the Linux Kernel’s practices and
 
 Open Source Technology Improvement Fund, working with the team at Atredis Partners and a coalition of interested parties from the Kernel team including the Linux Foundation, Google Android, Google Cloud, and Red Hat worked together to map out the current system in place, and look for opportunities to improve upon that system to potentially improve the overall security of the kernel and to resolve potential problems with downstream projects like Android, Debian, Red Hat Enterprise Linux, Fedora, Ubuntu, CentOS, Arch, OpenSuse, and so many more.
 
-The result of the review is two key recommendations from the Atredis report, and supply short descriptions of the reasoning behind these suggestions. Reading the full report is strongly recommended.
+The result of the review is two key recommendations from the Atredis report. Reading the full report is strongly recommended.
 
-It is worth noting these recommendations are just that – recommendations. Our public disclosure of the audit results does not guarantee that these recommendations will be enacted. The Linux kernel community is already discussing how these recommendations might be acted upon, and given some complex transitions required, what timeline they could be acted upon.
+It is worth noting these recommendations are just that – recommendations. The public disclosure of the audit results does not guarantee that these recommendations will be enacted. The Linux kernel community is already discussing how these recommendations might be acted upon, and given some complex transitions required, what timeline they could be acted upon.
 
 Recommendation One – Keep All Security Discussions Public Instead of Private. 
 
