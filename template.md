@@ -3,7 +3,7 @@
 This content must appear at the top of the review file. This is YAML.
 ```
 ---
-Publication-State: ["Ative"]
+Publication-State: ["Active"]
 Reviewers:
 - Name: <Name>
   Email: <E-Mail>
