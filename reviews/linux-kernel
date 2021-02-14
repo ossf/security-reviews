@@ -27,9 +27,7 @@ SPDX-License-Identifier: CC-BY-4.0
 
 ### Summary
 
-<!-- [Required]
 The Linux Foundation sponsored a review in of the Linux Kernel’s practices and policies around how security vulnerabilities are reported to the kernel team, how those reports are processed and addressed, and how those vulnerabilities are disclosed to the public. The review took place in Q3 of 2020, with results published in Q1 of 2021. 
--->
 
 ### Details
 
@@ -49,13 +47,9 @@ Atredis recommends that the downstream distributions manage CVE reporting. This 
 
 This recommendation asserts that the contributors to the various distributions know their products best and because of the practices of backporting fixes and integrating updates in a piecemeal fashion, a system where the kernel issued CVEs would not be helpful as the risk profiles of the individual distributions that admins are actually using is still unknown without more information. This means that a hypothetical kernel CVE system would produce lower-quality information than CVE reporting systems that are guided and driven by the distributions.
 
-
--->
-
 ### Methodology
 
 This project involved multiple one-on-one interviews with members of the kernel team as well as representatives from the stakeholders where opportunities to investigate were discussed. Additionally, the Atredis team looked at documentation, articles, public talks, and discussions that took place over the last few years to construct a best-possible picture of the current topology and look toward standard industry practices to see how they could best inform their analysis.
--->
 
 ### External References
 
