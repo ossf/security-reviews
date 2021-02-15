@@ -27,7 +27,7 @@ SPDX-License-Identifier: CC-BY-4.0
 
 ### Summary
 
-The Linux Foundation sponsored a review in of the Linux Kernel’s practices and policies around how security vulnerabilities are reported to the kernel team, how those reports are processed and addressed, and how those vulnerabilities are disclosed to the public. The review took place in Q3 of 2020, with results published in Q1 of 2021. 
+The Linux Foundation sponsored a review of the Linux Kernel’s practices and policies around how security vulnerabilities are reported to the kernel team, how those reports are processed and addressed, and how those vulnerabilities are disclosed to the public. The review took place in Q3 of 2020, with results published in Q1 of 2021. 
 
 ### Details
 
