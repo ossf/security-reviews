@@ -1,24 +1,26 @@
 ## Front Metadata
 
-This content must appear at the top of the review file. This is YAML.
+This content must appear at the top of the review file, and can easily be generated using the [quickstart](quickstart.html).
 ```
 ---
-Publication-State: ["Ative"]
+Publication-State: [ "Draft" | "Active" | "Removed" ]
 Reviewers:
 - Name: <Name>
   Email: <E-Mail>
   Organization: <Organization>
-  Associated-With-Project: true
+  Associated-With-Project: [ true | false ]
   Compensation-Source: [ "Project" | "Non-Project" | "External" | "Undisclosed" | "None" ]
 Domain: Security
 Methodology:
 - Static-Analysis
 - Code-Review
 - Web-Search
+- Fuzzing
+- External
 Issues-Identified: [ "Severe" | "Non-Severe" | "Not-Examined" | "None" ]
 Package-URLs:
 - <Package URL>
-Date-Reviewed: 'YYYY-MM-DD'
+Review-Date 'YYYY-MM-DD'
 Scope: [ "Implementation/Full" | "Implementation/Partial" | "Non-Implementation" ]
 Schema-Version: '1.0'
 SPDX-License-Identifier: CC-BY-4.0
