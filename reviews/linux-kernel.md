@@ -1,4 +1,3 @@
----
 Publication-State: Active
 Reviewers:
 - Name: <Name>
@@ -16,7 +15,6 @@ Date-Reviewed: 2021-01-15
 Scope: Non-Implementation
 Schema-Version: 1.0
 SPDX-License-Identifier: CC-BY-4.0
----
 
 ### Summary
 
