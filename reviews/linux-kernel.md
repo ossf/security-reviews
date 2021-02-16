@@ -1,17 +1,21 @@
 ---
 
 Publication-State: Active
+Access: Public
 Reviewers:
-  - Organization: Open Source Technology Improvement Fund
+- Organization: Open Source Technology Improvement Fund
   Associated-With-Project: false
   Compensation-Source: External
+- Organization: Atredis Partners
+  Associated-With-Project: false
+  Compensation-Source: External  
 Domain: Security
 Methodology:
 - External-Review
 Issues-Identified: Non-Severe
 Package-URLs:
 - pkg:generic/linux-kernel?download_url=https://kernel.org
-- pkg: github/torvalds/linux
+- pkg:github/torvalds/linux
 Review-Date: 2021-01-15
 Scope: Non-Implementation
 Schema-Version: 1.0
