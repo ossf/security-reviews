@@ -1,7 +1,4 @@
 ## Front Metadata
-
-This content must appear at the top of the review file. This is YAML.
-```
 ---
 Publication-State: ["Ative"]
 Reviewers:
@@ -23,7 +20,6 @@ Scope: [ "Implementation/Full" | "Implementation/Partial" | "Non-Implementation"
 Schema-Version: '1.0'
 SPDX-License-Identifier: CC-BY-4.0
 ---
-```
 
 ### Summary
 
