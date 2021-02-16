@@ -1,21 +1,22 @@
 ---
+
 Publication-State: Active
 Reviewers:
-- Name: <Name>
-  Email: <E-Mail>
-  Organization: Open Source Technology Improvement Fund
+  - Organization: Open Source Technology Improvement Fund
   Associated-With-Project: false
   Compensation-Source: External
 Domain: Security
-Methodology:- External-Review
+Methodology:
+- External-Review
 Issues-Identified: Non-Severe
 Package-URLs:
 - pkg:generic/linux-kernel?download_url=https://kernel.org
 - pkg: github/torvalds/linux
-Date-Reviewed: 2021-01-15
+Review-Date: 2021-01-15
 Scope: Non-Implementation
 Schema-Version: 1.0
 SPDX-License-Identifier: CC-BY-4.0
+
 ---
   
 ### Summary
