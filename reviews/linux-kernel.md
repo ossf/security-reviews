@@ -1,23 +1,20 @@
-## Front Metadata
 ---
-Publication-State: ["Ative"]
+Publication-State: Active
 Reviewers:
 - Name: <Name>
   Email: <E-Mail>
-  Organization: <Organization>
-  Associated-With-Project: true
-  Compensation-Source: [ "Project" | "Non-Project" | "External" | "Undisclosed" | "None" ]
+  Organization: Open Source Technology Improvement Fund
+  Associated-With-Project: false
+  Compensation-Source: External
 Domain: Security
-Methodology:
-- Static-Analysis
-- Code-Review
-- Web-Search
-Issues-Identified: [ "Severe" | "Non-Severe" | "Not-Examined" | "None" ]
+Methodology:- External-Review
+Issues-Identified: Non-Severe
 Package-URLs:
-- <Package URL>
-Date-Reviewed: 'YYYY-MM-DD'
-Scope: [ "Implementation/Full" | "Implementation/Partial" | "Non-Implementation" ]
-Schema-Version: '1.0'
+- pkg:generic/linux-kernel?download_url=https://kernel.org
+- pkg: github/torvalds/linux
+Date-Reviewed: 2021-01-15
+Scope: Non-Implementation
+Schema-Version: 1.0
 SPDX-License-Identifier: CC-BY-4.0
 ---
 
