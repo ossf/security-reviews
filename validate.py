@@ -9,6 +9,7 @@ from typing import List
 import yaml
 from better_profanity import profanity
 
+IS_PUBLIC_REPOSITORY = True
 
 class SecurityReviewValidator:
     results = None
@@ -100,8 +101,9 @@ class SecurityReviewValidator:
             self.results.append("Invalid access, must be either 'Public' or 'Private/<name>'")
 
         # For GitHub
-        if access.startswith("Private/"):
-            self.results.append("Invalid access, all reviews must be Public.")
+        if IS_PUBLIC_REPOSITORY:
+            if access.startswith("Private/"):
+                self.results.append("Invalid access, all reviews must be Public.")
 
         for reviewer in metadata.get('Reviewers'):
             for key, value in reviewer.items():
