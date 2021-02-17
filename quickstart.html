@@ -65,8 +65,8 @@
                                 <label for="domain" class="form-label sr-only">Associated with Project?</label>
                                 <select class="form-control" id="reviewer0AssociatedWithProject">
                                     <option value="">--Choose--</option>
-                                    <option value="true">true</option>
-                                    <option value="false">false</option>
+                                    <option value="true">true (I am a contributor or similar to the project.)</option>
+                                    <option value="false" selected>false (I am not affiliated with the project.)</option>
                                 </select>
                             </div>
                             <div class="col-6">
@@ -74,11 +74,11 @@
                                 <label for="domain" class="form-label sr-only">Compensation Source</label>
                                 <select class="form-control" id="reviewer0CompensationSource">
                                     <option value="">--Choose--</option>
-                                    <option value="Project">Project</option>
-                                    <option value="Non-Project">Non-Project</option>
-                                    <option value="External">External</option>
-                                    <option value="Undisclosed">Undisclosed</option>
-                                    <option value="None">None</option>
+                                    <option value="Project">Project (The project compensated me.)</option>
+                                    <option value="Non-Project">Non-Project (Another organization compensated me.)</option>
+                                    <option value="External">External (Someone else performed the review.)</option>
+                                    <option value="Undisclosed">Undisclosed (I'd prefer not to say.)</option>
+                                    <option value="None" selected>None (I received no compensation.)</option>
                                 </select>
                             </div>
                         </div>
@@ -296,6 +296,11 @@
             }
         });
 
+        $('#packageURLs').on('keyup', function() {
+            $('#packageURLs')[0].setCustomValidity('');
+            $('#packageURLs')[0].reportValidity();
+        });
+
         $('form').on('submit', function(e) {
             e.preventDefault();
 
@@ -305,9 +310,10 @@
             t += 'Access: ' + $('#access').val() + '\n';
             t += 'Reviewers:\n';
 
-            if ($('#reviewer0Name').val()) t += '- Name: ' + $('#reviewer0Name').val() + '\n';
-            if ($('#reviewer0Email').val()) t += '  Email: ' + $('#reviewer0Email').val() + '\n';
-            if ($('#reviewer0Organization').val()) t += '  Organization: ' + $('#reviewer0Organization').val() + '\n';
+            var prefix = '-';
+            if ($('#reviewer0Name').val()) t += prefix + ' Name: ' + $('#reviewer0Name').val() + '\n'; prefix = ' ';
+            if ($('#reviewer0Email').val()) t += prefix + ' Email: ' + $('#reviewer0Email').val() + '\n'; prefix = ' ';
+            if ($('#reviewer0Organization').val()) t += prefix + ' Organization: ' + $('#reviewer0Organization').val() + '\n';
             if ($('#reviewer0AssociatedWithProject').val()) t += '  Associated-With-Project: ' + $('#reviewer0AssociatedWithProject').val() + '\n';
             if ($('#reviewer0CompensationSource').val()) t += '  Compensation-Source: ' + $('#reviewer0CompensationSource').val() + '\n';
             
@@ -324,7 +330,14 @@
             t += 'Issues-Identified: ' + $('#issuesIdentified').val() + '\n';
 
             t += 'Package-URLs:\n';
+            var abortSubmission = false;
             $.each($('#packageURLs').val().split("\n"), (idx, url) => {
+                if (url !== '' && !url.startsWith('pkg:')) {
+                    $('#packageURLs')[0].setCustomValidity('Each line must contain a valid PackageURL.');
+                    $('#packageURLs')[0].reportValidity();
+                    abortSubmission = true;
+                    return false;
+                }
                 if (url !== '') {
                     t += '- ' + url.trim() + '\n';
                 }
