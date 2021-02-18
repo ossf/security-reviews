@@ -22,6 +22,8 @@ To be clear:
 
 **Do not disclose "new" or "unknown" vulnerabilities to this project or to this repository.**
 
+For more information, view this [wiki](https://github.com/ossf/security-reviews/wiki/Vulnerability-Disclosure) page.
+
 ## Motivation
 
 There are two main motivations that led to this project.
