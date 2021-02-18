@@ -71,7 +71,7 @@ in its purpose and approach.
       and to learn more about what is expected in a security review.
 - [ ] Review the [review template](template.md) file for information on
       which sections can (and must) be included and suggestions for the
-      level of detail expected. You can also use the [QuickStart](quickstart.html)
+      level of detail expected. You can also use the [QuickStart](https://ossf.github.io/security-reviews/quickstart.html)
       page to generate a markdown file using a simple HTML form.
 - [ ] Choose an open source component and conduct the security review.
 - [ ] Clone this repository and add your security review to the relevant path.
