@@ -3,7 +3,7 @@
 This content must appear at the top of the review file, and can easily be generated using the [quickstart](quickstart.html).
 ```
 ---
-Publication-State: [ "Draft" | "Active" | "Removed" ]
+Publication-State: [ "Active" | "Removed" ]
 Reviewers:
 - Name: <Name>
   Email: <E-Mail>
