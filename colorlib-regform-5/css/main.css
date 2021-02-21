@@ -9,7 +9,8 @@
 /* Create two equal columns that sits next to each other */
 .column {
   flex: 50%;
-  padding: 10px;
+  padding: 0px;
+  /* padding: 10px; */
   /* height: 100%; /* Should be removed. Only for demonstration */
 }
 
@@ -148,9 +149,9 @@ textarea {
 }
 
 .col-2 {
-  width: -webkit-calc((100% - 30px) / 2.8);
-  width: -moz-calc((100% - 30px) / 2.8);
-  width: calc((100% - 30px) / 2.8);
+  width: -webkit-calc((100% - 30px) / 2.9);
+  width: -moz-calc((100% - 30px) / 2.9);
+  width: calc((100% - 30px) / 2.9);
   padding: 0px 3px;
 }
 
@@ -868,32 +869,32 @@ input {
    #CARD
    ========================================================================== */
 .card {
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
-  border-radius: 3px;
+  /* -webkit-border-radius: 3px; */
+  /* -moz-border-radius: 3px; */
+  /* border-radius: 3px; */
   background: #fff;
 }
 
 .card-5 {
   background: #fff;
-  -webkit-border-radius: 10px;
-  -moz-border-radius: 10px;
-  border-radius: 10px;
-  -webkit-box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.15);
-  -moz-box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.15);
-  box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.15);
+  /* -webkit-border-radius: 10px; */
+  /* -moz-border-radius: 10px; */
+  /* border-radius: 10px; */
+  /* -webkit-box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.15); */
+  /* -moz-box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.15); */
+  /* box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.15); */
   height: 100%;
 }
 
 .card-5 .card-heading {
   padding: 20px 0;
   background: #1a1a1a;
-  -webkit-border-top-left-radius: 10px;
-  -moz-border-radius-topleft: 10px;
-  border-top-left-radius: 10px;
-  -webkit-border-top-right-radius: 10px;
-  -moz-border-radius-topright: 10px;
-  border-top-right-radius: 10px;
+  /* -webkit-border-top-left-radius: 10px; */
+  /* -moz-border-radius-topleft: 10px; */
+  /* border-top-left-radius: 10px; */
+  /* -webkit-border-top-right-radius: 10px; */
+  /* -moz-border-radius-topright: 10px; */
+  /* border-top-right-radius: 10px; */
 }
 
 .card-5 .card-body {
