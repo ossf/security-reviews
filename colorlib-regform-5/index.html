@@ -294,18 +294,6 @@
                             </div>
                                 </div>
 
-                                <div class="form-row p-t-20">
-                                    <label class="label label--block">This review does not contain any significant, undisclosed, or unpatched security vulnerabilities.</label>
-                                    <div class="p-t-15">
-                                        <label class="radio-container m-r-55">I agree
-                                            <input type="checkbox" name="exist">
-                                            <span class="checkmark"></span>
-                                        </label>
-                                    </div>
-                                </div>
-                                <div>
-                                    <button class="btn btn--radius-2 btn--black" type="submit">Register</button>
-                                </div>
                             </form>
                         </div>
 
@@ -321,84 +309,51 @@
                       <div class="card-body">
                           <form method="POST">
                               <div class="form-row m-b-55">
-                                  <div class="name">Name</div>
-                                  <div class="value">
-                                      <div class="row row-space">
-                                          <div class="col-2">
-                                              <div class="input-group-desc">
-                                                  <input class="input--style-5" type="text" name="first_name">
-                                                  <label class="label--desc">first name</label>
-                                              </div>
-                                          </div>
-                                          <div class="col-2">
-                                              <div class="input-group-desc">
-                                                  <input class="input--style-5" type="text" name="last_name">
-                                                  <label class="label--desc">last name</label>
-                                              </div>
-                                          </div>
+                                  <div class="name">Summary</div>
+                                      <div class="value">
+                                            <div class="input-group-desc">
+                                                <input class="input--style-5">
+                                            </div>
                                       </div>
-                                  </div>
-                              </div>
-                              <div class="form-row">
-                                  <div class="name">Company</div>
-                                  <div class="value">
-                                      <div class="input-group">
-                                          <input class="input--style-5" type="text" name="company">
-                                      </div>
-                                  </div>
-                              </div>
-                              <div class="form-row">
-                                  <div class="name">Email</div>
-                                  <div class="value">
-                                      <div class="input-group">
-                                          <input class="input--style-5" type="email" name="email">
-                                      </div>
-                                  </div>
                               </div>
                               <div class="form-row m-b-55">
-                                  <div class="name">Phone</div>
-                                  <div class="value">
-                                      <div class="row row-refine">
-                                          <div class="col-3">
-                                              <div class="input-group-desc">
-                                                  <input class="input--style-5" type="text" name="area_code">
-                                                  <label class="label--desc">Area Code</label>
-                                              </div>
-                                          </div>
-                                          <div class="col-9">
-                                              <div class="input-group-desc">
-                                                  <input class="input--style-5" type="text" name="phone">
-                                                  <label class="label--desc">Phone Number</label>
-                                              </div>
-                                          </div>
+                                  <div class="name">Details</div>
+                                      <div class="value">
+                                            <div class="input-group-desc">
+                                                <input class="input--style-5">
+                                            </div>
                                       </div>
-                                  </div>
                               </div>
+                              <div class="form-row m-b-55">
+                                  <div class="name">Methodology (Optional)</div>
+                                      <div class="value">
+                                            <div class="input-group-desc">
+                                                <input class="input--style-5">
+                                            </div>
+                                      </div>
+                              </div>
+                              <div class="form-row m-b-55">
+                                  <div class="name">External References (Optional)</div>
+                                      <div class="value">
+                                            <div class="input-group-desc">
+                                                <input class="input--style-5">
+                                            </div>
+                                      </div>
+                              </div>
+
                               <div class="form-row">
-                                  <div class="name">Subject</div>
-                                  <div class="value">
-                                      <div class="input-group">
-                                          <div class="rs-select2 js-select-simple select--no-search">
-                                              <select name="subject">
-                                                  <option disabled="disabled" selected="selected">Choose option</option>
-                                                  <option>Subject 1</option>
-                                                  <option>Subject 2</option>
-                                                  <option>Subject 3</option>
-                                              </select>
-                                              <div class="select-dropdown"></div>
-                                          </div>
-                                      </div>
+                                  <label class="label label--block">Instructions</label>
+                                  <div class="p-t-15">
+                                      <h5>Once you have the markdown completed, create a Pull Request to add your content to <a href="https://github.com/ossf/security-reviews">github.com/ossf/security-reviews</a> in the "reviews" folder. If you have feedback on this form or project, please open an <a href="https://github.com/ossf/security-reviews/issues">Issue</a>.
+                                      </h5>
                                   </div>
                               </div>
+
                               <div class="form-row p-t-20">
-                                  <label class="label label--block">Are you an existing customer?</label>
+                                  <label class="label label--block">This review does not contain any significant, undisclosed, or unpatched security vulnerabilities.</label>
                                   <div class="p-t-15">
-                                      <label class="radio-container m-r-55">Yes
-                                          <input type="radio" name="exist">
-                                          <span class="checkmark"></span>
-                                      </label>
-                                      <label class="radio-container">No
-                                          <input type="radio" name="exist">
+                                      <label class="radio-container m-r-55">I agree
+                                          <input type="checkbox" name="exist">
                                           <span class="checkmark"></span>
                                       </label>
                                   </div>
@@ -411,6 +366,7 @@
                   </div>
                 </div>
             </div>
+
         </div>
     </div>
 
