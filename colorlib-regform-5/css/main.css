@@ -462,6 +462,14 @@ h6 {
   background: #ff4b5a;
 }
 
+.btn--black {
+  background: #333333;
+}
+
+.btn--black:hover {
+  background: #0d0d0d;
+}
+
 .btn--red:hover {
   background: #eb3746;
 }
