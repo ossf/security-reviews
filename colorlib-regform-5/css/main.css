@@ -1,3 +1,7 @@
+/* ==========================================================================
+   #MAJORITY OF ADDED CSS ELEMENTS FOR QUICKSTART TEMPLATE START HERE
+   ========================================================================== */
+
 * {
   box-sizing: border-box;
 }
@@ -6,17 +10,17 @@
 .column {
   flex: 50%;
   padding: 10px;
-  /* height: 300px; /* Should be removed. Only for demonstration */ */
+  /* height: 100%; /* Should be removed. Only for demonstration */
 }
 
 a { color:blue }
 
 textarea {
-  background-color: #f2f2f2;
+  background-color: #e5e5e5;
   border: None;
   border-radius: 2%;
   font-size: 1.0em;
-  padding: 5px;
+  padding: 6px;
   resize: None;
 }
 
@@ -87,6 +91,11 @@ textarea {
     margin-bottom: 40px;
   }
 }
+
+/* ==========================================================================
+   #MAJORITY OF ADDED CSS ELEMENTS FOR QUICKSTART TEMPLATE END HERE
+   ========================================================================== */
+
 
 /* ==========================================================================
    #FONT
@@ -873,6 +882,7 @@ input {
   -webkit-box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.15);
   -moz-box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.15);
   box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.15);
+  height: 100%;
 }
 
 .card-5 .card-heading {
