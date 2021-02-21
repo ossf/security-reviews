@@ -50,7 +50,7 @@
                                     <div class="value">
                                         <div class="input-group">
                                             <div class="rs-select2 js-select-simple select--no-search">
-                                                <select name="subject">
+                                                <select name="subject" id="publicationState">
                                                     <option disabled="disabled" selected="selected">Choose option</option>
                                                     <option>Active</option>
                                                     <option>Draft</option>
@@ -231,14 +231,14 @@
                                 <div class="form-row-big">
                                     <div class="name">Package URLs</div>
                                         <div class="value">
-                                            <textarea class="input-group-big" placeholder="Ex. pkg:npm/left-pad@1.3.0 (one per line)"></textarea>
+                                            <textarea class="input-group-big" id="packageURLs" placeholder="Ex. pkg:npm/left-pad@1.3.0 (one per line)"></textarea>
                                         </div>
                                 </div>
 
                                 <div class="form-row m-b-55">
                                     <div class="name">Review Date</div>
                                     <div class="value">
-                                        <input class="date" type="date">
+                                        <input class="date" id="reviewDate" type="date">
                                     </div>
                                 </div>
 
@@ -364,6 +364,7 @@
     <script src="vendor/datepicker/daterangepicker.js"></script>
 
     <!-- Main JS-->
+    <script src="js/get_markdown.js"></script>
     <script src="js/global.js"></script>
 
 </body><!-- This templates was made by Colorlib (https://colorlib.com) -->
