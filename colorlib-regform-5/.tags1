@@ -1,0 +1,139 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	0	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+*	/Users/dilan/Desktop/colorlib-regform-5/css/main.css	/^* {$/;"	function	line:1
+.row	/Users/dilan/Desktop/colorlib-regform-5/css/main.css	/^.row {$/;"	function	line:5
+.column	/Users/dilan/Desktop/colorlib-regform-5/css/main.css	/^.column {$/;"	function	line:10
+.font-robo	/Users/dilan/Desktop/colorlib-regform-5/css/main.css	/^.font-robo {$/;"	function	line:19
+.font-poppins	/Users/dilan/Desktop/colorlib-regform-5/css/main.css	/^.font-poppins {$/;"	function	line:23
+.font-opensans	/Users/dilan/Desktop/colorlib-regform-5/css/main.css	/^.font-opensans {$/;"	function	line:27
+.row	/Users/dilan/Desktop/colorlib-regform-5/css/main.css	/^.row {$/;"	function	line:34
+.row .col-2:last-child .input-group-desc	/Users/dilan/Desktop/colorlib-regform-5/css/main.css	/^.row .col-2:last-child .input-group-desc {$/;"	function	line:45
+.row-space	/Users/dilan/Desktop/colorlib-regform-5/css/main.css	/^.row-space {$/;"	function	line:49
+.row-refine	/Users/dilan/Desktop/colorlib-regform-5/css/main.css	/^.row-refine {$/;"	function	line:57
+.row-refine .col-3 .input-group-desc	/Users/dilan/Desktop/colorlib-regform-5/css/main.css	/^.row-refine .col-3 .input-group-desc,$/;"	function	line:61
+.row-refine .col-9 .input-group-desc	/Users/dilan/Desktop/colorlib-regform-5/css/main.css	/^.row-refine .col-9 .input-group-desc {$/;"	function	line:62
+.col-2	/Users/dilan/Desktop/colorlib-regform-5/css/main.css	/^.col-2 {$/;"	function	line:66
+@media (max-width: 767px)	/Users/dilan/Desktop/colorlib-regform-5/css/main.css	/^@media (max-width: 767px) {$/;"	function	line:72
+.col-2	/Users/dilan/Desktop/colorlib-regform-5/css/main.css	/^  .col-2 {$/;"	function	line:73
+.form-row	/Users/dilan/Desktop/colorlib-regform-5/css/main.css	/^.form-row {$/;"	function	line:78
+.form-row .name	/Users/dilan/Desktop/colorlib-regform-5/css/main.css	/^.form-row .name {$/;"	function	line:95
+.form-row .value	/Users/dilan/Desktop/colorlib-regform-5/css/main.css	/^.form-row .value {$/;"	function	line:102
+@media (max-width: 767px)	/Users/dilan/Desktop/colorlib-regform-5/css/main.css	/^@media (max-width: 767px) {$/;"	function	line:108
+.form-row	/Users/dilan/Desktop/colorlib-regform-5/css/main.css	/^  .form-row {$/;"	function	line:109
+.form-row .name	/Users/dilan/Desktop/colorlib-regform-5/css/main.css	/^  .form-row .name,$/;"	function	line:112
+.form-row .value	/Users/dilan/Desktop/colorlib-regform-5/css/main.css	/^  .form-row .value {$/;"	function	line:113
+.form-row .name	/Users/dilan/Desktop/colorlib-regform-5/css/main.css	/^  .form-row .name {$/;"	function	line:117
+.col-3	/Users/dilan/Desktop/colorlib-regform-5/css/main.css	/^.col-3,$/;"	function	line:122
+.col-9	/Users/dilan/Desktop/colorlib-regform-5/css/main.css	/^.col-9 {$/;"	function	line:123
+.col-3	/Users/dilan/Desktop/colorlib-regform-5/css/main.css	/^.col-3 {$/;"	function	line:130
+@media (max-width: 1000px)	/Users/dilan/Desktop/colorlib-regform-5/css/main.css	/^@media (max-width: 1000px) {$/;"	function	line:139
+/* @media (max-width: 767px)	/Users/dilan/Desktop/colorlib-regform-5/css/main.css	/^\/* @media (max-width: 767px) { *\/$/;"	function	line:140
+.col-3	/Users/dilan/Desktop/colorlib-regform-5/css/main.css	/^  .col-3 {$/;"	function	line:141
+.col-9	/Users/dilan/Desktop/colorlib-regform-5/css/main.css	/^.col-9 {$/;"	function	line:151
+@media (max-width: 767px)	/Users/dilan/Desktop/colorlib-regform-5/css/main.css	/^@media (max-width: 767px) {$/;"	function	line:160
+.col-9	/Users/dilan/Desktop/colorlib-regform-5/css/main.css	/^  .col-9 {$/;"	function	line:161
+html	/Users/dilan/Desktop/colorlib-regform-5/css/main.css	/^html {$/;"	function	line:178
+*	/Users/dilan/Desktop/colorlib-regform-5/css/main.css	/^* {$/;"	function	line:184
+*, *:before, *:after	/Users/dilan/Desktop/colorlib-regform-5/css/main.css	/^*, *:before, *:after {$/;"	function	line:189
+body	/Users/dilan/Desktop/colorlib-regform-5/css/main.css	/^body,$/;"	function	line:201
+h1, h2, h3, h4, h5, h6	/Users/dilan/Desktop/colorlib-regform-5/css/main.css	/^h1, h2, h3, h4, h5, h6,$/;"	function	line:202
+blockquote, p, pre	/Users/dilan/Desktop/colorlib-regform-5/css/main.css	/^blockquote, p, pre,$/;"	function	line:203
+dl, dd, ol, ul	/Users/dilan/Desktop/colorlib-regform-5/css/main.css	/^dl, dd, ol, ul,$/;"	function	line:204
+figure	/Users/dilan/Desktop/colorlib-regform-5/css/main.css	/^figure,$/;"	function	line:205
+hr	/Users/dilan/Desktop/colorlib-regform-5/css/main.css	/^hr,$/;"	function	line:206
+fieldset, legend	/Users/dilan/Desktop/colorlib-regform-5/css/main.css	/^fieldset, legend {$/;"	function	line:207
+li > ol	/Users/dilan/Desktop/colorlib-regform-5/css/main.css	/^li > ol,$/;"	function	line:215
+li > ul	/Users/dilan/Desktop/colorlib-regform-5/css/main.css	/^li > ul {$/;"	function	line:216
+table	/Users/dilan/Desktop/colorlib-regform-5/css/main.css	/^table {$/;"	function	line:223
+fieldset	/Users/dilan/Desktop/colorlib-regform-5/css/main.css	/^fieldset {$/;"	function	line:232
+button	/Users/dilan/Desktop/colorlib-regform-5/css/main.css	/^button {$/;"	function	line:238
+.page-wrapper	/Users/dilan/Desktop/colorlib-regform-5/css/main.css	/^.page-wrapper {$/;"	function	line:247
+body	/Users/dilan/Desktop/colorlib-regform-5/css/main.css	/^body {$/;"	function	line:251
+h1, h2, h3, h4, h5, h6	/Users/dilan/Desktop/colorlib-regform-5/css/main.css	/^h1, h2, h3, h4, h5, h6 {$/;"	function	line:257
+h1	/Users/dilan/Desktop/colorlib-regform-5/css/main.css	/^h1 {$/;"	function	line:261
+h2	/Users/dilan/Desktop/colorlib-regform-5/css/main.css	/^h2 {$/;"	function	line:267
+h3	/Users/dilan/Desktop/colorlib-regform-5/css/main.css	/^h3 {$/;"	function	line:271
+h4	/Users/dilan/Desktop/colorlib-regform-5/css/main.css	/^h4 {$/;"	function	line:275
+h5	/Users/dilan/Desktop/colorlib-regform-5/css/main.css	/^h5 {$/;"	function	line:279
+h6	/Users/dilan/Desktop/colorlib-regform-5/css/main.css	/^h6 {$/;"	function	line:283
+.bg-blue	/Users/dilan/Desktop/colorlib-regform-5/css/main.css	/^.bg-blue {$/;"	function	line:290
+.bg-red	/Users/dilan/Desktop/colorlib-regform-5/css/main.css	/^.bg-red {$/;"	function	line:294
+.bg-light-grey	/Users/dilan/Desktop/colorlib-regform-5/css/main.css	/^.bg-light-grey {$/;"	function	line:298
+.bg-gra-01	/Users/dilan/Desktop/colorlib-regform-5/css/main.css	/^.bg-gra-01 {$/;"	function	line:302
+.bg-gra-02	/Users/dilan/Desktop/colorlib-regform-5/css/main.css	/^.bg-gra-02 {$/;"	function	line:310
+.bg-gra-03	/Users/dilan/Desktop/colorlib-regform-5/css/main.css	/^.bg-gra-03 {$/;"	function	line:318
+.p-t-100	/Users/dilan/Desktop/colorlib-regform-5/css/main.css	/^.p-t-100 {$/;"	function	line:329
+.p-t-130	/Users/dilan/Desktop/colorlib-regform-5/css/main.css	/^.p-t-130 {$/;"	function	line:333
+.p-t-180	/Users/dilan/Desktop/colorlib-regform-5/css/main.css	/^.p-t-180 {$/;"	function	line:337
+.p-t-45	/Users/dilan/Desktop/colorlib-regform-5/css/main.css	/^.p-t-45 {$/;"	function	line:341
+.p-t-20	/Users/dilan/Desktop/colorlib-regform-5/css/main.css	/^.p-t-20 {$/;"	function	line:345
+.p-t-15	/Users/dilan/Desktop/colorlib-regform-5/css/main.css	/^.p-t-15 {$/;"	function	line:349
+.p-t-10	/Users/dilan/Desktop/colorlib-regform-5/css/main.css	/^.p-t-10 {$/;"	function	line:353
+.p-t-30	/Users/dilan/Desktop/colorlib-regform-5/css/main.css	/^.p-t-30 {$/;"	function	line:357
+.p-b-100	/Users/dilan/Desktop/colorlib-regform-5/css/main.css	/^.p-b-100 {$/;"	function	line:361
+.p-b-50	/Users/dilan/Desktop/colorlib-regform-5/css/main.css	/^.p-b-50 {$/;"	function	line:365
+.m-r-45	/Users/dilan/Desktop/colorlib-regform-5/css/main.css	/^.m-r-45 {$/;"	function	line:369
+.m-r-55	/Users/dilan/Desktop/colorlib-regform-5/css/main.css	/^.m-r-55 {$/;"	function	line:373
+.m-b-55	/Users/dilan/Desktop/colorlib-regform-5/css/main.css	/^.m-b-55 {$/;"	function	line:377
+.wrapper	/Users/dilan/Desktop/colorlib-regform-5/css/main.css	/^.wrapper {$/;"	function	line:384
+.wrapper--w960	/Users/dilan/Desktop/colorlib-regform-5/css/main.css	/^.wrapper--w960 {$/;"	function	line:388
+.wrapper--w790	/Users/dilan/Desktop/colorlib-regform-5/css/main.css	/^.wrapper--w790 {$/;"	function	line:392
+/* .wrapper--w790	/Users/dilan/Desktop/colorlib-regform-5/css/main.css	/^\/* .wrapper--w790 {$/;"	function	line:396
+.wrapper--w780	/Users/dilan/Desktop/colorlib-regform-5/css/main.css	/^.wrapper--w780 {$/;"	function	line:400
+.wrapper--w680	/Users/dilan/Desktop/colorlib-regform-5/css/main.css	/^.wrapper--w680 {$/;"	function	line:404
+.btn	/Users/dilan/Desktop/colorlib-regform-5/css/main.css	/^.btn {$/;"	function	line:411
+.btn--radius	/Users/dilan/Desktop/colorlib-regform-5/css/main.css	/^.btn--radius {$/;"	function	line:427
+.btn--radius-2	/Users/dilan/Desktop/colorlib-regform-5/css/main.css	/^.btn--radius-2 {$/;"	function	line:433
+.btn--pill	/Users/dilan/Desktop/colorlib-regform-5/css/main.css	/^.btn--pill {$/;"	function	line:439
+.btn--green	/Users/dilan/Desktop/colorlib-regform-5/css/main.css	/^.btn--green {$/;"	function	line:445
+.btn--green:hover	/Users/dilan/Desktop/colorlib-regform-5/css/main.css	/^.btn--green:hover {$/;"	function	line:449
+.btn--blue	/Users/dilan/Desktop/colorlib-regform-5/css/main.css	/^.btn--blue {$/;"	function	line:453
+.btn--blue:hover	/Users/dilan/Desktop/colorlib-regform-5/css/main.css	/^.btn--blue:hover {$/;"	function	line:457
+.btn--red	/Users/dilan/Desktop/colorlib-regform-5/css/main.css	/^.btn--red {$/;"	function	line:461
+.btn--red:hover	/Users/dilan/Desktop/colorlib-regform-5/css/main.css	/^.btn--red:hover {$/;"	function	line:465
+td.active	/Users/dilan/Desktop/colorlib-regform-5/css/main.css	/^td.active {$/;"	function	line:472
+input[type="date" i]	/Users/dilan/Desktop/colorlib-regform-5/css/main.css	/^input[type="date" i] {$/;"	function	line:476
+.table-condensed td, .table-condensed th	/Users/dilan/Desktop/colorlib-regform-5/css/main.css	/^.table-condensed td, .table-condensed th {$/;"	function	line:480
+.daterangepicker td	/Users/dilan/Desktop/colorlib-regform-5/css/main.css	/^.daterangepicker td {$/;"	function	line:486
+.daterangepicker	/Users/dilan/Desktop/colorlib-regform-5/css/main.css	/^.daterangepicker {$/;"	function	line:491
+.daterangepicker::after, .daterangepicker::before	/Users/dilan/Desktop/colorlib-regform-5/css/main.css	/^.daterangepicker::after, .daterangepicker::before {$/;"	function	line:501
+.daterangepicker thead tr th	/Users/dilan/Desktop/colorlib-regform-5/css/main.css	/^.daterangepicker thead tr th {$/;"	function	line:505
+.daterangepicker .table-condensed th select	/Users/dilan/Desktop/colorlib-regform-5/css/main.css	/^.daterangepicker .table-condensed th select {$/;"	function	line:509
+input	/Users/dilan/Desktop/colorlib-regform-5/css/main.css	/^input {$/;"	function	line:522
+.radio-container	/Users/dilan/Desktop/colorlib-regform-5/css/main.css	/^.radio-container {$/;"	function	line:534
+.radio-container input	/Users/dilan/Desktop/colorlib-regform-5/css/main.css	/^.radio-container input {$/;"	function	line:547
+.radio-container input:checked ~ .checkmark	/Users/dilan/Desktop/colorlib-regform-5/css/main.css	/^.radio-container input:checked ~ .checkmark {$/;"	function	line:553
+.radio-container input:checked ~ .checkmark:after	/Users/dilan/Desktop/colorlib-regform-5/css/main.css	/^.radio-container input:checked ~ .checkmark:after {$/;"	function	line:557
+.radio-container .checkmark:after	/Users/dilan/Desktop/colorlib-regform-5/css/main.css	/^.radio-container .checkmark:after {$/;"	function	line:561
+.checkmark	/Users/dilan/Desktop/colorlib-regform-5/css/main.css	/^.checkmark {$/;"	function	line:577
+.checkmark:after	/Users/dilan/Desktop/colorlib-regform-5/css/main.css	/^.checkmark:after {$/;"	function	line:597
+.input--style-5	/Users/dilan/Desktop/colorlib-regform-5/css/main.css	/^.input--style-5 {$/;"	function	line:603
+.input-group-desc	/Users/dilan/Desktop/colorlib-regform-5/css/main.css	/^.input-group-desc {$/;"	function	line:616
+@media (max-width: 1000px)	/Users/dilan/Desktop/colorlib-regform-5/css/main.css	/^@media (max-width: 1000px) {$/;"	function	line:620
+/* @media (max-width: 767px)	/Users/dilan/Desktop/colorlib-regform-5/css/main.css	/^\/* @media (max-width: 767px) { *\/$/;"	function	line:621
+.input-group-desc	/Users/dilan/Desktop/colorlib-regform-5/css/main.css	/^  .input-group-desc {$/;"	function	line:622
+.input-group	/Users/dilan/Desktop/colorlib-regform-5/css/main.css	/^.input-group {$/;"	function	line:627
+.label	/Users/dilan/Desktop/colorlib-regform-5/css/main.css	/^.label {$/;"	function	line:632
+.label--block	/Users/dilan/Desktop/colorlib-regform-5/css/main.css	/^.label--block {$/;"	function	line:638
+.label--desc	/Users/dilan/Desktop/colorlib-regform-5/css/main.css	/^.label--desc {$/;"	function	line:642
+.select--no-search .select2-search	/Users/dilan/Desktop/colorlib-regform-5/css/main.css	/^.select--no-search .select2-search {$/;"	function	line:656
+.select2-container--open .select2-dropdown--below	/Users/dilan/Desktop/colorlib-regform-5/css/main.css	/^.select2-container--open .select2-dropdown--below {$/;"	function	line:660
+.select2-container--default .select2-results__option	/Users/dilan/Desktop/colorlib-regform-5/css/main.css	/^.select2-container--default .select2-results__option {$/;"	function	line:673
+.rs-select2 .select2-container	/Users/dilan/Desktop/colorlib-regform-5/css/main.css	/^.rs-select2 .select2-container {$/;"	function	line:677
+.rs-select2 .select2-container .select2-selection--single	/Users/dilan/Desktop/colorlib-regform-5/css/main.css	/^.rs-select2 .select2-container .select2-selection--single {$/;"	function	line:686
+.rs-select2 .select2-container .select2-selection--single .select2-selection__rendered	/Users/dilan/Desktop/colorlib-regform-5/css/main.css	/^.rs-select2 .select2-container .select2-selection--single .select2-selection__rendered {$/;"	function	line:694
+.rs-select2 .select2-container .select2-selection--single .select2-selection__arrow	/Users/dilan/Desktop/colorlib-regform-5/css/main.css	/^.rs-select2 .select2-container .select2-selection--single .select2-selection__arrow {$/;"	function	line:705
+.rs-select2 .select2-container .select2-selection--single .select2-selection__arrow b	/Users/dilan/Desktop/colorlib-regform-5/css/main.css	/^.rs-select2 .select2-container .select2-selection--single .select2-selection__arrow b {$/;"	function	line:725
+.rs-select2 .select2-container .select2-selection--single .select2-selection__arrow:after	/Users/dilan/Desktop/colorlib-regform-5/css/main.css	/^.rs-select2 .select2-container .select2-selection--single .select2-selection__arrow:after {$/;"	function	line:729
+.rs-select2 .select2-container.select2-container--open .select2-selection--single .select2-selection__arrow::after	/Users/dilan/Desktop/colorlib-regform-5/css/main.css	/^.rs-select2 .select2-container.select2-container--open .select2-selection--single .select2-selection__arrow::after {$/;"	function	line:740
+.title	/Users/dilan/Desktop/colorlib-regform-5/css/main.css	/^.title {$/;"	function	line:751
+.card	/Users/dilan/Desktop/colorlib-regform-5/css/main.css	/^.card {$/;"	function	line:762
+.card-5	/Users/dilan/Desktop/colorlib-regform-5/css/main.css	/^.card-5 {$/;"	function	line:769
+.card-5 .card-heading	/Users/dilan/Desktop/colorlib-regform-5/css/main.css	/^.card-5 .card-heading {$/;"	function	line:779
+.card-5 .card-body	/Users/dilan/Desktop/colorlib-regform-5/css/main.css	/^.card-5 .card-body {$/;"	function	line:790
+@media (max-width: 767px)	/Users/dilan/Desktop/colorlib-regform-5/css/main.css	/^@media (max-width: 767px) {$/;"	function	line:796
+.card-5 .card-body	/Users/dilan/Desktop/colorlib-regform-5/css/main.css	/^  .card-5 .card-body {$/;"	function	line:797
