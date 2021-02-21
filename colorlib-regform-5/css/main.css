@@ -2,10 +2,6 @@
   box-sizing: border-box;
 }
 
-.row {
-  display: flex;
-}
-
 /* Create two equal columns that sits next to each other */
 .column {
   flex: 50%;
@@ -66,9 +62,10 @@ a { color:blue }
 }
 
 .col-2 {
-  width: -webkit-calc((100% - 30px) / 2);
-  width: -moz-calc((100% - 30px) / 2);
-  width: calc((100% - 30px) / 2);
+  width: -webkit-calc((100% - 30px) / 2.8);
+  width: -moz-calc((100% - 30px) / 2.8);
+  width: calc((100% - 30px) / 2.8);
+  padding: 0px 3px;
 }
 
 @media (max-width: 767px) {
@@ -99,6 +96,7 @@ a { color:blue }
   color: #555;
   font-size: 15px;
   font-weight: 700;
+  padding: 0px 5px;
 }
 
 .form-row .value {
@@ -123,7 +121,8 @@ a { color:blue }
 
 .col-3,
 .col-9 {
-  padding: 0 15px;
+  padding: 0 5px;
+  /* padding: 0 15px; */
   position: relative;
   width: 100%;
   min-height: 1px;
