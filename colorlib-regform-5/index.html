@@ -66,7 +66,7 @@
                                     <div class="value">
                                         <div class="input-group">
                                             <div class="rs-select2 js-select-simple select--no-search">
-                                                <select name="subject">
+                                                <select name="subject" id="access">
                                                     <option disabled="disabled" selected="selected">Choose option</option>
                                                     <option>Public</option>
                                                     <option>Private/$ORG</option>
@@ -82,19 +82,19 @@
                                           <div class="row">
                                               <div class="col-2">
                                                   <div class="input-group-desc">
-                                                      <input class="input--style-5" type="text" name="first_name">
+                                                      <input class="input--style-5" type="text" name="first_name" id="reviewer0Name">
                                                       <label class="label--desc">Name</label>
                                                   </div>
                                               </div>
                                               <div class="col-2">
                                                   <div class="input-group-desc">
-                                                      <input class="input--style-5" type="text" name="last_name">
+                                                      <input class="input--style-5" type="text" name="last_name" id="reviewer0Email">
                                                       <label class="label--desc">Email</label>
                                                   </div>
                                               </div>
                                               <div class="col-2">
                                                   <div class="input-group-desc">
-                                                      <input class="input--style-5" type="text" name="last_name">
+                                                      <input class="input--style-5" type="text" name="last_name" id="reviewer0Organization">
                                                       <label class="label--desc">Organization</label>
                                                   </div>
                                               </div>
@@ -107,7 +107,7 @@
                                     <div class="value">
                                         <div class="input-group">
                                             <div class="rs-select2 js-select-simple select--no-search">
-                                                <select name="subject">
+                                                <select name="subject" id="reviewer0AssociatedWithProject">
                                                     <option disabled="disabled" selected="selected">Choose option</option>
                                                     <option>True (contributor or similar to the project)</option>
                                                     <option>False (not affiliated with the project)</option>
@@ -123,7 +123,7 @@
                                   <div class="value">
                                       <div class="input-group">
                                           <div class="rs-select2 js-select-simple select--no-search">
-                                              <select name="subject">
+                                              <select name="subject" id="reviewer0CompensationSource">
                                                   <option disabled="disabled" selected="selected">Choose option</option>
                                                   <option>Project (the project compensated me)</option>
                                                   <option>Non-project (another organization compensated me)</option>
@@ -142,7 +142,7 @@
                                 <div class="value">
                                     <div class="input-group">
                                         <div class="rs-select2 js-select-simple select--no-search">
-                                            <select name="subject">
+                                            <select name="subject" id="domain">
                                                 <option disabled="disabled" selected="selected">Choose option</option>
                                                 <option>Security</option>
                                             </select>
@@ -159,7 +159,7 @@
                                                 <div class="col-3">
                                                     <div class="p-t-15">
                                                         <label class="radio-container m-r-55">Static Analysis
-                                                            <input type="checkbox" name="exist">
+                                                            <input type="checkbox" name="exist" id="staticAnalysis">
                                                             <span class="checkmark"></span>
                                                         </label>
                                                     </div>
@@ -167,7 +167,7 @@
                                                 <div class="col-3">
                                                   <div class="p-t-15">
                                                       <label class="radio-container m-r-55">Dynamic Analysis
-                                                          <input type="checkbox" name="exist">
+                                                          <input type="checkbox" name="exist" id="dynamicAnalysis">
                                                           <span class="checkmark"></span>
                                                       </label>
                                                   </div>
@@ -175,7 +175,7 @@
                                                 <div class="col-3">
                                                   <div class="p-t-15">
                                                       <label class="radio-container m-r-55">Code Review
-                                                          <input type="checkbox" name="exist">
+                                                          <input type="checkbox" name="exist" id="codeReview">
                                                           <span class="checkmark"></span>
                                                       </label>
                                                   </div>
@@ -185,7 +185,7 @@
                                                 <div class="col-3">
                                                     <div class="p-t-15">
                                                         <label class="radio-container m-r-55">Web Search
-                                                            <input type="checkbox" name="exist">
+                                                            <input type="checkbox" name="exist" id="webSearch">
                                                             <span class="checkmark"></span>
                                                         </label>
                                                     </div>
@@ -193,7 +193,7 @@
                                                 <div class="col-3">
                                                   <div class="p-t-15">
                                                       <label class="radio-container m-r-55">Fuzzing
-                                                          <input type="checkbox" name="exist">
+                                                          <input type="checkbox" name="exist" id="fuzzing">
                                                           <span class="checkmark"></span>
                                                       </label>
                                                   </div>
@@ -201,7 +201,7 @@
                                                 <div class="col-3">
                                                   <div class="p-t-15">
                                                       <label class="radio-container m-r-55">External Review
-                                                          <input type="checkbox" name="exist">
+                                                          <input type="checkbox" name="exist" id="externalReview">
                                                           <span class="checkmark"></span>
                                                       </label>
                                                   </div>
@@ -215,7 +215,7 @@
                                   <div class="value">
                                       <div class="input-group">
                                           <div class="rs-select2 js-select-simple select--no-search">
-                                              <select name="subject">
+                                              <select name="subject" id="issuesIdentified">
                                                   <option disabled="disabled" selected="selected">Choose option</option>
                                                   <option>Severe</option>
                                                   <option>Non-Severe</option>
@@ -247,7 +247,7 @@
                                 <div class="value">
                                     <div class="input-group">
                                         <div class="rs-select2 js-select-simple select--no-search">
-                                            <select name="subject">
+                                            <select name="subject" id="scope">
                                                 <option disabled="disabled" selected="selected">Choose option</option>
                                                 <option>Implementation (Full)</option>
                                                 <option>Implementation (Partial)</option>
@@ -264,7 +264,7 @@
                               <div class="value">
                                   <div class="input-group">
                                       <div class="rs-select2 js-select-simple select--no-search">
-                                          <select name="subject">
+                                          <select name="subject" id="schemaVersion">
                                               <option disabled="disabled" selected="selected">Choose option</option>
                                               <option>1.0</option>
                                           </select>
@@ -279,7 +279,7 @@
                             <div class="value">
                                 <div class="input-group">
                                     <div class="rs-select2 js-select-simple select--no-search">
-                                        <select name="subject">
+                                        <select name="subject" id="spdxLicense">
                                             <option disabled="disabled" selected="selected">Choose option</option>
                                             <option>CC-BY-4.0</option>
                                         </select>
@@ -304,25 +304,25 @@
                               <div class="form-row-big">
                                   <div class="name">Summary</div>
                                       <div class="value">
-                                          <textarea class="input-group-big" placeholder="One-line summary of the review"></textarea>
+                                          <textarea class="input-group-big" placeholder="One-line summary of the review" id="summary"></textarea>
                                       </div>
                               </div>
                               <div class="form-row-big">
                                   <div class="name">Details</div>
                                       <div class="value">
-                                          <textarea class="input-group-big" placeholder="Details of the review"></textarea>
+                                          <textarea class="input-group-big" placeholder="Details of the review" id="details"></textarea>
                                       </div>
                               </div>
                               <div class="form-row-big">
                                   <div class="name">Methodology (Optional)</div>
                                       <div class="value">
-                                          <textarea class="input-group-big" placeholder="Methodology of the review"></textarea>
+                                          <textarea class="input-group-big" placeholder="Methodology of the review" id="methodology"></textarea>
                                       </div>
                               </div>
                               <div class="form-row-big">
                                   <div class="name">External References (Optional)</div>
                                       <div class="value">
-                                          <textarea class="input-group-big" placeholder="External References"></textarea>
+                                          <textarea class="input-group-big" placeholder="External References" id="externalReferences"></textarea>
                                       </div>
                               </div>
 
@@ -345,7 +345,7 @@
                                   </div>
                               </div>
                               <div>
-                                  <button class="btn btn--radius-2 btn--black" type="submit">Submit</button>
+                                  <button class="btn btn--radius-2 btn--black" type="submit">Get Markdown</button>
                               </div>
                           </form>
                       </div>
@@ -353,6 +353,26 @@
                 </div>
             </div>
 
+        </div>
+    </div>
+
+    <div class="modal" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document" style="width:1200px;max-width:1200px">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Markdown Text</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <textarea id="markdown" class="form-control" style="width: 100%;" rows="35"></textarea>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary copyClipboard">Copy to Clipboard</button>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
         </div>
     </div>
 
