@@ -100,7 +100,6 @@ Date.prototype.toDateInputValue = (function() {
             t += '[Creative Commons Attribution 4.0 (CC-BY-4.0) license](https://creativecommons.org/licenses/by/4.0/legalcode.txt).\n';
             t += 'Externally-referenced content may be licensed differently.\n';
 
-            alert(t);
 
             $('#markdown').val(t);
             $('.modal').modal();
