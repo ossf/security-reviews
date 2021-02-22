@@ -142,11 +142,12 @@ Date.prototype.toDateInputValue = (function() {
 
             t += 'Issues-Identified: ' + $('#issuesIdentified').val() + '\n';
 
-            t += 'Package-URLs:\n';
+            t += 'Package-URL(s):\n';
             $.each($('#packageURLs').val().split("\n"), (idx, url) => {
                 if (url !== '' && !url.startsWith('pkg:')) {
-                    $('#packageURLs')[0].setCustomValidity('Each line must contain a valid PackageURL.');
-                    $('#packageURLs')[0].reportValidity();
+                    alert("Invalid package URL. Example: pkg:npm/left-pad@1.3.0");
+                    // $('#packageURLs')[0].setCustomValidity('Each line must contain a valid PackageURL.');
+                    // $('#packageURLs')[0].reportValidity();
                     abortSubmission = true;
                     return false;
                 }
