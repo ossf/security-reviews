@@ -149,9 +149,9 @@ textarea {
 }
 
 .col-2 {
-  width: -webkit-calc((100% - 30px) / 2.9);
-  width: -moz-calc((100% - 30px) / 2.9);
-  width: calc((100% - 30px) / 2.9);
+  width: -webkit-calc((100% - 30px) / 2.81);
+  width: -moz-calc((100% - 30px) / 2.81);
+  width: calc((100% - 30px) / 2.81);
   padding: 0px 3px;
 }
 
