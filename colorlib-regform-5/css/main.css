@@ -580,6 +580,7 @@ h6 {
 
 .btn--black:hover {
   background: #0d0d0d;
+  color: white;
 }
 
 .btn--red:hover {
@@ -912,6 +913,7 @@ input {
   /* -moz-box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.15); */
   /* box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.15); */
   height: 100%;
+  border: 0px;
 }
 
 .card-5 .card-heading {
