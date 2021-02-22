@@ -168,7 +168,12 @@ Date.prototype.toDateInputValue = (function() {
             t += $('#details').val().trim() + '\n\n';
 
             t += '### Methodology\n\n';
-            t += $('#methodology').val().trim() + '\n\n';
+            const methodology = $('#methodology').val().trim();
+            if (methodology !== '') {
+                t += $('#methodology').val().trim() + '\n\n';
+            } else {
+                t += 'No methodology was provided.\n\n';
+            }
 
             t += '### External References\n\n';
             const refs = $('#externalReferences').val().trim();
