@@ -115,29 +115,6 @@ Date.prototype.toDateInputValue = (function() {
               abortSubmission = true;
               return false;
             }
-            // var summary = $('#summary').val();
-            // if(summary == ""){
-            //   $('#summary')[0].setCustomValidity('Please select an option.');
-            //   $('#summary')[0].reportValidity();
-            //   abortSubmission = true;
-            //   alert(1);
-            //   return false;
-            // }
-            // var details = $('#details').val();
-            // if(details == ""){
-            //   $('#details')[0].setCustomValidity('Please select an option.');
-            //   $('#details')[0].reportValidity();
-            //   abortSubmission = true;
-            //   return false;
-            // }
-            // var disclosure = $('#disclosure').val();
-            // if(!document.querySelector('#disclosure').checked){
-            //   $('#disclosure')[0].setCustomValidity('Please select an option.');
-            //   $('#disclosure')[0].reportValidity();
-            //   abortSubmission = true;
-            //   alert(1);
-            //   return false;
-            // }
 
             var t = '';
             t += '---\n'
@@ -211,7 +188,6 @@ Date.prototype.toDateInputValue = (function() {
             t += 'This text is released under at least the\n';
             t += '[Creative Commons Attribution 4.0 (CC-BY-4.0) license](https://creativecommons.org/licenses/by/4.0/legalcode.txt).\n';
             t += 'Externally-referenced content may be licensed differently.\n';
-
 
             $('#markdown').val(t);
             $('.modal').modal();

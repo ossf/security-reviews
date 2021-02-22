@@ -348,7 +348,7 @@
                                   </div>
                               </div>
                               <div>
-                                  <button class="btn btn--radius-2 btn--black" type="submit" data-toggle="modal" data-target=".modal">Get Markdown</button>
+                                  <button class="btn btn--radius-2 btn--black" type="submit">Get Markdown</button>
                               </div>
                           </form>
                       </div>
@@ -359,7 +359,7 @@
         </div>
     </div>
 
-    <div class="modal" tabindex="-1" role="dialog">
+    <div class="modal" id=modalID tabindex="0" role="dialog">
         <div class="modal-dialog" role="document" style="width:1200px;max-width:1200px">
             <div class="modal-content">
                 <div class="modal-header">
@@ -382,16 +382,15 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.bundle.min.js" integrity="sha512-wV7Yj1alIZDqZFCUQJy85VN+qvEIly93fIQAN7iqDFCPEucLCeNFz4r35FCo9s6WrpdDQPi80xbljXB8Bjtvcg==" crossorigin="anonymous"></script>
 
-    <script src="js/get_markdown.js"></script>
-
     <!-- Jquery JS-->
-    <script src="vendor/jquery/jquery.min.js"></script>
+    <!-- <script src="vendor/jquery/jquery.min.js"></script> -->
     <!-- Vendor JS-->
     <script src="vendor/select2/select2.min.js"></script>
     <script src="vendor/datepicker/moment.min.js"></script>
     <script src="vendor/datepicker/daterangepicker.js"></script>
 
     <!-- Main JS-->
+    <script src="js/get_markdown.js"></script>
     <script src="js/global.js"></script>
 
 </body><!-- This templates was made by Colorlib (https://colorlib.com) -->
