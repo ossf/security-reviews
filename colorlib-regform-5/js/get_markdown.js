@@ -63,23 +63,23 @@ Date.prototype.toDateInputValue = (function() {
               abortSubmission = true;
               return false;
             }
-            // var staticAnalysis = $('#staticAnalysis').val();
-            // var dynamicAnalysis = $('#dynamicAnalysis').val();
-            // var codeReview = $('#codeReview').val();
-            // var webSearch = $('#webSearch').val();
-            // var fuzzing = $('#fuzzing').val();
-            // var externalReview = $('#externalReview').val();
-            // if(!document.querySelector('.staticAnalysis').checked &&
-            //    !document.querySelector('.dynamicAnalysis').checked &&
-            //    !document.querySelector('.codeReview').checked &&
-            //    !document.querySelector('.webSearch').checked &&
-            //    !document.querySelector('.fuzzing').checked &&
-            //    !document.querySelector('.fuzzing').checked) {
-            //   $('#fuzzing')[0].setCustomValidity('Please select an option.');
-            //   $('#fuzzing')[0].reportValidity();
-            //   abortSubmission = true;
-            //   return false;
-            // }
+            var staticAnalysis = $('#staticAnalysis').val();
+            var dynamicAnalysis = $('#dynamicAnalysis').val();
+            var codeReview = $('#codeReview').val();
+            var webSearch = $('#webSearch').val();
+            var fuzzing = $('#fuzzing').val();
+            var externalReview = $('#externalReview').val();
+            if(!document.querySelector('#staticAnalysis').checked &&
+               !document.querySelector('#dynamicAnalysis').checked &&
+               !document.querySelector('#codeReview').checked &&
+               !document.querySelector('#webSearch').checked &&
+               !document.querySelector('#fuzzing').checked &&
+               !document.querySelector('#externalReview').checked) {
+              $('#fuzzing')[0].setCustomValidity('Please select an option.');
+              $('#fuzzing')[0].reportValidity();
+              abortSubmission = true;
+              return false;
+            }
             var issuesIdentified = $('#issuesIdentified').val();
             if(issuesIdentified == ""){
               $('#issuesIdentified')[0].setCustomValidity('Please select an option.');
@@ -115,6 +115,29 @@ Date.prototype.toDateInputValue = (function() {
               abortSubmission = true;
               return false;
             }
+            // var summary = $('#summary').val();
+            // if(summary == ""){
+            //   $('#summary')[0].setCustomValidity('Please select an option.');
+            //   $('#summary')[0].reportValidity();
+            //   abortSubmission = true;
+            //   alert(1);
+            //   return false;
+            // }
+            // var details = $('#details').val();
+            // if(details == ""){
+            //   $('#details')[0].setCustomValidity('Please select an option.');
+            //   $('#details')[0].reportValidity();
+            //   abortSubmission = true;
+            //   return false;
+            // }
+            // var disclosure = $('#disclosure').val();
+            // if(!document.querySelector('#disclosure').checked){
+            //   $('#disclosure')[0].setCustomValidity('Please select an option.');
+            //   $('#disclosure')[0].reportValidity();
+            //   abortSubmission = true;
+            //   alert(1);
+            //   return false;
+            // }
 
             var t = '';
             t += '---\n'
@@ -191,7 +214,6 @@ Date.prototype.toDateInputValue = (function() {
 
 
             $('#markdown').val(t);
-
             $('.modal').modal();
         });
     });
