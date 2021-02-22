@@ -26,6 +26,96 @@ Date.prototype.toDateInputValue = (function() {
 
             e.preventDefault();
 
+            var abortSubmission = false;
+
+            var publicationState = $('#publicationState').val();
+            if(publicationState == ""){
+              $('#publicationState')[0].setCustomValidity('Please select an option.');
+              $('#publicationState')[0].reportValidity();
+              abortSubmission = true;
+              return false;
+            }
+            var access = $('#access').val();
+            if(access == ""){
+              $('#access')[0].setCustomValidity('Please select an option.');
+              $('#access')[0].reportValidity();
+              abortSubmission = true;
+              return false;
+            }
+            var reviewer0AssociatedWithProject = $('#reviewer0AssociatedWithProject').val();
+            if(reviewer0AssociatedWithProject == ""){
+              $('#reviewer0AssociatedWithProject')[0].setCustomValidity('Please select an option.');
+              $('#reviewer0AssociatedWithProject')[0].reportValidity();
+              abortSubmission = true;
+              return false;
+            }
+            var reviewer0CompensationSource = $('#reviewer0CompensationSource').val();
+            if(reviewer0CompensationSource == ""){
+              $('#reviewer0CompensationSource')[0].setCustomValidity('Please select an option.');
+              $('#reviewer0CompensationSource')[0].reportValidity();
+              abortSubmission = true;
+              return false;
+            }
+            var domain = $('#domain').val();
+            if(domain == ""){
+              $('#domain')[0].setCustomValidity('Please select an option.');
+              $('#domain')[0].reportValidity();
+              abortSubmission = true;
+              return false;
+            }
+            // var staticAnalysis = $('#staticAnalysis').val();
+            // var dynamicAnalysis = $('#dynamicAnalysis').val();
+            // var codeReview = $('#codeReview').val();
+            // var webSearch = $('#webSearch').val();
+            // var fuzzing = $('#fuzzing').val();
+            // var externalReview = $('#externalReview').val();
+            // if(!document.querySelector('.staticAnalysis').checked &&
+            //    !document.querySelector('.dynamicAnalysis').checked &&
+            //    !document.querySelector('.codeReview').checked &&
+            //    !document.querySelector('.webSearch').checked &&
+            //    !document.querySelector('.fuzzing').checked &&
+            //    !document.querySelector('.fuzzing').checked) {
+            //   $('#fuzzing')[0].setCustomValidity('Please select an option.');
+            //   $('#fuzzing')[0].reportValidity();
+            //   abortSubmission = true;
+            //   return false;
+            // }
+            var issuesIdentified = $('#issuesIdentified').val();
+            if(issuesIdentified == ""){
+              $('#issuesIdentified')[0].setCustomValidity('Please select an option.');
+              $('#issuesIdentified')[0].reportValidity();
+              abortSubmission = true;
+              return false;
+            }
+            var packageURLs = $('#packageURLs').val();
+            if(packageURLs == ""){
+              $('#packageURLs')[0].setCustomValidity('Please select an option.');
+              $('#packageURLs')[0].reportValidity();
+              abortSubmission = true;
+              return false;
+            }
+            var scope = $('#scope').val();
+            if(scope == ""){
+              $('#scope')[0].setCustomValidity('Please select an option.');
+              $('#scope')[0].reportValidity();
+              abortSubmission = true;
+              return false;
+            }
+            var schemaVersion = $('#schemaVersion').val();
+            if(schemaVersion == ""){
+              $('#schemaVersion')[0].setCustomValidity('Please select an option.');
+              $('#schemaVersion')[0].reportValidity();
+              abortSubmission = true;
+              return false;
+            }
+            var spdxLicense = $('#spdxLicense').val();
+            if(spdxLicense == ""){
+              $('#spdxLicense')[0].setCustomValidity('Please select an option.');
+              $('#spdxLicense')[0].reportValidity();
+              abortSubmission = true;
+              return false;
+            }
+
             var t = '';
             t += '---\n'
             t += 'Publication-State: ' + $('#publicationState').val() + '\n';
@@ -53,7 +143,6 @@ Date.prototype.toDateInputValue = (function() {
             t += 'Issues-Identified: ' + $('#issuesIdentified').val() + '\n';
 
             t += 'Package-URLs:\n';
-            var abortSubmission = false;
             $.each($('#packageURLs').val().split("\n"), (idx, url) => {
                 if (url !== '' && !url.startsWith('pkg:')) {
                     $('#packageURLs')[0].setCustomValidity('Each line must contain a valid PackageURL.');

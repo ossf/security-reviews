@@ -54,10 +54,10 @@
                                         <div class="input-group">
                                             <div class="rs-select2 js-select-simple select--no-search">
                                                 <select name="subject" class="form-control" id="publicationState" required>
-                                                    <option>-Select Option-</option>
-                                                    <option selected="selected">Active</option>
-                                                    <option>Draft</option>
-                                                    <option>Removed</option>
+                                                    <option value="">-Select Option-</option>
+                                                    <option value="Active" selected>Active</option>
+                                                    <option value="Draft">Draft</option>
+                                                    <option value="Removed">Removed</option>
                                                 </select>
                                                 <div class="select-dropdown"></div>
                                             </div>
@@ -70,9 +70,9 @@
                                         <div class="input-group">
                                             <div class="rs-select2 js-select-simple select--no-search">
                                                 <select name="subject" id="access" required>
-                                                    <option>-Select Option-</option>
-                                                    <option selected="selected">Public</option>
-                                                    <option>Private/$ORG</option>
+                                                    <option value="">-Select Option-</option>
+                                                    <option value="Public" selected>Public</option>
+                                                    <option value="Private">Private/$ORG</option>
                                                 </select>
                                                 <div class="select-dropdown"></div>
                                             </div>
@@ -111,9 +111,9 @@
                                         <div class="input-group">
                                             <div class="rs-select2 js-select-simple select--no-search">
                                                 <select name="subject" id="reviewer0AssociatedWithProject" required>
-                                                    <option selected="selected" value="">-Select Option-</option>
-                                                    <option>True (contributor or similar to the project)</option>
-                                                    <option>False (not affiliated with the project)</option>
+                                                    <option value="">-Select Option-</option>
+                                                    <option value="True">True (contributor or similar to the project)</option>
+                                                    <option value="False">False (not affiliated with the project)</option>
                                                 </select>
                                                 <div class="select-dropdown"></div>
                                             </div>
@@ -127,12 +127,12 @@
                                       <div class="input-group">
                                           <div class="rs-select2 js-select-simple select--no-search">
                                               <select name="subject" id="reviewer0CompensationSource" required>
-                                                  <option selected="selected">-Select Option-</option>
-                                                  <option>Project (the project compensated me)</option>
-                                                  <option>Non-project (another organization compensated me)</option>
-                                                  <option>External (someone else performed the review)</option>
-                                                  <option>Undisclosed (would prefer not to say)</option>
-                                                  <option>None (received no compensation)</option>
+                                                  <option value="">-Select Option-</option>
+                                                  <option value="Project">Project (the project compensated me)</option>
+                                                  <option value="project">Non-project (another organization compensated me)</option>
+                                                  <option value="External">External (someone else performed the review)</option>
+                                                  <option value="Undisclosed">Undisclosed (would prefer not to say)</option>
+                                                  <option value="None">None (received no compensation)</option>
                                               </select>
                                               <div class="select-dropdown"></div>
                                           </div>
@@ -146,8 +146,8 @@
                                     <div class="input-group">
                                         <div class="rs-select2 js-select-simple select--no-search">
                                             <select name="subject" id="domain" required>
-                                                <option>-Select Option-</option>
-                                                <option selected="selected">Security</option>
+                                                <option value="">-Select Option-</option>
+                                                <option value="Security" selected>Security</option>
                                             </select>
                                             <div class="select-dropdown"></div>
                                         </div>
@@ -219,11 +219,11 @@
                                       <div class="input-group">
                                           <div class="rs-select2 js-select-simple select--no-search">
                                               <select name="subject" id="issuesIdentified" required>
-                                                  <option selected="selected">-Select Option-</option>
-                                                  <option>Severe</option>
-                                                  <option>Non-Severe</option>
-                                                  <option>None</option>
-                                                  <option>Not Examined</option>
+                                                  <option value="">-Select Option-</option>
+                                                  <option value="Severe">Severe</option>
+                                                  <option value="Non-Severe">Non-Severe</option>
+                                                  <option value="None">None</option>
+                                                  <option value="Not Examined">Not Examined</option>
                                               </select>
                                               <div class="select-dropdown"></div>
                                           </div>
@@ -251,10 +251,10 @@
                                     <div class="input-group">
                                         <div class="rs-select2 js-select-simple select--no-search">
                                             <select name="subject" id="scope" required>
-                                                <option selected="selected">-Select Option-</option>
-                                                <option>Implementation (Full)</option>
-                                                <option>Implementation (Partial)</option>
-                                                <option>Non-Implementation</option>
+                                                <option value="">-Select Option-</option>
+                                                <option value="Implementation (Full)">Implementation (Full)</option>
+                                                <option value="Implementation (Partial)">Implementation (Partial)</option>
+                                                <option value="Non-Implementation">Non-Implementation</option>
                                             </select>
                                             <div class="select-dropdown"></div>
                                         </div>
@@ -268,8 +268,8 @@
                                   <div class="input-group">
                                       <div class="rs-select2 js-select-simple select--no-search">
                                           <select name="subject" id="schemaVersion" required>
-                                              <option>-Select Option-</option>
-                                              <option selected="selected">1.0</option>
+                                              <option value="">-Select Option-</option>
+                                              <option value="1.0" selected>1.0</option>
                                           </select>
                                           <div class="select-dropdown"></div>
                                       </div>
@@ -283,8 +283,8 @@
                                 <div class="input-group">
                                     <div class="rs-select2 js-select-simple select--no-search">
                                         <select name="subject" id="spdxLicense" required>
-                                            <option>-Select Option-</option>
-                                            <option selected="selected">CC-BY-4.0</option>
+                                            <option value="">-Select Option-</option>
+                                            <option value="CC-BY-4.0" selected>CC-BY-4.0</option>
                                         </select>
                                         <div class="select-dropdown"></div>
                                     </div>
@@ -363,7 +363,7 @@
         <div class="modal-dialog" role="document" style="width:1200px;max-width:1200px">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title">Markdown Text</h5>
+                    <h1 class="modal-title">Markdown Text</h1>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                     </button>
