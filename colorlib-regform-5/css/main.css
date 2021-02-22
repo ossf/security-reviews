@@ -25,6 +25,28 @@ textarea {
   resize: None;
 }
 
+.col-4{
+  margin-bottom: 0;
+}
+
+.col-4 {
+  padding: 0 2px;
+  /* padding: 0 15px; */
+  position: relative;
+  width: 100%;
+  min-height: 1px;
+}
+
+.col-4 {
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 0 33%;
+  -moz-box-flex: 0;
+  -ms-flex: 0 0 33%;
+  flex: 0 0 33%;
+  max-width: 33%;
+}
+
+
 .form-row-big {
   display: -webkit-box;
   display: -webkit-flex;
@@ -125,6 +147,8 @@ textarea {
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
+  padding-left: 12px;
+  padding-right: 12px;
 }
 
 .row .col-2:last-child .input-group-desc {
@@ -781,6 +805,10 @@ input {
 
 .select2-container--default .select2-results__option {
   padding-left: 22px;
+}
+
+.select--no-search {
+  width: 100% !important;
 }
 
 .rs-select2 .select2-container {

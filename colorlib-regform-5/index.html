@@ -13,7 +13,7 @@
     <title>Security Review QuickStart</title>
 
     <!-- CSS Template From Old QuickStart Page-->
-    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css" integrity="sha512-P5MgMn1jBN01asBgU0z60Qk4QxiXo86+wlFahKrsQf37c9cro517WzVSPPV1tDKzhku2iJ2FVgL67wG03SGnNA==" crossorigin="anonymous" /> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css" integrity="sha512-P5MgMn1jBN01asBgU0z60Qk4QxiXo86+wlFahKrsQf37c9cro517WzVSPPV1tDKzhku2iJ2FVgL67wG03SGnNA==" crossorigin="anonymous" />
 
     <!-- Icons font CSS-->
     <link href="vendor/mdi-font/css/material-design-iconic-font.min.css" rel="stylesheet" media="all">
@@ -53,8 +53,8 @@
                                     <div class="value">
                                         <div class="input-group">
                                             <div class="rs-select2 js-select-simple select--no-search">
-                                                <select name="subject" class="form-control" id="publicationState">
-                                                    <option>-Select Option-</option>
+                                                <select name="subject" class="form-control" id="publicationState" required>
+                                                    <option value="">-Select Option-</option>
                                                     <option selected="selected">Active</option>
                                                     <option>Draft</option>
                                                     <option>Removed</option>
@@ -69,7 +69,7 @@
                                     <div class="value">
                                         <div class="input-group">
                                             <div class="rs-select2 js-select-simple select--no-search">
-                                                <select name="subject" id="access">
+                                                <select name="subject" id="access" required>
                                                     <option>-Select Option-</option>
                                                     <option selected="selected">Public</option>
                                                     <option>Private/$ORG</option>
@@ -83,19 +83,19 @@
                                     <div class="name">Reviewer (Optional)</div>
                                         <div class="value">
                                           <div class="row">
-                                              <div class="col-2">
+                                              <div class="col-4">
                                                   <div class="input-group-desc">
                                                       <input class="input--style-5" type="text" name="first_name" id="reviewer0Name">
                                                       <label class="label--desc">Name</label>
                                                   </div>
                                               </div>
-                                              <div class="col-2">
+                                              <div class="col-4">
                                                   <div class="input-group-desc">
                                                       <input class="input--style-5" type="text" name="last_name" id="reviewer0Email">
                                                       <label class="label--desc">Email</label>
                                                   </div>
                                               </div>
-                                              <div class="col-2">
+                                              <div class="col-4">
                                                   <div class="input-group-desc">
                                                       <input class="input--style-5" type="text" name="last_name" id="reviewer0Organization">
                                                       <label class="label--desc">Organization</label>
@@ -110,8 +110,8 @@
                                     <div class="value">
                                         <div class="input-group">
                                             <div class="rs-select2 js-select-simple select--no-search">
-                                                <select name="subject" id="reviewer0AssociatedWithProject">
-                                                    <option selected="selected">-Select Option-</option>
+                                                <select name="subject" id="reviewer0AssociatedWithProject" required>
+                                                    <option selected="selected" value="">-Select Option-</option>
                                                     <option>True (contributor or similar to the project)</option>
                                                     <option>False (not affiliated with the project)</option>
                                                 </select>
@@ -126,7 +126,7 @@
                                   <div class="value">
                                       <div class="input-group">
                                           <div class="rs-select2 js-select-simple select--no-search">
-                                              <select name="subject" id="reviewer0CompensationSource">
+                                              <select name="subject" id="reviewer0CompensationSource" required>
                                                   <option selected="selected">-Select Option-</option>
                                                   <option>Project (the project compensated me)</option>
                                                   <option>Non-project (another organization compensated me)</option>
@@ -145,7 +145,7 @@
                                 <div class="value">
                                     <div class="input-group">
                                         <div class="rs-select2 js-select-simple select--no-search">
-                                            <select name="subject" id="domain">
+                                            <select name="subject" id="domain" required>
                                                 <option>-Select Option-</option>
                                                 <option selected="selected">Security</option>
                                             </select>
@@ -218,7 +218,7 @@
                                   <div class="value">
                                       <div class="input-group">
                                           <div class="rs-select2 js-select-simple select--no-search">
-                                              <select name="subject" id="issuesIdentified">
+                                              <select name="subject" id="issuesIdentified" required>
                                                   <option selected="selected">-Select Option-</option>
                                                   <option>Severe</option>
                                                   <option>Non-Severe</option>
@@ -234,7 +234,7 @@
                                 <div class="form-row-big">
                                     <div class="name">Package URLs</div>
                                         <div class="value">
-                                            <textarea class="input-group-big" id="packageURLs" placeholder="Ex. pkg:npm/left-pad@1.3.0 (one per line)"></textarea>
+                                            <textarea class="input-group-big" id="packageURLs" placeholder="Ex. pkg:npm/left-pad@1.3.0 (one per line)" required></textarea>
                                         </div>
                                 </div>
 
@@ -250,7 +250,7 @@
                                 <div class="value">
                                     <div class="input-group">
                                         <div class="rs-select2 js-select-simple select--no-search">
-                                            <select name="subject" id="scope">
+                                            <select name="subject" id="scope" required>
                                                 <option selected="selected">-Select Option-</option>
                                                 <option>Implementation (Full)</option>
                                                 <option>Implementation (Partial)</option>
@@ -267,7 +267,7 @@
                               <div class="value">
                                   <div class="input-group">
                                       <div class="rs-select2 js-select-simple select--no-search">
-                                          <select name="subject" id="schemaVersion">
+                                          <select name="subject" id="schemaVersion" required>
                                               <option>-Select Option-</option>
                                               <option selected="selected">1.0</option>
                                           </select>
@@ -282,7 +282,7 @@
                             <div class="value">
                                 <div class="input-group">
                                     <div class="rs-select2 js-select-simple select--no-search">
-                                        <select name="subject" id="spdxLicense">
+                                        <select name="subject" id="spdxLicense" required>
                                             <option>-Select Option-</option>
                                             <option selected="selected">CC-BY-4.0</option>
                                         </select>
@@ -307,13 +307,13 @@
                               <div class="form-row-big">
                                   <div class="name">Summary</div>
                                       <div class="value">
-                                          <textarea class="input-group-big" placeholder="One-line summary of the review" id="summary"></textarea>
+                                          <textarea class="input-group-big" placeholder="One-line summary of the review" id="summary" required></textarea>
                                       </div>
                               </div>
                               <div class="form-row-big">
                                   <div class="name">Details</div>
                                       <div class="value">
-                                          <textarea class="input-group-big" placeholder="Details of the review" id="details"></textarea>
+                                          <textarea class="input-group-big" placeholder="Details of the review" id="details" required></textarea>
                                       </div>
                               </div>
                               <div class="form-row-big">
@@ -342,7 +342,7 @@
                                   <label class="label label--block">This review does not contain any significant, undisclosed, or unpatched security vulnerabilities.</label>
                                   <div class="p-t-15">
                                       <label class="radio-container m-r-55">I agree
-                                          <input type="checkbox" name="exist">
+                                          <input type="checkbox" name="exist" required>
                                           <span class="checkmark"></span>
                                       </label>
                                   </div>
