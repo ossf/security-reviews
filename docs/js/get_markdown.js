@@ -28,6 +28,17 @@ Date.prototype.toDateInputValue = (function() {
 
             var abortSubmission = false;
 
+            $.each($('#packageURLs').val().split("\n"), (idx, url) => {
+              if (url !== '' && !url.startsWith('pkg:')) {
+                  abortSubmission = true;
+              }
+            });
+            if (abortSubmission == true) {
+              $('#packageURLs')[0].setCustomValidity('Each line must contain a valid PackageURL.');
+              $('#packageURLs')[0].reportValidity();
+              return false;
+            }
+
             var publicationState = $('#publicationState').val();
             if(publicationState == ""){
               $('#publicationState')[0].setCustomValidity('Please select an option.');
@@ -87,6 +98,12 @@ Date.prototype.toDateInputValue = (function() {
               abortSubmission = true;
               return false;
             }
+
+            $('#packageURLs').on('keyup', function() {
+                $('#packageURLs')[0].setCustomValidity('');
+                $('#packageURLs')[0].reportValidity();
+            });
+
             var packageURLs = $('#packageURLs').val();
             if(packageURLs == ""){
               $('#packageURLs')[0].setCustomValidity('Please select an option.');
@@ -143,18 +160,18 @@ Date.prototype.toDateInputValue = (function() {
             t += 'Issues-Identified: ' + $('#issuesIdentified').val() + '\n';
 
             t += 'Package-URL(s):\n';
-            $.each($('#packageURLs').val().split("\n"), (idx, url) => {
-                if (url !== '' && !url.startsWith('pkg:')) {
-                    alert("Invalid package URL. Example: pkg:npm/left-pad@1.3.0");
-                    // $('#packageURLs')[0].setCustomValidity('Each line must contain a valid PackageURL.');
-                    // $('#packageURLs')[0].reportValidity();
-                    abortSubmission = true;
-                    return false;
-                }
-                if (url !== '') {
-                    t += '- ' + url.trim() + '\n';
-                }
-            });
+            // $.each($('#packageURLs').val().split("\n"), (idx, url) => {
+            //     if (url !== '' && !url.startsWith('pkg:')) {
+            //         // alert("Invalid package URL. Example: pkg:npm/left-pad@1.3.0");
+            //         $('#packageURLs')[0].setCustomValidity('Each line must contain a valid PackageURL.');
+            //         $('#packageURLs')[0].reportValidity();
+            //         abortSubmission = true;
+            //         return false;
+            //     }
+            //     if (url !== '') {
+            //         t += '- ' + url.trim() + '\n';
+            //     }
+            // });
 
             t += 'Review-Date: ' + $('#reviewDate').val() + '\n';
             t += 'Scope: ' + $('#scope').val() + '\n';
