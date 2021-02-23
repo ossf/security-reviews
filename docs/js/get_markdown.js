@@ -165,7 +165,7 @@ Date.prototype.toDateInputValue = (function() {
               }
             });
             if (abortSubmission == true) {
-              $('#packageURLs')[0].setCustomValidity('Each line must contain a valid PackageURL.');
+              $('#packageURLs')[0].setCustomValidity('Each line must contain a valid PackageURL. Ex. pkg:npm/left-pad@1.3.0');
               $('#packageURLs')[0].reportValidity();
               return false;
             }
