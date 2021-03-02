@@ -8,11 +8,7 @@ Reviewers:
 Domain: Security
 Methodology:
 - External-Review
-Issues-Identified:
-- One Critical
-- Five High
-- Five Medium
-- 37 Low/Informational 
+Issues-Identified:48 
 Package-URLs:
 - https://github.com/NLnetLabs/unbound
 Review-Date: 2019-12-19
