@@ -15,7 +15,7 @@ Issues-Identified: One Critical, Five High, Five Medium Severity Issues
 Package-URLs:
 - https://github.com/NLnetLabs/unbound
 Review-Date: 2019-12-19
-Scope: Full-end-to-end-review
+Scope: Full
 Schema-Version: 1.0
 SPDX-License-Identifier: CC-BY-4.0
 
@@ -23,7 +23,7 @@ SPDX-License-Identifier: CC-BY-4.0
   
 ### Summary
 
-The audit of UnboundDNS, facilitated by Open Source Technology Improvement Fund, Inc (ostif.org) led to a total of 48 changes that either improve security or fix minor issues that could lead to future security problems as the application grows and evolves over time. The consensus is that Unbound has greatly benefited from the work and that the users and applications that depend on it are now safer than they were prior to our work. A patch was released and can be seen here: https://nlnetlabs.nl/pipermail/unbound-users/2019-December/011930.html all other outstanding issues were corrected in versions 1.9.4 and 1.9.5.
+The audit of UnboundDNS, facilitated by Open Source Technology Improvement Fund, Inc (ostif.org) resulted in a total of 48 changes that either improve security or fix minor issues that could lead to future security problems as the application grows and evolves over time. The consensus is that Unbound has greatly benefited from the work and that the users and applications that depend on it are now safer than they were prior to the audit. A patch was released and can be seen here: https://nlnetlabs.nl/pipermail/unbound-users/2019-December/011930.html all other outstanding issues were corrected in versions 1.9.4 and 1.9.5.
 
 ### Details
 
