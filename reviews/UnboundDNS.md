@@ -8,10 +8,7 @@ Reviewers:
 Domain: Security
 Methodology:
 - External-Review
-- Manual-Code-Auditing
-- Dynamic-Analysis
-- Static-Analysis
-Issues-Identified: 
+Issues-Identified:
 - One Critical
 - Five High
 - Five Medium Severity Issues
