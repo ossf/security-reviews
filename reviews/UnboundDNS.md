@@ -11,11 +11,14 @@ Methodology:
 - Manual-Code-Auditing
 - Dynamic-Analysis
 - Static-Analysis
-Issues-Identified: One Critical, Five High, Five Medium Severity Issues
+Issues-Identified: 
+- One Critical
+- Five High
+- Five Medium Severity Issues
 Package-URLs:
 - https://github.com/NLnetLabs/unbound
 Review-Date: 2019-12-19
-Scope: Full
+Scope: Implementation/Full
 Schema-Version: 1.0
 SPDX-License-Identifier: CC-BY-4.0
 
