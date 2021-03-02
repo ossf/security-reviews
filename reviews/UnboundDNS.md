@@ -11,7 +11,8 @@ Methodology:
 Issues-Identified:
 - One Critical
 - Five High
-- Five Medium Severity Issues
+- Five Medium
+- 37 Low/Informational 
 Package-URLs:
 - https://github.com/NLnetLabs/unbound
 Review-Date: 2019-12-19
