@@ -10,7 +10,7 @@ Methodology:
 - External-Review
 Issues-Identified:48 
 Package-URLs:
-- https://github.com/NLnetLabs/unbound
+- pkg:github/NLnetLabs/unbound
 Review-Date: 2019-12-19
 Scope: Implementation/Full
 Schema-Version: 1.0
