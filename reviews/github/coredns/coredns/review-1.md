@@ -31,7 +31,7 @@ Cure53 used dynamic penetration testing and probed input locations for undesired
 
 ### External References
 
-• [Full Report](https://coredns.io/assets/DNS-01-report.pdf)
+• [Full Report](https://coredns.io/assets/DNS-01-report.pdf)  
 • [Repository](https://github.com/coredns/coredns)
 
 ### Disclaimer
