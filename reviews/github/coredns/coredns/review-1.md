@@ -2,9 +2,15 @@
 Publication-State: Active
 Access: Public
 Reviewers:
-  Organization: Cloud Native Computing Foundation / Linux Foundation / Cure53
-  Associated-With-Project: false
-  Compensation-Source: External
+-  Organization: Cloud Native Computing Foundation
+   Associated-With-Project: false
+   Compensation-Source: External
+-  Organization: Linux Foundation
+   Associated-With-Project: false
+   Compensation-Source: External
+-  Organization: Cure53
+   Associated-With-Project: false
+   Compensation-Source: External
 Domain: Security
 Methodology:
 - External-Review
@@ -46,13 +52,13 @@ A malicious actor can spoof IP addresses and source ports, paired with additiona
 
 ### Methodology
 
-Cure53 used dynamic penetration testing and probed input locations for undesired behavior. A series of common attacks such as DoS/SYN-floods were attempted, with one of these common attacks detecting a vulnerability (poisoning the DNS cache). Other checks were run as well, including non-terminating and data starving zone transfers, but in the end CoreDNS handled almost all attacks appropriately, and only a few minor issues were detected. Lastly, some manual static analysis was used to check for common vulnerabilities such as command injection, but nothing major was found.
+Cure53 used dynamic pen testing and probed input locations for undesired behavior. A series of common attacks such as DoS/SYN-floods were attempted, with one of these common attacks detecting a vulnerability (poisoning the DNS cache). Other checks were run as well, including non-terminating and data starving zone transfers, but in the end CoreDNS handled almost all attacks appropriately, and only a few minor issues were detected. Lastly, some manual static analysis was used to check for common vulnerabilities such as command injection, but nothing major was found.
 
 ### External References
 
 * [Full Report](https://coredns.io/assets/DNS-01-report.pdf)  
 * GitHub Repositories:  
-  *  [coredns/coredns](https://github.com/coredns/coredns)  
+  * [coredns/coredns](https://github.com/coredns/coredns)  
   * [miekg/dns]( https://github.com/miekg/dns)
 
 ### Disclaimer
