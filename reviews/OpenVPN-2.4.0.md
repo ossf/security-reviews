@@ -14,7 +14,7 @@ Package-URLs:
 Review-Date: 2017-05-11
 Scope: Implementation/Full
 Schema-Version: 2.4.0
-@@ -19,20 +20,40 @@ SPDX-License-Identifier: CC-BY-4.0
+SPDX-License-Identifier: CC-BY-4.0
 
 ---
 
