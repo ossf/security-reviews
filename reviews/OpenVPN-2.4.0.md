@@ -7,13 +7,13 @@ Reviewers:
   Compensation-Source: External
 Domain: Security
 Methodology: 
-- Source-Code Audit
-Issues-Identified: Critical
+- Code-Review
+Issues-Identified: Severe
 Package-URLs:
 - pkg:github/OpenVPN
 Review-Date: 2017-05-11
 Scope: Implementation/Full
-Schema-Version: 2.4.0
+Schema-Version: 1.0
 SPDX-License-Identifier: CC-BY-4.0
 
 ---
