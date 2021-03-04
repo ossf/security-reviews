@@ -1,21 +1,20 @@
 ---
-
- Publication-State: Active
- Access: Public
- Reviewers:
-  -Organization: Open Source Technology Improvement Fund, Quarkslab
-   Associated-With-Project: false
-   Compensation-Source: External
- Domain: Security
- Methodology: 
- - Source-Code Audit
- Issues-Identified: Critical
- Package-URLs:
- - pkg:github/OpenVPN
- Review-Date: 2017-05-11
- Scope: Implementation/Full
- Schema-Version: 2.4.0
- SPDX-License-Identifier: CC-BY-4.0
+Publication-State: Active
+Access: Public
+Reviewers:
+- Organization: Open Source Technology Improvement Fund, Quarkslab
+  Associated-With-Project: false
+  Compensation-Source: External
+Domain: Security
+Methodology: 
+- Source-Code Audit
+Issues-Identified: Critical
+Package-URLs:
+- pkg:github/OpenVPN
+Review-Date: 2017-05-11
+Scope: Implementation/Full
+Schema-Version: 2.4.0
+SPDX-License-Identifier: CC-BY-4.0
 
 ---
 
