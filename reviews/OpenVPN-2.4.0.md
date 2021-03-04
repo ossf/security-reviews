@@ -35,21 +35,21 @@ Because of this audit, the OpenVPN development team has issued a number of fixes
 
 ### The fixes include:
 
-#### - Correction of a pre-authentication Denial of Service attack. An attacker can crash any OpenVPN client or server without any credentials or keys.
-#### - Correction of an authenticated user Denial of Service attack. An attacker can crash an OpenVPN client or server using an AEAD mode cipher by sending crafted data to exhaust the packet counter. Requires authentication.
-#### - Correction of issues in mbedtls (PolarSSL) X509 certificate handling. Verify return values of mbedtls_x509_dn_gets and mbedtls_x509_serial_gets correctly.
-#### - Correction of usernames and passwords not being properly erased. for the new bootloader. (keystrokes not erased after authentication)
-#### - Correction of null pointer dereferences. Because this issue is low-severity and not exploitable, this fix is reserved for a future release.
-#### - Correction of service handling for OpenVPN GUI. The OpenVPN GUI did not properly terminate the service when closed.
-#### - Improvements to documentation of the OpenVPN protocol. Improving transparency of functionality for developers working with the OpenVPN protocol.
-#### - Updates to user documentation for other vulnerabilities that can be closed by user practices. Such as selecting more secure options, and deprecating antiquated options that are unsafe.
+- Correction of a pre-authentication Denial of Service attack. An attacker can crash any OpenVPN client or server without any credentials or keys.
+- Correction of an authenticated user Denial of Service attack. An attacker can crash an OpenVPN client or server using an AEAD mode cipher by sending crafted data to exhaust the packet counter. Requires authentication.
+- Correction of issues in mbedtls (PolarSSL) X509 certificate handling. Verify return values of mbedtls_x509_dn_gets and mbedtls_x509_serial_gets correctly.
+- Correction of usernames and passwords not being properly erased. for the new bootloader. (keystrokes not erased after authentication)
+- Correction of null pointer dereferences. Because this issue is low-severity and not exploitable, this fix is reserved for a future release.
+- Correction of service handling for OpenVPN GUI. The OpenVPN GUI did not properly terminate the service when closed.
+- Improvements to documentation of the OpenVPN protocol. Improving transparency of functionality for developers working with the OpenVPN protocol.
+- Updates to user documentation for other vulnerabilities that can be closed by user practices. Such as selecting more secure options, and deprecating antiquated options that are unsafe.
 
 ### Furthermore the following was affirmed:
 
-#### - When using OpenSSL, OpenVPN uses the RAND_bytes function for entropy exclusively. It appears to utilize it correctly with proper error handling.
-#### - When using mbedTLS, OpenVPN uses the mbedtls_ctr_drbg_random function for entropy exclusively. It appears to utilize it correctly with proper error handling.
-#### - When generating “non critical” random values, OpenVPN uses a custom algorithm that is non-standard but cryptographically sound.
-#### - OpenVPN contains some legacy code related to end-of-life versions of OpenSSL that are no longer supported.
+- When using OpenSSL, OpenVPN uses the RAND_bytes function for entropy exclusively. It appears to utilize it correctly with proper error handling.
+- When using mbedTLS, OpenVPN uses the mbedtls_ctr_drbg_random function for entropy exclusively. It appears to utilize it correctly with proper error handling.
+- When generating “non critical” random values, OpenVPN uses a custom algorithm that is non-standard but cryptographically sound.
+- OpenVPN contains some legacy code related to end-of-life versions of OpenSSL that are no longer supported.
 
 
 
