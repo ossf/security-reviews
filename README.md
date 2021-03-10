@@ -7,7 +7,7 @@ This repository contains a collection of security reviews of open source softwar
 ## How Can I Submit a Security Review?
 
 - [ ] Choose an open source component and complete the form on the [QuickStart](https://ossf.github.io/security-reviews/quickstart.html) page to generate your review (it will be a markdown file).
-- [ ] Clone this repository and add your security review to the relevant path in the [reviews](https://github.com/ossf/security-reviews/tree/main/reviews) directory (see [Naming Reviews](#Naming Reviews)).
+- [ ] Clone this repository and add your security review to the relevant path in the [reviews](https://github.com/ossf/security-reviews/tree/main/reviews) directory (see [Naming Reviews](#naming-reviews)).
 - [ ] Submit a pull request!
 
 ## Naming Reviews
