@@ -1,10 +1,10 @@
-# Open Source Security Reviews
+# Security Reviews
 
 This repository contains a collection of security reviews of open source software. It is a public resource that anyone can contribute to, and is consumable by anyone under a permissive license.
 
-***Note: Do not disclose "new" or "unknown" vulnerabilities to this project or to this repository.***
+## How do I submit a security review?
 
-## How Can I Submit a Security Review?
+***Note: Do not disclose "new" or "unknown" vulnerabilities to this project or to this repository.***
 
 - [ ] Choose an open source component and complete the form on the [QuickStart](https://ossf.github.io/security-reviews/quickstart.html) page to generate your review (it will be a markdown file).
 - [ ] Clone this repository and add your security review to the relevant path in the [reviews](https://github.com/ossf/security-reviews/tree/main/reviews) directory (see [Naming Reviews](#naming-reviews)).
