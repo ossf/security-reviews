@@ -2,13 +2,14 @@
 
 This repository contains a collection of security reviews of open source software. It is a public resource that anyone can contribute to, and is consumable by anyone under a permissive license.
 
-## How do I submit a security review?
+## How do I submit a review?
 
 ***Note: Do not disclose "new" or "unknown" vulnerabilities to this project or to this repository.***
 
-- [ ] Choose an open source component and complete the form on the [QuickStart](https://ossf.github.io/security-reviews/quickstart.html) page to generate your review (it will be a markdown file).
-- [ ] Clone this repository and add your security review to the relevant path in the [reviews](https://github.com/ossf/security-reviews/tree/main/reviews) directory (see [Naming Reviews](#naming-reviews)).
-- [ ] Submit a pull request!
+1. Choose an open source component
+2. Complete the form on the [QuickStart](https://ossf.github.io/security-reviews/quickstart.html) page (this will generate your review as a markdown file).
+2. Clone this repository and add your security review to the relevant path in the [reviews](https://github.com/ossf/security-reviews/tree/main/reviews) directory (see [Naming Reviews](#naming-reviews)).
+3. Submit a pull request!
 
 ## Naming Reviews
 
@@ -24,9 +25,9 @@ feel free to ask in an Issue or Pull Request.
 
 If you believe that a security review is inappropriate, either because
 it is giving objectively poor advice, contains an undisclosed security
-vulnerability, or similar, please open an Issue or contact [TBD](#).
+vulnerability, or similar, please open an Issue or [contact us](#) (link TBD).
 
-We reserve the right to remove (or not remove) any content submitted
+We reserve the right to remove, or not remove, any content submitted
 to this repository.
 
 ## Tips
