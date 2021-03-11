@@ -33,7 +33,7 @@ to this repository.
 ## Tips
 
 - [ ] Read the [Review Template](template.md) for information on which sections can (and must) be included and suggestions for the level of detail expected.
-- [ ] We are working on including a [Video Introduction](#) (may not be uploaded yet) to the project for more information and to learn more about what is expected in a security review.
+- [ ] Watch the [Video Introduction](#) (may not be uploaded yet) for more information and to learn more about what is expected in a security review.
 
 ## Disclosure Policy
 
