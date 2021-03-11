@@ -6,7 +6,7 @@ This repository contains a collection of security reviews of open source softwar
 
 ***Note: Do not disclose "new" or "unknown" vulnerabilities to this project or to this repository.***
 
-1. Choose an open source component
+1. Choose an open source component.
 2. Complete the form on the [QuickStart](https://ossf.github.io/security-reviews/quickstart.html) page (this will generate your review as a markdown file).
 2. Clone this repository and add your security review to the relevant path in the [reviews](https://github.com/ossf/security-reviews/tree/main/reviews) directory (see [Naming Reviews](#naming-reviews)).
 3. Submit a pull request!
