@@ -56,7 +56,23 @@ mechanism.
  * Vulnerabilities must already be disclosed publicly (preferably via a CVE) AND either (a) it must be fixed OR (b) at least 90 days must have passed since it was publicly disclosed.
 For reviews that don't describe or reference vulnerabilities, all content should be acceptable.
 
-For a more detailed Disclosure Policy with examples of acceptable and non-acceptable security reviews, please see the [Disclosure Policy](https://github.com/ossf/security-reviews/wiki/Disclosure-Policy) in the [Wiki](https://github.com/ossf/security-reviews/wiki/Disclosure-Policy). If you are ever unsure, we encourage you to seek guidance by opening an issue (please do not provide specifics), and a maintainer will advise on the most appropriate course.
+For a more detailed Disclosure Policy that includes examples of acceptable and non-acceptable security reviews, please see the [Disclosure Policy](https://github.com/ossf/security-reviews/wiki/Disclosure-Policy) page of the [Wiki](https://github.com/ossf/security-reviews/wiki). If you are ever unsure, we encourage you to seek guidance by opening an issue (please do not provide specifics), and a maintainer will advise on the most appropriate course.
+
+## Quality Bar
+
+When evaluating whether a submitted review meets the quality bar, maintainers will consider the following:
+
+ * **Evidence-based:** While opinions are allowed, all opinions must be clearly supported by specific evidence. That evidence could be analysis of source code (showing code snippets is recommended), fuzzing results, and so on. The opinions can be positive or negative, but they must be evidence based.
+
+ * **Credibility:** Does the content appear to be credible? For example, if a review just contained the text, "Project X has lots of vulnerabilities. Don't use it", the maintainer should request clarification and expansion of the content until it provides the reader with sufficient information to understand the risk. Such an explanation need not be exhaustive. For "positive" reviews
+
+ * **Reasonable:** Does the content sound reasonable? For example, if there are obvious incorrect assertions or poor advice ("Enable 'strict mode' to prevent SQL Injection attacks", "Switch from HTTPS to HTTP to improve performance"), then the maintainer should request changes, and the conversation should continue within the pull request until it is resolved.
+
+ * **Not a 0-Day:** Does the submission appear to comply with the [Disclosure Policy](https://github.com/ossf/security-reviews/wiki/Disclosure-Policy)? This essentially means, "does the submission contain a newly-disclosed vulnerability? If the submission appears to violate this policy, it will be closed. The submitter may open an Issue to discuss the matter. If the submission is particularly sensitive, a maintainer may request GitHub perform a "hard delete" of the PR, but we make no guarantee that the content will not be available. **Please, reflect on the nature of the content you intend to submit, and ask us if you have any doubts.**
+
+It would be infeasible for the reviewer of a pull request to "re-evaluate" the package from the submitted review to "double-check" the work product. As such, submissions by new contributors may be subject to additional scrutiny.
+
+The quality bar is also included in the  in the [PR Review Process](https://github.com/ossf/security-reviews/wiki/PR-Review-Process) of the [Wiki](https://github.com/ossf/security-reviews/wiki). Please note that this quality bar is subject to change over time.
 
 ## Motivation
 
