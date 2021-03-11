@@ -34,7 +34,7 @@ to this repository.
 
  * Read the [Review Template](template.md) for information on which sections can (and must) be included and suggestions for the level of detail expected.
  * Watch the [Video Introduction](#) (may not be uploaded yet) for more information and to learn more about what is expected in a security review.
- * Please see our [Wiki](https://github.com/ossf/security-reviews/wiki) for information on topics such as our [Disclosure Policy](https://github.com/ossf/security-reviews/wiki/Disclosure-Policy) and our [PR Review Process](https://github.com/ossf/security-reviews/wiki/PR-Review-Process).
+ * Please see the [Wiki](https://github.com/ossf/security-reviews/wiki) for information on topics such as the [Disclosure Policy](https://github.com/ossf/security-reviews/wiki/Disclosure-Policy) and the [PR Review Process](https://github.com/ossf/security-reviews/wiki/PR-Review-Process).
 
 ## Disclosure Policy
 
@@ -56,7 +56,7 @@ mechanism.
  * Vulnerabilities must already be disclosed publicly (preferably via a CVE) AND either (a) it must be fixed OR (b) at least 90 days must have passed since it was publicly disclosed.
 For reviews that don't describe or reference vulnerabilities, all content should be acceptable.
 
-For examples, please see the [Disclosure Policy](https://github.com/ossf/security-reviews/wiki/Disclosure-Policy) in the [Wiki](https://github.com/ossf/security-reviews/wiki/Disclosure-Policy). If you are ever unsure, we encourage you to seek guidance by opening an issue (please do not provide specifics), and a maintainer will advise on the most appropriate course.
+For a more detailed Disclosure Policy with examples of acceptable and non-acceptable security reviews, please see the [Disclosure Policy](https://github.com/ossf/security-reviews/wiki/Disclosure-Policy) in the [Wiki](https://github.com/ossf/security-reviews/wiki/Disclosure-Policy). If you are ever unsure, we encourage you to seek guidance by opening an issue (please do not provide specifics), and a maintainer will advise on the most appropriate course.
 
 ## Motivation
 
