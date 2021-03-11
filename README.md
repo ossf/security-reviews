@@ -32,17 +32,17 @@ to this repository.
 
 ## Tips
 
-- [ ] Read the [Review Template](template.md) for information on which sections can (and must) be included and suggestions for the level of detail expected.
-- [ ] Watch the [Video Introduction](#) (may not be uploaded yet) for more information and to learn more about what is expected in a security review.
+ * Read the [Review Template](template.md) for information on which sections can (and must) be included and suggestions for the level of detail expected.
+ * Watch the [Video Introduction](#) (may not be uploaded yet) for more information and to learn more about what is expected in a security review.
 
 ## Disclosure Policy
 
-This platform is **not** intended to be a vulnerability reporting process, but rather a forum for sharing general security reviews of open source components; if you
+This platform is **not** intended to be a vulnerability reporting process, but rather a forum for sharing general security reviews of open source components. If you
 discover a vulnerability in an open source software component, we
 strongly encourage you to disclose it privately to the author so as
 to protect the community.
 
-It is also **not** intended to be a vulnerability disclosure mechanism
+This platform is also **not** intended to be a vulnerability disclosure mechanism
 (i.e. it isn't an alternative to a CVE). If you are the author of a
 component, we encourage you to publicly disclose the vulnerability,
 either through the
@@ -55,24 +55,7 @@ mechanism.
  * Vulnerabilities must already be disclosed publicly (preferably via a CVE) AND either (a) it must be fixed OR (b) at least 90 days must have passed since it was publicly disclosed.
 For reviews that don't describe or reference vulnerabilities, all content should be acceptable.
 
-### Examples
-
-The following examples attempt to illustrate the policy above:
-
-***Acceptable Submissions***
-
- * Reviewer found no security vulnerabilities in a project.
- * Reviewer found a new vulnerability, reported it to the author, and it was fixed. Note that since it was fixed, it meets the "publicly disclosed" part of the policy above, even though we'd prefer CVEs or another disclosure mechanism to be used and referenced.
- * A vulnerability was reported on Twitter 91 days ago, but the project has not been updated. Note that we'd strongly encourage the submitter to disclose that vulnerability to the project maintainer.
- * Reviewer describes that if a particular configuration setting is used incorrectly, it could open up the user to attack. For example, "Web Server X, by default, provides an index page at /index. You should turn it off by setting NO_INDEX=1 in your server.conf file".
- * Vulnerabilities in transitive dependencies. For example, "Project Foo depends on Project Bar, and Project Bar is vulnerable to CVE-2021-123456."
-
-***Unacceptable Submissions***
-
- * Reviewer found a vulnerability but did not disclose it to the maintainer.
- * A vulnerability was reported on Twitter 30 days ago and the project has not released a fix yet.
-
-This page cannot account for all possible scenarios; therefore we encourage you to seek guidance by opening an issue (please do not provide specifics), and a maintainer will advise on the most appropriate course.
+For examples, please see the Disclosure Policy on our [Wiki](https://github.com/ossf/security-reviews/wiki/Disclosure-Policy). If you are ever unsure, we encourage you to seek guidance by opening an issue (please do not provide specifics), and a maintainer will advise on the most appropriate course.
 
 ## Motivation
 
