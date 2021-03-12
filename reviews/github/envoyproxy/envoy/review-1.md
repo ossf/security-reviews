@@ -66,7 +66,7 @@ There were four other issues detected during this security audit, all of which a
 
 ### Methodology
 
-Cure53 carried out a source code audit and penetration test in order to discover the above vulnerabilities/issues. The scope of this analysis, however, was very targeted due to the sheer size of the project. Thus, attention was focused on areas that posed a high threat such as the HTTP parser and header sanitizer, as well as areas requested by Envoy maintainers such as the TLS configuration, XFF, and DoS attacks.
+Cure53 carried out a source code audit and pen test in order to discover the above vulnerabilities/issues. The scope of this analysis, however, was very targeted due to the sheer size of the project. Thus, attention was focused on areas that posed a high threat such as the HTTP parser and header sanitizer, as well as areas requested by Envoy maintainers such as the TLS configuration, XFF, and DoS attacks.
 
 ### External References
 
