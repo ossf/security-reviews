@@ -25,13 +25,13 @@ SPDX-License-Identifier: CC-BY-4.0
 
 ### Summary
 
-Four vulnerabilities were detected as well as four smaller security issues, none of which were considered critical. The vulnerability of highest severity, the insecure Admin-Interface, was not considered a large threat and was later no longer considered a part of the attack surface. After the security audit, it was decided that Envoy implemented a modern, well-written, and secure infrastructure.
+This security audit determined that Envoy maintains a modern, well-written, and secure codebase. Four vulnerabilities and four smaller security issues were detected, however. The vulnerability of highest severity, an insecure Admin-Interface, was not considered a large threat as it was later deemed to be outside of the relevant attack surface. The report does not state whether these security issues have been fixed, but instead emphasized the importance that no threats of critical risk level were identified.
 
 ### Details
 
 The Cloud Native Computing Foundation asked Cure53 to conduct an in-depth security assessment of Envoy, which has since been made publicly available. This report was sponsored by the Linux Foundation and includes the scope, test coverage, identified vulnerabilities, and conclusions reached from the assessment, all of which are outlined in further detail in the [report](https://github.com/envoyproxy/envoy/blob/main/docs/SECURITY_AUDIT.pdf).
 
-The analysis was conducted by a team of eight (six from Cure53 and two experts from Secfault Security GmbH) analyzing targeted areas of the software. A brief summary of each of the vulnerabilities detected and their relative threat levels are outlined below.
+The analysis was conducted by a team of eight (six from Cure53 and two experts from Secfault Security GmbH) analyzing targeted areas of the codebase. A brief summary of each of the vulnerabilities detected and their relative threat levels are outlined below.
 
 ***Vulnerability 1: Lacking Admin-Interface Security allows CSRF and DOS (High)***
 
@@ -49,17 +49,17 @@ A potential buffer overflow was found in which the length of the input is not ch
 
 ***Vulnerability 3: Potential UaF with HeaderStrings and Ref. Buffers (Medium)***
 
-A potential use-after-free vulnerability was discovered in the Envoy's HeaderMap implementation, in which a function returning a reference is assigned to a particular variable that may later be invalidated/deleted. Importantly, in other locations of the codebase, the return value of the reference was assigned instead, protecting against this type of vulnerability in those areas.
+A potential use-after-free vulnerability was discovered in the Envoy's ```HeaderMap``` implementation, in which a function returning a reference is assigned to a particular variable that may later be invalidated/deleted. Importantly, in other locations of the codebase, the return value of the reference was assigned instead, protecting against this type of vulnerability in those areas.
 
 ***Vulnerability 4: Potential Integer Overflow during Header Encoding (Medium)***
 
-A potential integer overflow was detected where header encoding is handled, in which two 32-bit unsigned integers are included in an addition operation that is then assigned to a 64-bit unsigned integer which is used for memory allocation. Using particularly large values would cause this operation to overflow, resulting far less memory allocated, which creates possibilities for buffer overflows in memory-based options later on.
+A potential integer overflow was detected where the header encoding is handled, in which two 32-bit unsigned integers are included in an addition operation that is then assigned to a 64-bit unsigned integer, which is used for memory allocation. Using particularly large values would cause this operation to overflow, resulting far less memory allocated, and creates possibilities for buffer overflows later on.
 
 ***Smaller Issues***
 
 There were four other issues detected during this security audit, all of which are listed below. It is important to note that these were not labeled vulnerabilities as the vulnerable code was not found to be very accessible/exploitable. For the full details on these additional security issues, see the [report](https://github.com/envoyproxy/envoy/blob/main/docs/SECURITY_AUDIT.pdf).
 
- * *Issue 1: *strlcpy does not check for zero-sized parameters (Low)
+ * *Issue 1: *```strlcpy``` does not check for zero-sized parameters (Low)
  * *Issue 2: *User-Controlled Allocation leads to DOS (Medium)
  * *Issue 3: *Stack Exhaustion via unbounded Recursion (Medium)
  * *Issue 4: *Lax Parsing when processing malformed Messages (Low)
