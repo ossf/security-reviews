@@ -38,18 +38,18 @@ The analysis was conducted by a team of eight (six from Cure53 and two experts f
 This was documented as the only vulnerability of notable concern, as the Admin Interface was insecure. The interface lacks HTTP security headers and does not utilize CSRF tokens. As a result, if an administrator were tricked into clicking a malicious link elsewhere with specified code injection, an external actor would be given full administrative rights. Two examples of such links have been copied from the report below (note the Admin Interface is located at ht<span>tp://</span>localhost:9901):
 
 *Disable Logging:*
-```<img src="http://localhost:9901/logging?admin=off">```
+`<img src="http://localhost:9901/logging?admin=off">`
 
 *Shutdown the Server:*
-```<img src="http://localhost:9901/quitquitquit">```
+`<img src="http://localhost:9901/quitquitquit">`
 
 ***Vulnerability 2: Potential BoF with HeaderStrings and Inline Buffers (Medium)***
 
-A potential buffer overflow was found in which the length of the input is not checked prior to a ```memcpy``` command within the constructor of the ```HeaderString``` class.
+A potential buffer overflow was found in which the length of the input is not checked prior to a `memcpy` command within the constructor of the `HeaderString` class.
 
 ***Vulnerability 3: Potential UaF with HeaderStrings and Ref. Buffers (Medium)***
 
-A potential use-after-free vulnerability was discovered in the Envoy's ```HeaderMap``` implementation, in which a function returning a reference is assigned to a particular variable that may later be invalidated/deleted. Importantly, in other locations of the codebase, the return value of the reference was assigned instead, protecting against this type of vulnerability in those areas.
+A potential use-after-free vulnerability was discovered in the Envoy's `HeaderMap` implementation, in which a function returning a reference is assigned to a particular variable that may later be invalidated/deleted. Importantly, in other locations of the codebase, the return value of the reference was assigned instead, protecting against this type of vulnerability in those areas.
 
 ***Vulnerability 4: Potential Integer Overflow during Header Encoding (Medium)***
 
@@ -59,10 +59,10 @@ A potential integer overflow was detected where the header encoding is handled, 
 
 There were four other issues detected during this security audit, all of which are listed below. It is important to note that these were not labeled vulnerabilities as the vulnerable code was not found to be very accessible/exploitable. For the full details on these additional security issues, see the [report](https://github.com/envoyproxy/envoy/blob/main/docs/SECURITY_AUDIT.pdf).
 
- * *Issue 1: *```strlcpy``` does not check for zero-sized parameters (Low)
- * *Issue 2: *User-Controlled Allocation leads to DOS (Medium)
- * *Issue 3: *Stack Exhaustion via unbounded Recursion (Medium)
- * *Issue 4: *Lax Parsing when processing malformed Messages (Low)
+1. `strlcpy` does not check for zero-sized parameters (Low)
+2. User-Controlled Allocation leads to DOS (Medium)
+3. Stack Exhaustion via unbounded Recursion (Medium)
+4. Lax Parsing when processing malformed Messages (Low)
 
 ### Methodology
 
