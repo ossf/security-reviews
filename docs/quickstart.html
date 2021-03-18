@@ -1,263 +1,369 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<head>
+    <!-- Required meta tags-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Colorlib Templates">
+    <meta name="author" content="Colorlib">
+    <meta name="keywords" content="Colorlib Templates">
+
+    <!-- Title Page-->
+    <title>Security Review QuickStart</title>
+
+    <!-- CSS Template From Old QuickStart Page-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css" integrity="sha512-P5MgMn1jBN01asBgU0z60Qk4QxiXo86+wlFahKrsQf37c9cro517WzVSPPV1tDKzhku2iJ2FVgL67wG03SGnNA==" crossorigin="anonymous" />
 
-    <title>OSS Security Reviews: QuickStart!</title>
-    <style>
-        body { font-family: 'Segoe UI', 'Helvetica Neue', sans-serif}
-        textarea { font-family: 'Source Code Pro', Inconsolata, 'Consolas', monospace}
-        h6 { margin-top: 15px; font-weight: bold }
-    </style>
-  </head>
-  <body>
-    <nav class="navbar navbar-dark bg-dark">
-        <a class="navbar-brand" href="/">
-            OpenSSF: Security Reviews: QuickStart
-        </a>
-    </nav>
-    <div class="container-fluid" style="margin-top: 50px">
-        <main>
-            <form style="width: 1800px;margin:auto">
-                <div class="row">
-                    <div class="col-5">
-                        <div class="row">
-                            <h2>Metadata</h2>
+    <!-- Icons font CSS-->
+    <link href="vendor/mdi-font/css/material-design-iconic-font.min.css" rel="stylesheet" media="all">
+    <!-- <link href="vendor/font-awesome-4.7/css/font-awesome.min.css" rel="stylesheet" media="all"> -->
+    <!-- Font special for pages-->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i" rel="stylesheet">
+
+    <!-- Vendor CSS-->
+    <link href="vendor/select2/select2.min.css" rel="stylesheet" media="all">
+    <!-- <link href="vendor/datepicker/daterangepicker.css" rel="stylesheet" media="all"> -->
+
+    <!-- Main CSS-->
+    <link href="css/main.css" rel="stylesheet" media="all">
+
+</head>
+
+<body>
+
+    <div class="page-wrapper bg-light-grey p-t-45 p-b-50">
+
+        <h1>
+              OpenSSF: Security Review QuickStart
+        </h1>
+
+        <div class="wrapper wrapper--w790">
+
+            <div class="row">
+                <div class="column">
+                    <div class="card card-5">
+                        <div class="card-heading">
+                            <h2 class="title">Metadata</h2>
                         </div>
-                        <div class="row">
-                            <h6>Publication State</h6>
-                            <label for="publicationState" class="form-label sr-only">Publication State</label>
-                            <select class="form-control" id="publicationState" required>
-                                <option value="">--Choose--</option>
-                                <option value="Draft">Draft</option>
-                                <option value="Active" selected>Active</option>
-                                <option value="Removed">Removed</option>
-                            </select>
-                        </div>
-                        <div class="row">
-                            <h6>Access</h6>
-                            <label for="access" class="form-label sr-only">Access</label>
-                            <select class="form-control" id="access" required>
-                                <option value="">--Choose--</option>
-                                <option value="Private/$ORG">Private/$ORG</option>
-                                <option value="Public" selected>Public</option>
-                            </select>
-                        </div>
-                        <div class="row">
-                            <h6>Reviewer (Optional)</h6>
-                        </div>
-                        <div class="row">
-                            <div class="col-4">
-                                <input type="text" class="form-control" placeholder="Name (optional)" id="reviewer0Name" />
-                            </div>
-                            <div class="col-4">
-                                <input type="text" class="form-control" placeholder="E-Mail (optional)" id="reviewer0Email" />
-                            </div>
-                            <div class="col-4">
-                                <input type="text" class="form-control" placeholder="Organization (optional)" id="reviewer0Organization" />
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-6">
-                                <h6>Reviewer Association</h6>
-                                <label for="domain" class="form-label sr-only">Associated with Project?</label>
-                                <select class="form-control" id="reviewer0AssociatedWithProject">
-                                    <option value="">--Choose--</option>
-                                    <option value="true">true (I am a contributor or similar to the project.)</option>
-                                    <option value="false">false (I am not affiliated with the project.)</option>
-                                </select>
-                            </div>
-                            <div class="col-6">
-                                <h6>Compensation Source</h6>
-                                <label for="domain" class="form-label sr-only">Compensation Source</label>
-                                <select class="form-control" id="reviewer0CompensationSource">
-                                    <option value="">--Choose--</option>
-                                    <option value="Project">Project (The project compensated me.)</option>
-                                    <option value="Non-Project">Non-Project (Another organization compensated me.)</option>
-                                    <option value="External">External (Someone else performed the review.)</option>
-                                    <option value="Undisclosed">Undisclosed (I'd prefer not to say.)</option>
-                                    <option value="None">None (I received no compensation.)</option>
-                                </select>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <h6>Domain</h6>
-                            <label for="domain" class="form-label sr-only">Domain</label>
-                            <select class="form-control" id="domain" required>
-                                <option value="">--Choose--</option>
-                                <option value="Security" selected>Security</option>
-                            </select>
-                        </div>                        
-                        <div class="row">
-                            <h6>Methodology</h6>
-                        </div>
-                        <div class="row">
-                            <div class="col-6">
-                                <div class="form-group w-100">
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" value="static-analysis" id="staticAnalysis">
-                                        <label class="form-check-label" for="staticAnalysis">Static Analysis</label>
-                                    </div>
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" value="dynamic-analysis" id="dynamicAnalysis">
-                                        <label class="form-check-label" for="dynamicAnalysis">Dynamic Analysis</label>
-                                    </div>
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" value="code-review" id="codeReview">
-                                        <label class="form-check-label" for="codeReview">Code Review</label>
-                                    </div>                                
-                                </div>
-                            </div>
-                            <div class="col-6">
-                                <div class="form-group w-100">
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" value="web-search" id="webSearch">
-                                        <label class="form-check-label" for="webSearch">Web Search</label>
-                                    </div>
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" value="fuzzing" id="fuzzing">
-                                        <label class="form-check-label" for="fuzzing">Fuzzing</label>
-                                    </div>
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" value="external-review" id="externalReview">
-                                        <label class="form-check-label" for="externalReview">External Review</label>
+                        <div class="card-body">
+                            <form method="POST">
+                                <div class="form-row">
+                                    <div class="name">Publication State</div>
+                                    <div class="value">
+                                        <div class="input-group">
+                                            <div class="rs-select2 js-select-simple select--no-search">
+                                                <select name="subject" class="form-control" id="publicationState" required>
+                                                    <option value="">-Select Option-</option>
+                                                    <option value="Active" selected>Active</option>
+                                                    <option value="Draft">Draft</option>
+                                                    <option value="Removed">Removed</option>
+                                                </select>
+                                                <div class="select-dropdown"></div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>                            
-                        </div>
-                        <div class="row">
-                            <h6>Issues Identified</h6>
-                            <label for="issuesIdentified" class="form-label sr-only">Issues Identified</label>
-                            <select class="form-control" id="issuesIdentified" required>
-                                <option value="">--Choose--</option>
-                                <option value="Severe">Severe</option>
-                                <option value="Non-Severe">Non-Severe</option>
-                                <option value="None">None</option>
-                                <option value="Not-Examined">Not Examined</option>
-                            </select>
-                        </div>                        
-                        <div class="row">
-                            <h6>Package URLs</h6>
-                            <label for="packageURLs" class="sr-only">Package URLs</label>
-                            <textarea class="form-control" id="packageURLs" rows="5" placeholder="pkg:npm/left-pad@1.3.0 (one per line)" required></textarea>
-                        </div>                                                
-                        <div class="row">
-                            <h6>Review Date</h6>
-                            <label for="reviewDate" class="form-label sr-only">Review Date</label>
-                            <input type="date" class="form-control" id="reviewDate" required/>
-                        </div>
-                        <div class="row">
-                            <h6>Scope</h6>
-                            <label for="scope" class="form-label sr-only">Scope</label>
-                            <select class="form-control" id="scope" required>
-                                <option value="">--Choose--</option>
-                                <option value="Implementation/Full" selected>Implementation (Full)</option>
-                                <option value="Implementation/Partial">Implementation (Partial)</option>
-                                <option value="Non-Implementation">Non-Implementation</option>
-                            </select>
-                        </div>                        
-                        <div class="row">
-                            <h6>Schema Version</h6>
-                            <label for="schemaVersion" class="form-label sr-only">Schema Version</label>
-                            <select class="form-control" id="schemaVersion" required>
-                                <option value="">--Choose--</option>
-                                <option value="1.0" selected>1.0</option>
-                            </select>
-                        </div>                        
-                        <div class="row">
-                            <h6>SPDX License</h6>
-                            <label for="spdxLicense" class="form-label sr-only">SPDX License</label>
-                            <select class="form-control" id="spdxLicense" required>
-                                <option value="">--Choose--</option>
-                                <option value="CC-BY-4.0" selected>CC-BY-4.0</option>
-                            </select>
-                        </div>              
-                        <div class="row">
-                            <h6>Disclosure</h6>
-                            <div class="form-group w-100">
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="agreeDisclosure" id="disclosure" required>
-                                    <label class="form-check-label" for="disclosure">
-                                        I agree that this review does not contain details on any vulnerability that is undisclosed or is not yet fixed and is within 90 days of public disclosure.
-                                        For more information, view our <a href="https://github.com/ossf/security-reviews/wiki/Disclosure-Policy">disclosure policy</a>.
-                                    </label>
+                                <div class="form-row">
+                                    <div class="name">Access</div>
+                                    <div class="value">
+                                        <div class="input-group">
+                                            <div class="rs-select2 js-select-simple select--no-search">
+                                                <select name="subject" id="access" required>
+                                                    <option value="">-Select Option-</option>
+                                                    <option value="Public" selected>Public</option>
+                                                    <option value="Private">Private/$ORG</option>
+                                                </select>
+                                                <div class="select-dropdown"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-row m-b-55">
+                                    <div class="name">Reviewer (Optional)</div>
+                                        <div class="value">
+                                          <div class="row">
+                                              <div class="col-4">
+                                                  <div class="input-group-desc">
+                                                      <input class="input--style-5" type="text" name="first_name" id="reviewer0Name">
+                                                      <label class="label--desc">Name</label>
+                                                  </div>
+                                              </div>
+                                              <div class="col-4">
+                                                  <div class="input-group-desc">
+                                                      <input class="input--style-5" type="text" name="last_name" id="reviewer0Email">
+                                                      <label class="label--desc">Email</label>
+                                                  </div>
+                                              </div>
+                                              <div class="col-4">
+                                                  <div class="input-group-desc">
+                                                      <input class="input--style-5" type="text" name="last_name" id="reviewer0Organization">
+                                                      <label class="label--desc">Organization</label>
+                                                  </div>
+                                              </div>
+                                              </div>
+                                      </div>
+                                  </div>
+
+                                  <div class="form-row">
+                                    <div class="name">Association</div>
+                                    <div class="value">
+                                        <div class="input-group">
+                                            <div class="rs-select2 js-select-simple select--no-search">
+                                                <select name="subject" id="reviewer0AssociatedWithProject" required>
+                                                    <option value="">-Select Option-</option>
+                                                    <option value="True">True (contributor or similar to the project)</option>
+                                                    <option value="False">False (not affiliated with the project)</option>
+                                                </select>
+                                                <div class="select-dropdown"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-row">
+                                  <div class="name">Compensation Source</div>
+                                  <div class="value">
+                                      <div class="input-group">
+                                          <div class="rs-select2 js-select-simple select--no-search">
+                                              <select name="subject" id="reviewer0CompensationSource" required>
+                                                  <option value="">-Select Option-</option>
+                                                  <option value="Project">Project (the project compensated me)</option>
+                                                  <option value="Non-Project">Non-Project (another organization compensated me)</option>
+                                                  <option value="External">External (someone else performed the review)</option>
+                                                  <option value="Undisclosed">Undisclosed (would prefer not to say)</option>
+                                                  <option value="None">None (received no compensation)</option>
+                                              </select>
+                                              <div class="select-dropdown"></div>
+                                          </div>
+                                      </div>
+                                  </div>
+                                </div>
+
+                                <div class="form-row">
+                                <div class="name">Domain</div>
+                                <div class="value">
+                                    <div class="input-group">
+                                        <div class="rs-select2 js-select-simple select--no-search">
+                                            <select name="subject" id="domain" required>
+                                                <option value="">-Select Option-</option>
+                                                <option value="Security" selected>Security</option>
+                                            </select>
+                                            <div class="select-dropdown"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                </div>
+
+                                <div class="form-row">
+                                    <div class="name">Methodology</div>
+                                        <div class="value">
+                                            <div class="row row-space">
+                                                <div class="col-3">
+                                                    <div class="p-t-15">
+                                                        <label class="radio-container m-r-55">Static Analysis
+                                                            <input type="checkbox" name="exist" id="staticAnalysis">
+                                                            <span class="checkmark"></span>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                                <div class="col-3">
+                                                  <div class="p-t-15">
+                                                      <label class="radio-container m-r-55">Dynamic Analysis
+                                                          <input type="checkbox" name="exist" id="dynamicAnalysis">
+                                                          <span class="checkmark"></span>
+                                                      </label>
+                                                  </div>
+                                                </div>
+                                                <div class="col-3">
+                                                  <div class="p-t-15">
+                                                      <label class="radio-container m-r-55">Code Review
+                                                          <input type="checkbox" name="exist" id="codeReview">
+                                                          <span class="checkmark"></span>
+                                                      </label>
+                                                  </div>
+                                                </div>
+                                            </div>
+                                            <div class="row row-space">
+                                                <div class="col-3">
+                                                    <div class="p-t-15">
+                                                        <label class="radio-container m-r-55">Web Search
+                                                            <input type="checkbox" name="exist" id="webSearch">
+                                                            <span class="checkmark"></span>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                                <div class="col-3">
+                                                  <div class="p-t-15">
+                                                      <label class="radio-container m-r-55">Fuzzing
+                                                          <input type="checkbox" name="exist" id="fuzzing">
+                                                          <span class="checkmark"></span>
+                                                      </label>
+                                                  </div>
+                                                </div>
+                                                <div class="col-3">
+                                                  <div class="p-t-15">
+                                                      <label class="radio-container m-r-55">External Review
+                                                          <input type="checkbox" name="exist" id="externalReview">
+                                                          <span class="checkmark"></span>
+                                                      </label>
+                                                  </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                </div>
+
+                                <div class="form-row">
+                                  <div class="name">Issues Identified</div>
+                                  <div class="value">
+                                      <div class="input-group">
+                                          <div class="rs-select2 js-select-simple select--no-search">
+                                              <select name="subject" id="issuesIdentified" required>
+                                                  <option value="">-Select Option-</option>
+                                                  <option value="Severe">Severe</option>
+                                                  <option value="Non-Severe">Non-Severe</option>
+                                                  <option value="None">None</option>
+                                                  <option value="Not Examined">Not Examined</option>
+                                              </select>
+                                              <div class="select-dropdown"></div>
+                                          </div>
+                                      </div>
+                                  </div>
+                                </div>
+
+                                <div class="form-row-big">
+                                    <div class="name">Package URL(s)</div>
+                                        <div class="value">
+                                            <textarea class="input-group-big" id="packageURLs" placeholder="Ex. pkg:npm/left-pad@1.3.0 (one per line)"></textarea>
+                                        </div>
+                                </div>
+
+                                <div class="form-row m-b-55">
+                                    <div class="name">Review Date</div>
+                                    <div class="value">
+                                        <input class="date" id="reviewDate" type="date">
+                                    </div>
+                                </div>
+
+                                <div class="form-row">
+                                <div class="name">Scope</div>
+                                <div class="value">
+                                    <div class="input-group">
+                                        <div class="rs-select2 js-select-simple select--no-search">
+                                            <select name="subject" id="scope" required>
+                                                <option value="">-Select Option-</option>
+                                                <option value="Implementation (Full)">Implementation (Full)</option>
+                                                <option value="Implementation (Partial)">Implementation (Partial)</option>
+                                                <option value="Non-Implementation">Non-Implementation</option>
+                                            </select>
+                                            <div class="select-dropdown"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                </div>
+
+                                <div class="form-row">
+                              <div class="name">Schema Version</div>
+                              <div class="value">
+                                  <div class="input-group">
+                                      <div class="rs-select2 js-select-simple select--no-search">
+                                          <select name="subject" id="schemaVersion" required>
+                                              <option value="">-Select Option-</option>
+                                              <option value="1.0" selected>1.0</option>
+                                          </select>
+                                          <div class="select-dropdown"></div>
+                                      </div>
+                                  </div>
+                              </div>
+                                </div>
+
+                                <div class="form-row">
+                            <div class="name">SPDX License</div>
+                            <div class="value">
+                                <div class="input-group">
+                                    <div class="rs-select2 js-select-simple select--no-search">
+                                        <select name="subject" id="spdxLicense" required>
+                                            <option value="">-Select Option-</option>
+                                            <option value="CC-BY-4.0" selected>CC-BY-4.0</option>
+                                        </select>
+                                        <div class="select-dropdown"></div>
+                                    </div>
                                 </div>
                             </div>
-                        </div>                                                      
-                    </div>
-                    <div class="col-7 pl-4">
-                        <div class="row">
-                            <h2>Content</h2>
-                        </div>           
-                        <div class="row">
-                            <div class="col-12">
-                                <h6>Summary</h6>
-                                <div class="form-group">
-                                    <label for="summary" class="sr-only">Summary</label>
-                                    <textarea class="form-control" id="summary" rows="3" placeholder="One-line summary of the review" required></textarea>
                                 </div>
-                            </div>                                                
-                        </div>                             
-                        <div class="row">
-                            <div class="col-12">
-                                <h6>Details</h6>
-                                <div class="form-group">
-                                    <label for="details" class="sr-only">Details</label>
-                                    <textarea class="form-control" id="details" rows="10" placeholder="Details of the review" required></textarea>
-                                </div>
-                            </div>                                                
-                        </div>                    
-                        <div class="row">
-                            <div class="col-12">
-                                <h6>Methodology (Optional)</h6>
-                                <div class="form-group">
-                                    <label for="details" class="sr-only">Methodology</label>
-                                    <textarea class="form-control" id="methodology" rows="4" placeholder="Methodology of the review"></textarea>
-                                </div>
-                            </div>                                                
-                        </div>     
-                        <div class="row">
-                            <div class="col-12">
-                                <h6>External References (Optional)</h6>
-                                <div class="form-group">
-                                    <label for="externalReferences" class="sr-only">External References</label>
-                                    <textarea class="form-control" id="externalReferences" rows="5" placeholder="External References"></textarea>
-                                </div>
-                            </div>                                                
-                        </div>       
-                        <div class="row">
-                            <div class="col-12">
-                                <button type="submit" class="btn btn-primary float-right">Create Markdown</button>
-                            </div>                                                
-                        </div>           
-                        <div class="row">
-                            <div class="col-12">
-                                <h6>Instructions</h6>
-                                <p>
-                                    Once you have the markdown completed, create a Pull Request to add your content to 
-                                    <a href="https://github.com/ossf/security-reviews">github.com/ossf/security-reviews</a>
-                                    in the "reviews" folder.
-                                </p>
-                                <p>
-                                    If you have feedback on this form or project, please open an
-                                    <a href="https://github.com/ossf/security-reviews/issues">Issue</a>.
-                                </p>
-                            </div>                                                
-                        </div>                                                          
+
+                            </form>
+                        </div>
                     </div>
                 </div>
-            </form>
-        </main>
+
+                <div class="column">
+                  <div class="card card-5">
+                      <div class="card-heading">
+                          <h2 class="title">Content</h2>
+                      </div>
+                      <div class="card-body">
+                          <form method="POST">
+                              <div class="form-row-big">
+                                  <div class="name">Summary</div>
+                                      <div class="value">
+                                          <textarea class="input-group-big" placeholder="One-line summary of the review" id="summary" required></textarea>
+                                      </div>
+                              </div>
+                              <div class="form-row-big">
+                                  <div class="name">Details</div>
+                                      <div class="value">
+                                          <textarea class="input-group-big" placeholder="Details of the review" id="details" required></textarea>
+                                      </div>
+                              </div>
+                              <div class="form-row-big">
+                                  <div class="name">Methodology (Optional)</div>
+                                      <div class="value">
+                                          <textarea class="input-group-big" placeholder="Methodology of the review" id="methodology"></textarea>
+                                      </div>
+                              </div>
+                              <div class="form-row-big">
+                                  <div class="name">External References (Optional)</div>
+                                      <div class="value">
+                                          <textarea class="input-group-big" placeholder="External References" id="externalReferences"></textarea>
+                                      </div>
+                              </div>
+
+                              <div class="form-row">
+                                  <label class="label label--block">Instructions</label>
+                                  <div class="p-t-15">
+                                      <h5>Once you have the markdown completed, create a Pull Request to add your content to <a href="https://github.com/ossf/security-reviews">github.com/ossf/security-reviews</a> in the "reviews" folder.</h5>
+                                      <br>
+                                      <h5>If you have feedback on this form or project, please open an <a href="https://github.com/ossf/security-reviews/issues">Issue</a>.</h5>
+                                  </div>
+                              </div>
+
+                              <div class="form-row p-t-20">
+                                  <label class="label label--block">This review does not contain any significant, undisclosed, or unpatched security vulnerabilities.</label>
+                                  <div class="p-t-15">
+                                      <label class="radio-container m-r-55">I agree
+                                          <input type="checkbox" name="exist" id="disclosure" required>
+                                          <span class="checkmark"></span>
+                                      </label>
+                                  </div>
+                              </div>
+                              <div>
+                                  <button class="btn btn--radius-2 btn--black" type="submit">Get Markdown</button>
+                              </div>
+                          </form>
+                      </div>
+                  </div>
+                </div>
+            </div>
+
+        </div>
     </div>
 
-    
-    <div class="modal" tabindex="-1" role="dialog">
+    <div class="modal" id=modalID tabindex="0" role="dialog">
         <div class="modal-dialog" role="document" style="width:1200px;max-width:1200px">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title">Markdown Text</h5>
+                    <h1 class="modal-title">Markdown Text</h1>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                     </button>
@@ -273,115 +379,21 @@
         </div>
     </div>
 
-
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.bundle.min.js" integrity="sha512-wV7Yj1alIZDqZFCUQJy85VN+qvEIly93fIQAN7iqDFCPEucLCeNFz4r35FCo9s6WrpdDQPi80xbljXB8Bjtvcg==" crossorigin="anonymous"></script>
-    
-    <script type="text/javascript">
-    Date.prototype.toDateInputValue = (function() {
-        var local = new Date(this);
-        local.setMinutes(this.getMinutes() - this.getTimezoneOffset());
-        return local.toJSON().slice(0,10);
-    });
 
-    $(window).on('load', function() {
-        $('#reviewDate').val(new Date().toDateInputValue());
+    <!-- Jquery JS-->
+    <!-- <script src="vendor/jquery/jquery.min.js"></script> -->
+    <!-- Vendor JS-->
+    <script src="vendor/select2/select2.min.js"></script>
+    <!-- <script src="vendor/datepicker/moment.min.js"></script> -->
+    <!-- <script src="vendor/datepicker/daterangepicker.js"></script> -->
 
-        $('.copyClipboard').on('click', function(e) {
-            $('#markdown').select();
-            const result = document.execCommand('copy');
-            if (!result) {
-                alert('Unable to copy to clipboard. Press Ctrl-C instead.');
-            } else {
-                $("#markdown").blur();
-            }
-        });
+    <!-- Main JS-->
+    <script src="js/get_markdown.js"></script>
+    <script src="js/global.js"></script>
 
-        $('#packageURLs').on('keyup', function() {
-            $('#packageURLs')[0].setCustomValidity('');
-            $('#packageURLs')[0].reportValidity();
-        });
+</body><!-- This templates was made by Colorlib (https://colorlib.com) -->
 
-        $('form').on('submit', function(e) {
-            e.preventDefault();
-
-            var t = '';
-            t += '---\n'
-            t += 'Publication-State: ' + $('#publicationState').val() + '\n';
-            t += 'Access: ' + $('#access').val() + '\n';
-            t += 'Reviewers:\n';
-
-            var prefix = '-';
-            if ($('#reviewer0Name').val()) t += prefix + ' Name: ' + $('#reviewer0Name').val() + '\n'; prefix = ' ';
-            if ($('#reviewer0Email').val()) t += prefix + ' Email: ' + $('#reviewer0Email').val() + '\n'; prefix = ' ';
-            if ($('#reviewer0Organization').val()) t += prefix + ' Organization: ' + $('#reviewer0Organization').val() + '\n';
-            if ($('#reviewer0AssociatedWithProject').val()) t += '  Associated-With-Project: ' + $('#reviewer0AssociatedWithProject').val() + '\n';
-            if ($('#reviewer0CompensationSource').val()) t += '  Compensation-Source: ' + $('#reviewer0CompensationSource').val() + '\n';
-            
-            t += 'Domain: ' + $('#domain').val() + '\n';
-            
-            t += 'Methodology:\n';
-            if ($('#staticAnalysis').is(':checked')) t += '- Static-Analysis\n';
-            if ($('#dynamicAnalysis').is(':checked')) t += '- Dynamic-Analysis\n';
-            if ($('#webSearch').is(':checked')) t += '- Web-Search\n';
-            if ($('#codeReview').is(':checked')) t += '- Code-Review\n';
-            if ($('#externalReview').is(':checked')) t += '- External-Review\n';
-            if ($('#fuzzing').is(':checked')) t += '- Fuzzing\n';
-
-            t += 'Issues-Identified: ' + $('#issuesIdentified').val() + '\n';
-
-            t += 'Package-URLs:\n';
-            var abortSubmission = false;
-            $.each($('#packageURLs').val().split("\n"), (idx, url) => {
-                if (url !== '' && !url.startsWith('pkg:')) {
-                    $('#packageURLs')[0].setCustomValidity('Each line must contain a valid PackageURL.');
-                    $('#packageURLs')[0].reportValidity();
-                    abortSubmission = true;
-                    return false;
-                }
-                if (url !== '') {
-                    t += '- ' + url.trim() + '\n';
-                }
-            });
-
-            t += 'Review-Date: ' + $('#reviewDate').val() + '\n';
-            t += 'Scope: ' + $('#scope').val() + '\n';
-            t += 'Schema-Version: ' + $('#schemaVersion').val() + '\n';
-            t += 'SPDX-License-Identifier: ' + $('#spdxLicense').val() + '\n';            
-            t += '---\n\n';
-
-            t += '### Summary\n\n';
-            t += $('#summary').val().trim() + '\n\n';
-
-            t += '### Details\n\n';
-            t += $('#details').val().trim() + '\n\n';
-
-            t += '### Methodology\n\n';
-            t += $('#methodology').val().trim() + '\n\n';
-
-            t += '### External References\n\n';
-            const refs = $('#externalReferences').val().trim();
-            if (refs !== '') {
-                t += $('#externalReferences').val().trim() + '\n\n';
-            } else {
-                t += 'No external references were provided.\n\n';
-            }
-            
-            t += '### Disclaimer\n\n';
-            t += 'All security reviews are conducted on a "best-effort" basis against a software\n';
-            t += 'component at a point in time. We make no guarantee as to the quality or completeness\n';
-            t += 'of any review. If you believe any content is inaccurate, we encourage you to open\n';
-            t += 'an issue or submit a pull request with a correction or improvement.\n\n';
-
-            t += '### License\n\n';
-            t += 'This text is released under at least the\n';
-            t += '[Creative Commons Attribution 4.0 (CC-BY-4.0) license](https://creativecommons.org/licenses/by/4.0/legalcode.txt).\n';
-            t += 'Externally-referenced content may be licensed differently.\n';
-
-            $('#markdown').val(t);
-            $('.modal').modal();
-        });
-    });
-    </script>
-  </body>
 </html>
+<!-- end document-->
