@@ -4,16 +4,16 @@ Access: Public
 Reviewers:
 - Organization: Microsoft (OSS Security Team)
   Associated-With-Project: false
-  Compensation-Source: none
+  Compensation-Source: None
 Domain: Security
 Methodology:
 - Static-Analysis
-- Web-Search
 - Code-Review
-Issues-Identified: None
+- Web-Search
 Package-URLs:
-- pkg:npm/left-pad@1.3.0
-Review-Date: 2019-04-08
+- pkg:npm/cityhash@0.0.5
+Issues-Identified: Non-Severe
+Review-Date: 2019-10-30
 Scope: Implementation/Full
 Schema-Version: 1.0
 SPDX-License-Identifier: CC-BY-4.0
@@ -21,11 +21,17 @@ SPDX-License-Identifier: CC-BY-4.0
 
 ### Summary
 
-This is a relatively simple module for padding strings. A review did not identify any security defects.
+CityHash is not a cryptographic hash function, and was designed for speed rather
+than collision resistence or other security properties.
 
 ### Details
 
-This is a relatively simple module for padding strings. A review did not identify any security defects, but the module itself has been deprecated; the module author suggests using `String.prototype.padStart()` instead. The associated GitHub [repository](https://github.com/left-pad/left-pad) has also been archived.
+CityHash is not a cryptographic hash function, and was designed for speed rather
+than collision resistence or other security properties. If you use CityHash, you
+should assume an attacker is able to both "invert" (given a hash output, easily
+find input that would map to that hash output) and collide (quickly create many
+inputs that map to the same output value. This could lead to O(n) hash tables,
+caching issues, etc. Ensure that you do not rely on CityHash for security.
 
 ### Methodology
 
@@ -35,8 +41,7 @@ effort to identify already-known security defects.
 
 ### External References
 
-* [npmjs.com/package/left-pad](https://www.npmjs.com/package/left-pad)
-* [github.com/left-pad/left-pad](https://github.com/left-pad/left-pad)
+No external references exist for this review.
 
 ### Disclaimer
 

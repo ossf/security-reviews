@@ -4,16 +4,16 @@ Access: Public
 Reviewers:
 - Organization: Microsoft (OSS Security Team)
   Associated-With-Project: false
-  Compensation-Source: none
+  Compensation-Source: None
 Domain: Security
 Methodology:
 - Static-Analysis
-- Web-Search
 - Code-Review
-Issues-Identified: None
+- Web-Search
 Package-URLs:
-- pkg:npm/left-pad@1.3.0
-Review-Date: 2019-04-08
+- pkg:npm/file-loader@3.0.1
+Issues-Identified: None
+Review-Date: 2019-10-04
 Scope: Implementation/Full
 Schema-Version: 1.0
 SPDX-License-Identifier: CC-BY-4.0
@@ -21,11 +21,11 @@ SPDX-License-Identifier: CC-BY-4.0
 
 ### Summary
 
-This is a relatively simple module for padding strings. A review did not identify any security defects.
+No security issues identified.
 
 ### Details
 
-This is a relatively simple module for padding strings. A review did not identify any security defects, but the module itself has been deprecated; the module author suggests using `String.prototype.padStart()` instead. The associated GitHub [repository](https://github.com/left-pad/left-pad) has also been archived.
+No security issues identified.
 
 ### Methodology
 
@@ -35,8 +35,7 @@ effort to identify already-known security defects.
 
 ### External References
 
-* [npmjs.com/package/left-pad](https://www.npmjs.com/package/left-pad)
-* [github.com/left-pad/left-pad](https://github.com/left-pad/left-pad)
+No external references exist for this review.
 
 ### Disclaimer
 
