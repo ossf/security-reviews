@@ -26,7 +26,7 @@ SPDX-License-Identifier: CC-BY-4.0
   
 ### Summary
 
-As part of its mission, the Linux Foundation funded multiple audits of critical open-source software via the Core Infrastructure Iniative (CII) from 2017-2019. 
+As part of its effort to investigate and improve both internal and external projects, the Linux Foundation funded multiple audits via the Core Infrastructure Iniative (CII) from 2017-2019. 
 
 ### Details
 
