@@ -3,7 +3,7 @@ Publication-State: Active
 Access: Public
 Reviewers:
 - Organization: Linux Foundation
-  Associated-With-Project: false
+  Associated-With-Project: true
   Compensation-Source: External
 - Organization: Core Infrastructure Initiative
   Associated-With-Project: false
