@@ -30,7 +30,7 @@ As part of its effort to investigate and improve both internal and external proj
 
 ### Details
 
-See https://www.coreinfrastructure.org/programs/audit-program/ for a complete list and information on the security reviews. 
+See https://www.coreinfrastructure.org/programs/audit-program/ for a complete list of projects and more information on the security reviews. 
 
 ### Disclaimer
 
