@@ -17,7 +17,7 @@ Methodology:
 Issues-Identified: Non-Severe
 Package-URLs:
 - https://www.coreinfrastructure.org/programs/audit-program/
-Review-Date: 01-15-2019
+Review-Date: 2019-01-15
 Scope: Non-Implementation
 Schema-Version: 1.0
 SPDX-License-Identifier: CC-BY-4.0
