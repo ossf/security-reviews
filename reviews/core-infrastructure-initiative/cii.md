@@ -17,7 +17,7 @@ Methodology:
 Issues-Identified: Non-Severe
 Package-URLs:
 - https://www.coreinfrastructure.org/programs/audit-program/
-Review-Date: 2017, 2018, 2019
+Review-Date: 2019
 Scope: Non-Implementation
 Schema-Version: 1.0
 SPDX-License-Identifier: CC-BY-4.0
@@ -31,6 +31,14 @@ As part of its effort to investigate and improve both internal and external proj
 ### Details
 
 See https://www.coreinfrastructure.org/programs/audit-program/ for a complete list of projects and more information on the security reviews. 
+
+### Methodology
+
+The Core Infrastructure Initiative funded audits through various firms. More information on the methodology of each audit at the link above. 
+
+### External References
+
+https://www.coreinfrastructure.org/programs/audit-program/
 
 ### Disclaimer
 
