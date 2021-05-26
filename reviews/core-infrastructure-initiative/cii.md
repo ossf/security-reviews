@@ -26,15 +26,33 @@ SPDX-License-Identifier: CC-BY-4.0
   
 ### Summary
 
-As part of its effort to investigate and improve both internal and external projects, the Linux Foundation funded multiple audits via the Core Infrastructure Iniative (CII) from 2017-2019. 
+As part of its effort to investigate and improve both internal and external projects, the Linux Foundation funded multiple audits via the Core Infrastructure Iniative (CII) from 2017-2019. The projects include:
+
+- Chrony
+- Hyperledger Composer
+- containerd
+- CoreDNS
+- Envoy
+- Hyperledger Fabric
+- Hyperledger Indy
+- Hyperledger Iroha
+- Kubernetes
+- NATS
+- ntpd
+- NTPSec
+- Open Policy Agent
+- OpenSSL
+- Prometheus
+- Hyperledger Sawtooth
+- TUF/Notary
 
 ### Details
 
-See https://www.coreinfrastructure.org/programs/audit-program/ for a complete list of projects and more information on the security reviews. 
+See https://www.coreinfrastructure.org/programs/audit-program/ for more information on the security reviews. 
 
 ### Methodology
 
-The Core Infrastructure Initiative funded audits through various firms. More information on the methodology of each audit at the link above. 
+The Core Infrastructure Initiative funded audits through various firms. More information on the methodology of each audit is detailed in the link. 
 
 ### External References
 
