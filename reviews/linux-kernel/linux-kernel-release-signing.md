@@ -30,7 +30,7 @@ The Linux Foundation sought a review of the kernel teams’ processes for releas
 
 This review resulted in seven recommendations that can help improve the robustness of the security and use of the signing keys for the Linux Kernel. Additionally, Trail of Bits suggested that more comprehensive and up to date documentation on the current procedures and policies are needed to help organizations around the world to best understand the current stratagem.
 
-## Use of smart cards for GPG and SSH not enforced for key individuals
+## 1. Use of smart cards for GPG and SSH not enforced for key individuals
 
 Individuals with commit rights on key Linux kernel repositories are not required to store private key material used for GPG or SSH on a separate smart card device, such as a Nitrokey or Yubikey.
 
@@ -38,7 +38,7 @@ Individuals with commit rights on key Linux kernel repositories are not required
 
 Short term, require individuals with access to significant repositories or systems to use a smart card device to store sensitive key material. If that is not a viable option, consider using an alternative mechanism, such as a TPM, to protect sensitive cryptographic material.
 
-## Recommended smartcard does not require touch activation
+## 2. Recommended smartcard does not require touch activation
 
 The Linux Foundation recommends that kernel developers use smart cards, specifically Nitrokeys, to secure their private key material. Linux Foundation-issued Nitrokeys do not require users to perform any physical actions when using smart card functions. Other devices can be configured to require the user to touch the device before the smart card operations occur. As a result, the Nitrokey is protected only by a passphrase while inserted into a workstation.
 
@@ -52,7 +52,7 @@ Consider mandating the use of smart card devices that require physical touch to 
 
 The Linux Foundation Kernel Team members said that because the Yubikey with touch activation is not open source, it is not possible to use for critical infrastructure security. However, they would consider updating their policies to recommend that the current Nitrokeys be physically removed from the administrator’s computer when they are not in use. In the longer term we hope for more options for open source software in touch activated devices.
 
-## Lack of documented key management policies and procedures
+## 3. Lack of documented key management policies and procedures
 
 There is no centralized, authoritative documentation laying out policies and procedures for key revocation, generation, or rotation or other key management tasks. Without such documentation, users and administrators are more likely to make serious errors when engaging in routine and emergent key management tasks.
 
@@ -66,7 +66,7 @@ Long term, periodically review policies and procedures, assessing their applicab
 
 The Linux Foundation Kernel Team members have affirmed that improved documentation is needed to reduce the chance of errors and improve incident response.
 
-## Lack of public-key authentication resources
+## 4. Lack of public-key authentication resources
 
 To verify the content of kernel updates, each commit in the git tree produces a signed tag, and each release is accompanied by a signature over the release’s tarball. Public keys for Linux developers, as well as the associated key signatures forming the web of trust, are managed from a single location. Compromise of the git.kernel.org server would allow an attacker to provide users with a web of public keys not controlled by kernel developers, enabling them to post malicious kernel “releases” that would validate against the attacker’s public keys.
 
@@ -82,7 +82,7 @@ Short term, identify effective ways to widely advertise developers’ key finger
 
 The Linux Foundation Kernel Team members have expressed interest in both the short and long term recommendations.
 
-## Use of older public-key algorithms and standards within web of trust
+## 5. Use of older public-key algorithms and standards within web of trust
 
 PGP keys used by kernel developers vary significantly in terms of algorithm and key size. RSA is the most commonly used algorithm, followed by DSA and elliptic curve algorithms. Work estimates for attacking algorithms based on integer factorization and integer discrete logarithms vary widely, and the algorithms are frequently subject to subtle new failure modes. Trail of Bits generally recommends moving away from RSA where possible in favor of elliptic curve algorithms.
 
@@ -94,7 +94,7 @@ Short term, choose a single algorithm and key size for new keys incorporated int
 
 Long term, work with developers to gradually replace older RSA and traditional DSA keys with new policy-compliant keys and integrate them into the kernel web of trust. Establish a “sunset date” by which all keys should be switched over.
 
-## Lack of external integrity validation mechanisms
+## 6. Lack of external integrity validation mechanisms
 
 Kernel releases involve a series of steps such as merging changes in Git repositories, pushing tags, and generating a tarball for release. Currently, verification of the steps’ integrity largely depends on the wider community to notice incorrect or malicious behavior. Although this can be effective, additional integrity checks would greatly increase the robustness of the system and help reduce the implicit trust placed in the infrastructure.
 
@@ -104,7 +104,7 @@ Short term, consider releasing tooling that can compare release tarball content 
 
 Long term, consider advocating for interested independent parties to run these verification tools to bolster the integrity verification mechanisms of the wider Linux kernel community.
 
-## Lack of SSH key rotation
+## 7. Lack of SSH key rotation
 
 Currently, SSH keys used to access kernel.org infrastructure are static. Because SSH keys can often be leveraged to access additional systems, they are frequently targeted by attackers. Under the current setup, recovery of a single developer’s SSH key could allow indefinite access to kernel.org resources.
 
