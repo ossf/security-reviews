@@ -34,7 +34,7 @@ This review resulted in seven recommendations that can help improve the robustne
 
 Individuals with commit rights on key Linux kernel repositories are not required to store private key material used for GPG or SSH on a separate smart card device, such as a Nitrokey or Yubikey.
 
-# Recommended mitigation
+### Recommended mitigation
 
 Short term, require individuals with access to significant repositories or systems to use a smart card device to store sensitive key material. If that is not a viable option, consider using an alternative mechanism, such as a TPM, to protect sensitive cryptographic material.
 
@@ -44,11 +44,11 @@ The Linux Foundation recommends that kernel developers use smart cards, specific
 
 While touch activation does not prevent all classes of attacks, such as ones that replace binaries on disk (e.g., for GPG and SSH) or leverage session hijacking, it prevents entire classes of less sophisticated attacks and improves the security posture of a given end-user.
 
-# Recommended mitigation
+### Recommended mitigation
 
 Consider mandating the use of smart card devices that require physical touch to validate each smart card operation. If that is not practical, add guidance recommending that a smart card be physically connected to a workstation only when it is required to complete an operation, which would help prevent an attacker from using an attached smart card device without its user’s knowledge.
 
-# Response
+### Response
 
 The Linux Foundation Kernel Team members said that because the Yubikey with touch activation is not open source, it is not possible to use for critical infrastructure security. However, they would consider updating their policies to recommend that the current Nitrokeys be physically removed from the administrator’s computer when they are not in use. In the longer term we hope for more options for open source software in touch activated devices.
 
@@ -56,13 +56,13 @@ The Linux Foundation Kernel Team members said that because the Yubikey with touc
 
 There is no centralized, authoritative documentation laying out policies and procedures for key revocation, generation, or rotation or other key management tasks. Without such documentation, users and administrators are more likely to make serious errors when engaging in routine and emergent key management tasks.
 
-# Recommended mitigation
+### Recommended mitigation
 
 Short term, work with administrators and developers to document current procedures and policies and compile that information into a single set of documents that can be updated as necessary.
 
 Long term, periodically review policies and procedures, assessing their applicability and appropriateness. Update the documentation as policies and procedures change.
 
-# Response
+### Response
 
 The Linux Foundation Kernel Team members have affirmed that improved documentation is needed to reduce the chance of errors and improve incident response.
 
@@ -74,11 +74,11 @@ Bootstrapping trust for public-key systems is a hard problem, and is certainly n
 
 The Linux Foundation is uniquely equipped to alleviate this problem. Because of Linux’s community and commercial support, kernel developers have many ways to distribute PGP key fingerprints for important developers. Key fingerprints can be included in conference presentations, periodically published on news sites such as lwn.net, included in email signatures, or published on websites maintained by Linux Foundation partners like Red Hat or IBM. Key fingerprints hosted on the kernel.org infrastructure could then be validated against multiple public sources, reducing the likelihood of a malicious key being trusted.
 
-# Recommended mitigation
+### Recommended mitigation
 
 Short term, identify effective ways to widely advertise developers’ key fingerprints. These could include adding key fingerprints to email signatures, periodically posting them in mailing lists, or referencing them in conference presentations. Long term, continue advertising keys through multiple channels, and work with partners to provide accessible sources of public-key corroboration.
 
-# Response
+### Response
 
 The Linux Foundation Kernel Team members have expressed interest in both the short and long term recommendations.
 
@@ -88,7 +88,7 @@ PGP keys used by kernel developers vary significantly in terms of algorithm and 
 
 Since these keys are used to verify code that is eventually incorporated into the kernel, modern primitives should be used. Using a single modern algorithm and key size will help reduce the attack surface for sophisticated attackers.
 
-# Recommended mitigation
+### Recommended mitigation
 
 Short term, choose a single algorithm and key size for new keys incorporated into the kernel web of trust and the PGP key repository. The current kernel developer guidance suggests using ECDSA or Ed25519 keys. Requiring all new keys to conform to this guidance would be an effective step toward standardization.
 
@@ -98,7 +98,7 @@ Long term, work with developers to gradually replace older RSA and traditional D
 
 Kernel releases involve a series of steps such as merging changes in Git repositories, pushing tags, and generating a tarball for release. Currently, verification of the steps’ integrity largely depends on the wider community to notice incorrect or malicious behavior. Although this can be effective, additional integrity checks would greatly increase the robustness of the system and help reduce the implicit trust placed in the infrastructure.
 
-# Recommended mitigation
+### Recommended mitigation
 
 Short term, consider releasing tooling that can compare release tarball content with the content of the tagged Git release, as well as tooling that can ensure that all commits to key repositories hosted on kernel.org are signed with an expected identity. Also consider running a verifier on kernel.org systems.
 
@@ -110,7 +110,7 @@ Currently, SSH keys used to access kernel.org infrastructure are static. Because
 
 A key rotation schedule would mitigate the impact of an SSH key compromise on the kernel.org system. Moreover, with a system in place for rotating SSH keys, the Linux Foundation could respond to an attack that compromises these keys more quickly.
 
-# Recommended mitigation
+### Recommended mitigation
 
 Short term, develop an appropriate key rotation schedule to limit the impact of a compromised SSH key.
 
