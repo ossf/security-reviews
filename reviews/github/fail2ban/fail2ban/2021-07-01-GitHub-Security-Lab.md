@@ -13,9 +13,9 @@ Methodology:
 - External-Review
 Issues-Identified: Non-Severe
 Package-URL(s):
-- pkg:github.com/fail2ban/fail2ban
+- pkg:github.com/fail2ban/fail2ban@0.11.2
 Review-Date: 2021-07-01
-Scope: Implementation (Full)
+Scope: Implementation/Full
 Schema-Version: 1.0
 SPDX-License-Identifier: CC-BY-4.0
 ---
