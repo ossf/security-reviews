@@ -12,8 +12,8 @@ Methodology:
 - Code-Review
 - External-Review
 Issues-Identified: Non-Severe
-Package-URL(s):
-- pkg:github.com/fail2ban/fail2ban@0.11.2
+Package-URLs:
+- pkg:github/fail2ban/fail2ban@0.11.2
 Review-Date: 2021-07-01
 Scope: Implementation/Full
 Schema-Version: 1.0
