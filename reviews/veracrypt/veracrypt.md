@@ -15,7 +15,6 @@ Review-Date: 2016-08-16
 Scope: Implementation/Partial
 Schema-Version: 1.18
 SPDX-License-Identifier: CC-BY-4.0
-
 ---
 
 ### Summary
