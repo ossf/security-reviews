@@ -25,9 +25,9 @@ between Aug. 16 and Sep. 14, 2016, two Quarkslab engineers worked a total of 32 
 
 The audit resulted in the finding of: 
 
- • 8 Critical Vulnerabilities • 
+ • •  8 Critical Vulnerabilities • 
  • 3 Medium Vulnerabilities • 
- • 15 Low or Informational Vulnerabilities / Concerns • 
+ • 15 Low or Informational Vulnerabilities / Concerns • • 
 
 This public disclosure of these vulnerabilities coincides with the release of VeraCrypt 1.19 which fixed the vast majority of these high priority concerns. Some of these issues have not been fixed due to high complexity for the proposed fixes, but workarounds have been presented in the documentation for VeraCrypt.
 
