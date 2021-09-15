@@ -50,9 +50,13 @@ For optimal delineation of the scope, the work was split into five separate work
 therefore, can be elaborate as follows:
 
 • WP1: Security Tests & Code Audits against Mozilla VPN Qt5 App for macOS
+
 • WP2: Security Tests & Code Audits against Mozilla VPN Qt5 App for Linux
+
 • WP3: Security Tests & Code Audits against Mozilla VPN Qt5 App for Windows
+
 • WP4: Security Tests & Code Audits against Mozilla VPN Qt5 App for iOS
+
 • WP5: Security Tests & Code Audits against Mozilla VPN Qt5 App for Android
 
 ### External References
