@@ -20,6 +20,8 @@ SPDX-License-Identifier: CC-BY-4.0
 
 ### Summary
 
+Article on review: https://blog.mozilla.org/en/mozilla/news/mozilla-vpn-completes-independent-security-audit-by-cure53/
+
 Mozilla published an independent security audit of its Mozilla VPN, which provides encryption and device-level protection of your connection and information when you are on the Web, from Cure53, an unbiased cybersecurity firm based in Berlin with more than 15 years of running software testing and code auditing.
 
 ### Details
