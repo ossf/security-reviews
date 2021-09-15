@@ -13,7 +13,7 @@ Package-URLs:
 - pkg:github/veracrypt/veracrypt
 Review-Date: 2016-08-16
 Scope: Implementation/Partial
-Schema-Version: 1.18
+Schema-Version: 1.0
 SPDX-License-Identifier: CC-BY-4.0
 
 ---
