@@ -35,7 +35,11 @@ for root, dirs, files in os.walk("./reviews"):
                     yaml[property_name] = [property_value]
 
             overview.write("\n|")
-            overview.write(path[-1] + "|")
+            if len(files) > 1:
+                overview.write("[" + review_file[:-3] + "]")
+            else:
+                overview.write("[" + path[-1] + "]")
+            overview.write("(https://github.com/ossf/security-reviews/blob/main/" + review_full_path[1:] + ")|")
 
             review_date = ""
             facilitated_by = ""
@@ -77,6 +81,5 @@ for root, dirs, files in os.walk("./reviews"):
             overview.write(methodology + "|")
             overview.write(scope + "|")
             overview.write(packages + "|")
-
 
 overview.close()
