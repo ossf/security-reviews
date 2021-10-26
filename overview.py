@@ -66,8 +66,8 @@ for root, dirs, files in os.walk("./reviews"):
                 if "Scope" in prop:
                     scope += yaml[prop][0]
                 if "pkg" in prop:
-                    if len(yaml[prop]) == 1:
-                        packages += "pkg:" + yaml[prop][0]
+                    package_urls = ["pkg:" + purl for purl in yaml[prop]]
+                    packages += ", ".join(package_urls)
 
             if (len(methodology) > 2):
                 methodology = methodology[2:]
