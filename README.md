@@ -74,6 +74,8 @@ It would be infeasible for the reviewer of a pull request to "re-evaluate" the p
 
 The quality bar is also included in the  in the [PR Review Process](https://github.com/ossf/security-reviews/wiki/PR-Review-Process) of the [Wiki](https://github.com/ossf/security-reviews/wiki). Please note that this quality bar is subject to change over time.
 
+For more information, view this [wiki](https://github.com/ossf/security-reviews/wiki/Vulnerability-Disclosure) page.
+
 ## Motivation
 
 There are two main motivations that led to this project.
