@@ -36,6 +36,6 @@ jobs:
         git config user.name ${{ secrets.USERNAME }}
         git config user.email ${{ secrets.EMAIL }}
     - name: commit changes
-        run: |
+      run: |
         chmod +x ./overview.md
         ./sync_overview.sh
