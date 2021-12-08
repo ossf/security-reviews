@@ -1,6 +1,6 @@
 The following table provides an overview of all Security Reviews and associated work found in this repo, along with a link to the report of the security review.
 
-|Project/Product|Review Date|Facilitated By|Issues|Methodology|Scope|Example Package|
+|Project/Product|Review Date|Facilitated By|Issues|Methodology|Scope|Package Example|
 |-|-|-|-|-|-|-|
 |[left-pad](https://github.com/ossf/security-reviews/blob/main//reviews/npm/left-pad/review-1.md)| 2019-04-08| Microsoft (OSS Security Team)| None|Static-Analysis, Web-Search, Code-Review| Implementation/Full|pkg:npm/left-pad@1.3.0|
 |[atom-node-module-installer](https://github.com/ossf/security-reviews/blob/main//reviews/npm/atom-node-module-installer/review-1.md)| 2021-02-12| Dilan Bhalla| Severe|Static-Analysis, Web-Search| Implementation/Full|pkg:npm/atom-node-module-installer@0.9.0|
