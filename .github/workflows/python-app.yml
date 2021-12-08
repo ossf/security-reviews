@@ -31,13 +31,10 @@ jobs:
       run: |
         # stop the build if there are any errors (errcode 0 means 'pass')
         python generate_overview.py
-    - name: setup git config
+    - name: Setup git config
       run: |
         git config user.name ${{ secrets.USERNAME }}
         git config user.email ${{ secrets.EMAIL }}
-    - name: Set permission
-      run: |
-        sudo chmod +x ./overview.md
     - name: Commit changes
       run: |
         chmod +x ./sync_overview.sh
