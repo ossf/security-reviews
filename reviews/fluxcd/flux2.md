@@ -2,7 +2,7 @@
 Publication-State: Active
 Access: Public
 Reviewers:
-  Organization: OSTIF, Ada Logics
+  Organization: Ada Logics
   Associated-With-Project: False
   Compensation-Source: Non-Project
 Domain: Security
