@@ -40,5 +40,5 @@ jobs:
         sudo chmod +x ./overview.md
     - name: Commit changes
       run: |
-        sudo chmod +x ./overview.md
+        chmod +x ./sync_overview.sh
         ./sync_overview.sh
