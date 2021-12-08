@@ -2,19 +2,19 @@
 Publication-State: Active
 Access: Public
 Reviewers:
-  Organization: Trail of Bits
-  Associated-With-Project: False
-  Compensation-Source: External
+-  Organization: Trail of Bits
+   Associated-With-Project: False
+   Compensation-Source: External
 Domain: Security
 Methodology:
 - Static-Analysis
 - Code-Review
 - External-Review
 Issues-Identified: Severe
-Package-URL(s):
+Package-URLs:
 - pkg:github.com/westerndigitalcorporation/sweet-b
 Review-Date: 2020-01-24
-Scope: Implementation (Partial)
+Scope: Implementation/Partial
 Schema-Version: 1.0
 SPDX-License-Identifier: CC-BY-4.0
 ---
