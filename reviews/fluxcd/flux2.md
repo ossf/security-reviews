@@ -2,7 +2,7 @@
 Publication-State: Active
 Access: Public
 Reviewers:
-  Organization: Ada Logics
+  Organization: AdaLogics
   Associated-With-Project: False
   Compensation-Source: Non-Project
 Domain: Security
