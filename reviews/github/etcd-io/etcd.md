@@ -2,9 +2,9 @@
 Publication-State: Active
 Access: Public
 Reviewers:
-  Organization: Trail of Bits
-  Associated-With-Project: False
-  Compensation-Source: External
+-  Organization: Trail of Bits
+   Associated-With-Project: False
+   Compensation-Source: External
 Domain: Security
 Methodology:
 - Static-Analysis
@@ -12,7 +12,7 @@ Methodology:
 - Code-Review
 - External-Review
 Issues-Identified: Severe
-Package-URL(s):
+Package-URLs:
 - pkg:github.com/etcd-io/etcd
 Review-Date: 2020-02-07
 Scope: Non-Implementation

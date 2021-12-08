@@ -2,9 +2,9 @@
 Publication-State: Active
 Access: Public
 Reviewers:
-  Organization: Trail of Bits
-  Associated-With-Project: False
-  Compensation-Source: External
+-  Organization: Trail of Bits
+   Associated-With-Project: False
+   Compensation-Source: External
 Domain: Security
 Methodology:
 - Static-Analysis
@@ -12,10 +12,10 @@ Methodology:
 - Code-Review
 - External-Review
 Issues-Identified: Severe
-Package-URL(s):
+Package-URLs:
 - pkg:github.com/helm/helm/tree/v3.3.0-rc.1
 Review-Date: 2020-08-10
-Scope: Implementation (Full)
+Scope: Implementation/Full
 Schema-Version: 1.0
 SPDX-License-Identifier: CC-BY-4.0
 ---

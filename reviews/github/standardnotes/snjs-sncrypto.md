@@ -2,20 +2,20 @@
 Publication-State: Active
 Access: Public
 Reviewers:
-  Organization: Trail of Bits
-  Associated-With-Project: False
-  Compensation-Source: External
+-  Organization: Trail of Bits
+   Associated-With-Project: False
+   Compensation-Source: External
 Domain: Security
 Methodology:
 - Static-Analysis
 - Code-Review
 - External-Review
 Issues-Identified: Non-Severe
-Package-URL(s):
+Package-URLs:
 - pkg:pkg:github.com/standardnotes/snjs
 - pkg:github.com/standardnotes/SNCrypto
 Review-Date: 2020-09-08
-Scope: Implementation (Partial)
+Scope: Implementation/Partial
 Schema-Version: 1.0
 SPDX-License-Identifier: CC-BY-4.0
 ---

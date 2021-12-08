@@ -2,14 +2,14 @@
 Publication-State: Active
 Access: Public
 Reviewers:
-  Organization: Trail of Bits
-  Associated-With-Project: False
-  Compensation-Source: External
+-  Organization: Trail of Bits
+   Associated-With-Project: False
+   Compensation-Source: External
 Domain: Security
 Methodology:
 - External-Review
-Issues-Identified: Not Examined
-Package-URL(s):
+Issues-Identified: Not-Examined
+Package-URLs:
 - pkg:github.com/zerotier
 Review-Date: 2020-03-23
 Scope: Non-Implementation

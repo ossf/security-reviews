@@ -2,9 +2,9 @@
 Publication-State: Active
 Access: Public
 Reviewers:
-  Organization: Trail of Bits
-  Associated-With-Project: False
-  Compensation-Source: External
+-  Organization: Trail of Bits
+   Associated-With-Project: False
+   Compensation-Source: External
 Domain: Security
 Methodology:
 - Static-Analysis
@@ -12,7 +12,7 @@ Methodology:
 - Code-Review
 - External-Review
 Issues-Identified: Severe
-Package-URL(s):
+Package-URLs:
 - pkg:github.com/argoproj/argo-cd
 - pkg:github.com/argoproj/argo-events
 - pkg:github.com/argoproj/argo-rollouts
@@ -20,7 +20,7 @@ Package-URL(s):
 - pkg:github.com/argoproj/gitops-engine
 - pkg:github.com/argoproj/pkg
 Review-Date: 2021-03-12
-Scope: Implementation (Full)
+Scope: Implementation/Full
 Schema-Version: 1.0
 SPDX-License-Identifier: CC-BY-4.0
 ---

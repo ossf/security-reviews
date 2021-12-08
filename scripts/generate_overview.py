@@ -1,9 +1,9 @@
 import os
 
-overview = open("overview.md", "w")
+overview = open("Overview.md", "w")
 
 overview.write("The following table provides an overview of all Security Reviews and associated work found in this repo, along with a link to the report of the security review.\n\n")
-overview.write("|Project/Product|Review Date|Facilitated By|Issues|Methodology|Scope|Packages|")
+overview.write("|Project/Product|Review Date|Facilitated By|Issues|Methodology|Scope|Package Example|")
 overview.write("\n|-|-|-|-|-|-|-|")
 
 for root, dirs, files in os.walk("./reviews"):
@@ -67,7 +67,10 @@ for root, dirs, files in os.walk("./reviews"):
                     scope += yaml[prop][0]
                 if "pkg" in prop:
                     package_urls = ["pkg:" + purl for purl in yaml[prop]]
-                    packages += ", ".join(package_urls)
+                    # just use last package in list as example package, using entire list looks too long/messy
+                    # packages += ", ".join(package_urls)
+                    if package_urls:
+                        packages = package_urls[-1]
 
             if (len(methodology) > 2):
                 methodology = methodology[2:]

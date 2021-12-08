@@ -2,9 +2,9 @@
 Publication-State: Active
 Access: Public
 Reviewers:
-  Organization: Trail of Bits
-  Associated-With-Project: False
-  Compensation-Source: External
+-  Organization: Trail of Bits
+   Associated-With-Project: False
+   Compensation-Source: External
 Domain: Security
 Methodology:
 - Static-Analysis
@@ -13,7 +13,7 @@ Methodology:
 - External-Review
 - Fuzzing
 Issues-Identified: Severe
-Package-URL(s):
+Package-URLs:
 - pkg:github.com/rook/rook/tree/release-1.1
 Review-Date: 2019-12-19
 Scope: Non-Implementation
