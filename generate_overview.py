@@ -3,7 +3,7 @@ import os
 overview = open("overview.md", "w")
 
 overview.write("The following table provides an overview of all Security Reviews and associated work found in this repo, along with a link to the report of the security review.\n\n")
-overview.write("|Project/Product|Review Date|Facilitated By|Issues|Methodology|Scope|Example Package|")
+overview.write("|Project/Product|Review Date|Facilitated By|Issues|Methodology|Scope|Package Example|")
 overview.write("\n|-|-|-|-|-|-|-|")
 
 for root, dirs, files in os.walk("./reviews"):
