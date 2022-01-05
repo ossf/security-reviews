@@ -2,7 +2,7 @@
 Publication-State: Active
 Access: Public
 Reviewers:
-  Organization: 
+- Organization: 
   - AdaLogics
   - Open Source Technology Improvement Fund
   Associated-With-Project: False
