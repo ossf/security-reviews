@@ -2,7 +2,9 @@
 Publication-State: Active
 Access: Public
 Reviewers:
-  Organization: AdaLogics
+  Organization: 
+  - AdaLogics
+  - Open Source Technology Improvement Fund
   Associated-With-Project: False
   Compensation-Source: Non-Project
 Domain: Security
