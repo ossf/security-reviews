@@ -8,6 +8,7 @@ Reviewers:
 Domain: Security
 Methodology:
 - External-Review
+- Manual Code Review
 Issues-Identified: Severe
 Package-URLs:
 - pkg:github/NLnetLabs/unbound
