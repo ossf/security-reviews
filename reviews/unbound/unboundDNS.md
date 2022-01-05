@@ -2,8 +2,8 @@
 Publication-State: Active
 Access: Public
 Reviewers:Organization: Open Source Technology Improvement Fund
-  Associated-With-Project: false
-  Compensation-Source: External
+Associated-With-Project: false
+Compensation-Source: External
 Domain: Security
 Methodology:
 - External-Review
