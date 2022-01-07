@@ -12,8 +12,8 @@ Methodology:
 - External-Review
 - Fuzzing
 Issues-Identified: Severe
-Package-URL(s):
-- pkg:github.com/fluxcd/flux2
+Package-URLs:
+- pkg:github/fluxcd/flux2
 Review-Date: 2021-09-01
 Scope: Implementation (Full)
 Schema-Version: 1.0
