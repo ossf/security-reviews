@@ -13,7 +13,7 @@ Methodology:
 - Fuzzing
 Issues-Identified: Severe
 Package-URLs:
-- pkg:github.com/fluxcd/flux2
+- pkg:github/fluxcd/flux2
 Review-Date: 2021-09-01
 Scope: Implementation/Full
 Schema-Version: 1.0
