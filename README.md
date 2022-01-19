@@ -2,6 +2,8 @@
 
 This repository contains a collection of security reviews of open source software. It is a public resource that anyone can contribute to, and is consumable by anyone under a permissive license.
 
+**[View the Security Reviews](Overview.md)**
+
 ## How do I submit a review?
 
 ***Note: Do not disclose "new" or "unknown" vulnerabilities to this project or to this repository.***
