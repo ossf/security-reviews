@@ -1,4 +1,4 @@
-# This workflow will refresh the Overview.md page.
+# This workflow will install Python dependencies and refresh the Overview.md page.
 
 name: Python application
 
