@@ -1,0 +1,35 @@
+# This workflow will refresh the Overview.md page.
+
+name: Python application
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Set up Python 3.9
+      uses: actions/setup-python@v2
+      with:
+        python-version: 3.9
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        if [ -f ./scripts/requirements/requirements.txt ]; then pip install -r ./scripts/requirements/requirements.txt; fi
+    - name: Generate overview
+      run: |
+        # stop the build if there are any errors (errcode 0 means 'pass')
+        python ./scripts/generate_overview.py
+    - name: Setup git config
+      run: |
+        git config user.name ${{ secrets.USERNAME }}
+        git config user.email ${{ secrets.EMAIL }}
+    - name: Commit changes
+      run: |
+        chmod +x ./scripts/sync_overview.sh
+        ./scripts/sync_overview.sh
