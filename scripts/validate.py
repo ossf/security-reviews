@@ -54,13 +54,14 @@ class SecurityReviewValidator:
         self.__check_metadata(lines)
 
         return (self.results, self.warn_results)
-        
+
     def __check_profanity(self, content):
+        profanity.load_censor_words(whitelist_words=['len'])
         if profanity.contains_profanity(content):
             censored_lines = profanity.censor(content).splitlines()
             content_lines = content.splitlines()
             if len(censored_lines) != len(content_lines):
-                self.warn_results.append("Contains profanity.")    
+                self.warn_results.append("Contains profanity.")
             else:
                 for idx in range(0, len(content_lines)):
                     if content_lines[idx] != censored_lines[idx]:
@@ -88,7 +89,7 @@ class SecurityReviewValidator:
                 break
             elif section == 1:
                 metadata_content.append(line)
-        
+
         metadata = yaml.safe_load('\n'.join(metadata_content))
 
         if 'Package-URLs' not in metadata or not len(metadata['Package-URLs']):
@@ -111,12 +112,12 @@ class SecurityReviewValidator:
                     self.results.append(f"Unexpected reviewer property ({key}).")
                 #if not isinstance(value, str):
                 #    self.results.append(f"Unexpected reviewer value ({value}), string expected.")
-        
+
         if 'Domain' not in metadata:
             self.results.append("Missing domain.")
         if metadata['Domain'] != 'Security':
             self.results.append("Invalid domain.")
-        
+
         methodology_parts = metadata.get('Methodology')
         if not methodology_parts or not isinstance(methodology_parts, list):
             self.results.append("Missing Methodology.")
@@ -156,7 +157,7 @@ class SecurityReviewValidator:
             self.results.append("Missing Schema-Version.")
         if str(schema_version) != "1.0":
             self.results.append("Invalid Schema-Version.")
-        
+
         spdx = metadata.get("SPDX-License-Identifier")
         if not spdx or spdx not in ["CC-BY-4.0"]:
             self.results.append(f"SPDX-License-Identifier is not CC-BY-4.0")
@@ -171,17 +172,17 @@ if __name__ == '__main__':
             (results, warn_results) = validator.validate_file(path)
     else:
         (results, warn_results) = validator.validate_path('reviews')
-    
+
     errcode = 0
     if results:
         for result in results:
             print(f'Error: {result}', flush=True)
         errcode = 1
-    
+
     if warn_results:
         for result in warn_results:
             print(f' Warn: {result}', flush=True)
-    
+
     if not results and not warn_results:
         print("OK", flush=True)
     sys.exit(errcode)

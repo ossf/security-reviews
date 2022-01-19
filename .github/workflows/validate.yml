@@ -27,15 +27,3 @@ jobs:
       run: |
         # stop the build if there are any errors (errcode 0 means 'pass')
         python ./scripts/validate.py
-    - name: Generate overview
-      run: |
-        # stop the build if there are any errors (errcode 0 means 'pass')
-        python ./scripts/generate_overview.py
-    - name: Setup git config
-      run: |
-        git config user.name ${{ secrets.USERNAME }}
-        git config user.email ${{ secrets.EMAIL }}
-    - name: Commit changes
-      run: |
-        chmod +x ./scripts/sync_overview.sh
-        ./scripts/sync_overview.sh

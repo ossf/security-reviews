@@ -8,7 +8,7 @@ Reviewers:
 Domain: Security
 Methodology:
 - External-Review
-- Manual Code Review
+- Code-Review
 Issues-Identified: Severe
 Package-URLs:
 - pkg:github/NLnetLabs/unbound
@@ -16,8 +16,8 @@ Review-Date: 2019-12-19
 Scope: Implementation/Full
 Schema-Version: 1.0
 SPDX-License-Identifier: CC-BY-4.0
---- 
- 
+---
+
 ### Summary
 
 The audit of UnboundDNS, facilitated by Open Source Technology Improvement Fund, Inc (ostif.org) resulted in a total of 48 changes that either improve security or fix minor issues that could lead to future security problems as the application grows and evolves over time. The consensus is that Unbound has greatly benefited from the work and that the users and applications that depend on it are now safer than they were prior to the audit. A patch was released and all other outstanding issues were corrected in versions 1.9.4 and 1.9.5.

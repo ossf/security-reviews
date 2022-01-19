@@ -12,10 +12,10 @@ Methodology:
 - External-Review
 - Fuzzing
 Issues-Identified: Severe
-Package-URL(s):
+Package-URLs:
 - pkg:github.com/fluxcd/flux2
 Review-Date: 2021-09-01
-Scope: Implementation (Full)
+Scope: Implementation/Full
 Schema-Version: 1.0
 SPDX-License-Identifier: CC-BY-4.0
 ---
@@ -37,7 +37,7 @@ Description:
 
 Users that can create Kubernetes Secrets, Service Accounts and Flux Kustomization objects, could execute commands inside the kustomize-controller container by embedding a shell script in a Kubernetes Secret. This can be used to run kubectl commands under the Service Account of kustomize-controller, thus allowing an authenticated Kubernetes user to gain cluster admin privileges.
 
-Impact: 
+Impact:
 
 Multi-tenant environments where non-admin users have permissions to create Flux Kustomization objects are affected by this issue.
 
