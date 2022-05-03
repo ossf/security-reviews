@@ -34,6 +34,10 @@ for root, dirs, files in os.walk("./reviews"):
                 else:
                     yaml[property_name] = [property_value]
 
+            # Only publish active reviews in the overview page
+            if yaml.get('Publication-State', '') != [' Active']:
+                continue 
+
             overview.write("\n|")
             if len(files) > 1:
                 overview.write("[" + review_file[:-3] + "]")

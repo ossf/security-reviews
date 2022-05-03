@@ -41,8 +41,8 @@ class SecurityReviewValidator:
         if not os.path.isfile(filename):
             self.results.append('File does not exist.')
             return self.results
-
-        with open(filename, 'r') as f:
+        
+        with open(filename, 'r', encoding='utf-8') as f:
             if not f.readable():
                 self.results.append('Unable to read from file.')
                 return self.results
@@ -137,7 +137,7 @@ class SecurityReviewValidator:
         publication_state = metadata.get('Publication-State')
         if not publication_state:
             self.results.append("Missing Publication-State.")
-        if publication_state not in ['Active']:
+        if publication_state not in ['Active', 'Draft', 'Removed']:
             self.results.append("Invalid Publication-State.")
 
         issues = metadata.get('Issues-Identified')
