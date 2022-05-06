@@ -42,7 +42,7 @@ class SecurityReviewValidator:
             self.results.append('File does not exist.')
             return self.results
 
-        with open(filename, 'r') as f:
+        with open(filename, 'r', encoding='utf-8') as f:
             if not f.readable():
                 self.results.append('Unable to read from file.')
                 return self.results
