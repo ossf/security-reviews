@@ -12,7 +12,7 @@ Methodology:
 - External-Review
 Issues-Identified: Non-Severe
 Package-URLs:
-- pkg:pkg:github.com/standardnotes/snjs
+- pkg:github.com/standardnotes/snjs
 - pkg:github.com/standardnotes/SNCrypto
 Review-Date: 2020-09-08
 Scope: Implementation/Partial
