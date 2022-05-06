@@ -15,14 +15,14 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-    - name: Set up Python 3.9
-      uses: actions/setup-python@v2
+    - name: Set up Python 3.x
+      uses: actions/setup-python@v3
       with:
-        python-version: 3.9
+        python-version: 3.x
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
-        if [ -f ./scripts/requirements/requirements.txt ]; then pip install -r ./scripts/requirements/requirements.txt; fi
+        if [ -f ./scripts/requirements.txt ]; then pip install -r ./scripts/requirements.txt; fi
     - name: Run validator
       run: |
         # stop the build if there are any errors (errcode 0 means 'pass')
