@@ -12,19 +12,19 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v2
-    - name: Set up Python 3.9
-      uses: actions/setup-python@v2
+    - uses: actions/checkout@v3
+    - name: Set up Python 3
+      uses: actions/setup-python@v3
       with:
-        python-version: 3.9
+        python-version: 3.x
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
-        if [ -f ./scripts/requirements/requirements.txt ]; then pip install -r ./scripts/requirements/requirements.txt; fi
+        if [ -f ./scripts/requirements.txt ]; then pip install -r ./scripts/requirements.txt; fi
     - name: Generate overview
       run: |
         # stop the build if there are any errors (errcode 0 means 'pass')
-        python ./scripts/generate_overview.py
+        python ./scripts/generate_overview.py --directory ./reviews
     - name: Setup git config
       run: |
         git config user.name ${{ secrets.USERNAME }}
