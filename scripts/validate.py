@@ -137,7 +137,7 @@ class SecurityReviewValidator:
         publication_state = metadata.get('Publication-State')
         if not publication_state:
             self.results.append("Missing Publication-State.")
-        if publication_state not in ['Active']:
+        if publication_state not in ['Active', 'Draft', 'Removed']:
             self.results.append("Invalid Publication-State.")
 
         issues = metadata.get('Issues-Identified')
