@@ -2,7 +2,6 @@
 Publication-State: Active
 Access: Public
 Reviewers:
-  Organization: Open Source Technology Improvement Fund
   Associated-With-Project: False
   Compensation-Source: External
 Domain: Security
