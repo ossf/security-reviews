@@ -12,7 +12,7 @@ Methodology:
 - Fuzzing
 Issues-Identified: Severe
 Package-URL(s):
-- pkg: github.com/cri-o/cri-o
+- pkg: github/cri-o/cri-o
 Review-Date: 2022-06-13
 Scope: Implementation (Full)
 Schema-Version: 1.0
