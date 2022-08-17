@@ -2,6 +2,7 @@
 Publication-State: Active
 Access: Public
 Reviewers:
+  Organization: OSTIF
   Associated-With-Project: False
   Compensation-Source: External
 Domain: Security
