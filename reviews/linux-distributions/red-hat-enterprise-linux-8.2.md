@@ -8,9 +8,11 @@ Reviewers:
 Domain: Security
 Methodology:
 - External-Review
+Package-URLs:
+- pkg:generic/red-hat-enterprise-linux@8.2?download_url=https://www.redhat.com/en/technologies/linux-platforms/enterprise-linux
 Issues-Identified: None
 Review-Date: 2022-03-09
-Scope: Implementation (Full)
+Scope: Implementation/Full
 Schema-Version: 1.0
 SPDX-License-Identifier: CC-BY-4.0
 ---

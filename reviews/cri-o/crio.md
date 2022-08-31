@@ -11,10 +11,10 @@ Methodology:
 - External-Review
 - Fuzzing
 Issues-Identified: Severe
-Package-URL(s):
-- pkg: github.com/cri-o/cri-o
+Package-URLs:
+- pkg:github/cri-o/cri-o
 Review-Date: 2022-06-13
-Scope: Implementation (Full)
+Scope: Implementation/Full
 Schema-Version: 1.0
 SPDX-License-Identifier: CC-BY-4.0
 ---
