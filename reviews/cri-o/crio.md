@@ -2,7 +2,7 @@
 Publication-State: Active
 Access: Public
 Reviewers:
-  Organization: OSTIF
+- Organization: OSTIF
   Associated-With-Project: False
   Compensation-Source: External
 Domain: Security
@@ -11,10 +11,10 @@ Methodology:
 - Code-Review
 - External-Review
 Issues-Identified: Severe
-Package-URL(s):
+Package-URLs:
 - pkg:github/cri-o/cri-o
 Review-Date: 2022-06-13
-Scope: Implementation (Full)
+Scope: Implementation/Full
 Schema-Version: 1.0
 SPDX-License-Identifier: CC-BY-4.0
 ---
@@ -27,7 +27,7 @@ Open Source Technology Improvement Fund is thrilled to report the results of a s
 
 The high severity finding is a denial of service attack on a given cluster by way of resource exhaustion of nodes. The attack is performed by way of pod creation, which means any user that can create a pod can cause denial of service on the given node that is used for pod creation. The CVE for the this vulnerability is CVE-2022-1708 and Github advisory can be found here: https://github.com/cri-o/cri-o/security/advisories/GHSA-fcm2-6c3h-pg6j
 
-Interestingly, the denial of service attack also occurred in other container runtime interface implementations, most notably Containerd. Specifically, the exact same attack that exhausts memory in CRI-O can be used to exhaust memory of Containerd. The CVE for this issue in containerd is CVE-2022-31030 and the Github security advisory can be found here: https://github.com/containerd/containerd/security/advisories/GHSA-5ffw-gxpp-mxpf 
+Interestingly, the denial of service attack also occurred in other container runtime interface implementations, most notably Containerd. Specifically, the exact same attack that exhausts memory in CRI-O can be used to exhaust memory of Containerd. The CVE for this issue in containerd is CVE-2022-31030 and the Github security advisory can be found here: https://github.com/containerd/containerd/security/advisories/GHSA-5ffw-gxpp-mxpf
 
 Furthermore, an extensive fuzzing suite targeting the CRI-O infrastructure was integrated as a result of this engagement, providing long-lasting improvements to the security posture of the project.
 
