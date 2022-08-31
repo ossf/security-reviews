@@ -2,7 +2,7 @@
 Publication-State: Active
 Access: Public
 Reviewers:
-  Associated-With-Project: False
+- Associated-With-Project: False
   Compensation-Source: External
 Domain: Security
 Methodology:
