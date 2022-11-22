@@ -2,6 +2,9 @@
 Publication-State: Active
 Access: Public
 Reviewers:
+- Name: Mario Heiderich
+  Email: mario@cure53.de
+  Organization: Cure53
   Organization: Cure53
   Associated-With-Project: False
   Compensation-Source: Non-Project
