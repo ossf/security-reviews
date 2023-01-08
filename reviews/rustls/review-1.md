@@ -5,7 +5,6 @@ Reviewers:
 - Name: Mario Heiderich
   Email: mario@cure53.de
   Organization: Cure53
-  Organization: Cure53
   Associated-With-Project: False
   Compensation-Source: Non-Project
 Domain: Security
@@ -15,14 +14,14 @@ Methodology:
 - Code-Review
 - External-Review
 Issues-Identified: Non-Severe
-Package-URL(s):
+Package-URLs:
 - pkg:cargo/rustls@0.16.0
 - pkg:cargo/ring
 - pkg:cargo/webpki
 - pkg:cargo/sct.rs
 - pkg:cargo/rustls-native-certs
 Review-Date: 2020-06-15
-Scope: Implementation (Full)
+Scope: Implementation/Full
 Schema-Version: 1.0
 SPDX-License-Identifier: CC-BY-4.0
 ---
