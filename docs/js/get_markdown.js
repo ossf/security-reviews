@@ -210,6 +210,6 @@ Date.prototype.toDateInputValue = (function() {
             t += 'Externally-referenced content may be licensed differently.\n';
 
             $('#markdown').val(t);
-            $('.modal').modal();
+            new bootstrap.Modal('.modal').show();
         });
     });
