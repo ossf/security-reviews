@@ -33,7 +33,7 @@ Overall, X41 found the c-ares library to be well designed and implemented. The a
 
 ### Methodology
 
-See full audit report for methodology followed. 
+See full audit report found at the link below for methodology followed. 
 
 ### External References
 
