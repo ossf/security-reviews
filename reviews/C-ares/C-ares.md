@@ -2,8 +2,8 @@
 Publication-State: Active
 Access: Public
 Reviewers:
-  - Organization: X41 D-Sec
-  - Organization: OSTIF
+- Organization: OSTIF
+- Organization: X41 D-Sec
   Associated-With-Project: False
   Compensation-Source: External
 Domain: Security
