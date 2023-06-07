@@ -137,11 +137,11 @@ Date.prototype.toDateInputValue = (function() {
             t += 'Reviewers:\n';
 
             var prefix = '-';
-            if ($('#reviewer0Name').val()) t += prefix + ' Name: ' + $('#reviewer0Name').val() + '\n'; prefix = ' ';
-            if ($('#reviewer0Email').val()) t += prefix + ' Email: ' + $('#reviewer0Email').val() + '\n'; prefix = ' ';
-            if ($('#reviewer0Organization').val()) t += prefix + ' Organization: ' + $('#reviewer0Organization').val() + '\n';
-            if ($('#reviewer0AssociatedWithProject').val()) t += '  Associated-With-Project: ' + $('#reviewer0AssociatedWithProject').val() + '\n';
-            if ($('#reviewer0CompensationSource').val()) t += '  Compensation-Source: ' + $('#reviewer0CompensationSource').val() + '\n';
+            if ($('#reviewer0Name').val()) {t += prefix + ' Name: ' + $('#reviewer0Name').val() + '\n'; prefix = ' ';}
+            if ($('#reviewer0Email').val()) {t += prefix + ' Email: ' + $('#reviewer0Email').val() + '\n'; prefix = ' ';}
+            if ($('#reviewer0Organization').val()) {t += prefix + ' Organization: ' + $('#reviewer0Organization').val() + '\n'; prefix = ' ';}
+            if ($('#reviewer0AssociatedWithProject').val()) {t += prefix + ' Associated-With-Project: ' + $('#reviewer0AssociatedWithProject').val() + '\n'; prefix = ' ';}
+            if ($('#reviewer0CompensationSource').val()) {t += prefix + ' Compensation-Source: ' + $('#reviewer0CompensationSource').val() + '\n'; prefix = ' ';}
 
             t += 'Domain: ' + $('#domain').val() + '\n';
 
@@ -155,7 +155,7 @@ Date.prototype.toDateInputValue = (function() {
 
             t += 'Issues-Identified: ' + $('#issuesIdentified').val() + '\n';
 
-            t += 'Package-URL(s):\n';
+            t += 'Package-URLs:\n';
             $.each($('#packageURLs').val().split("\n"), (idx, url) => {
               if (url !== '' && !url.startsWith('pkg:')) {
                   abortSubmission = true;
