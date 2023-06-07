@@ -2,8 +2,7 @@
 Publication-State: Active
 Access: Public
 Reviewers:
-- Organization: OSTIF
-- Organization: X41 D-Sec
+- Organization: OSTIF - X41 D-Sec
   Associated-With-Project: False
   Compensation-Source: External
 Domain: Security
@@ -14,10 +13,10 @@ Methodology:
 - External-Review
 - Fuzzing
 Issues-Identified: Non-Severe
-Package-URL(s):
-- pkg:c-ares/c-ares
+Package-URLs:
+- pkg:github/c-ares/c-ares
 Review-Date: 2023-05-30
-Scope: Implementation (Full)
+Scope: Implementation/Full
 Schema-Version: 1.0
 SPDX-License-Identifier: CC-BY-4.0
 ---
