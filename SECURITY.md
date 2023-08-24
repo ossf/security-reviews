@@ -12,5 +12,4 @@ in this specific project (e.g,. its scripts), please *do* report such
 vulnerabilities to us.
 
 We prefer that you use the [GitHub mechanism for privately reporting a vulnerability](https://docs.github.com/en/code-security/security-advisories/guidance-on-reporting-and-writing/privately-reporting-a-security-vulnerability#privately-reporting-a-security-vulnerability). Under the
-[main repository's security tab](https://github.com/coreinfrastructure/best-practices-badge/security), in the left sidebar, under "Reporting", click
-Advisories, then click "Report a vulnerability" to open the advisory form.
+[main repository's security tab](https://github.com/ossf/security-reviews/security), in the left sidebar, under "Reporting", click Advisories, then click "Report a vulnerability" to open the advisory form.
