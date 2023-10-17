@@ -6,7 +6,7 @@ This repository contains a collection of security reviews of open source softwar
 
 ## How do I submit a review?
 
-***Note: Do not disclose "new" or "unknown" vulnerabilities to this project or to this repository.***
+***Note: Do not disclose "new" or "unknown" vulnerabilities in other projects to this project or to this repository.***
 
 1. Choose an open source component.
 2. Complete the form on the [QuickStart](https://ossf.github.io/security-reviews/quickstart.html) page (this will generate your review as a markdown file).
@@ -127,6 +127,13 @@ Unless stated otherwise, documentation is released under the
 while code is released under the Apache license 2.0 (Apache-2.0).
 The documentation may link to other materials; those other materials retain
 their licenses.
+
+## Security / vulnerability reporting
+
+For information on how to
+report vulnerabilities in the software in this repository
+(e.g., our scripts), see
+[SECURITY.md](./SECURITY.md).
 
 ## More Information
 
